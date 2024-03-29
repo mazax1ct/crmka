@@ -1,0 +1,195 @@
+.sidebar {
+    @include scrollbar;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 30px 10px;
+    scrollbar-gutter: both-edges;
+
+    &__top {
+        border-bottom: 1px solid var(--grey_2);
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        transition: padding 0.3s;
+    }
+
+    &__logo {
+        margin-bottom: 30px;
+
+        img {
+            display: block;
+        }
+    }
+}
+
+.sidebar-resizer {
+    @media(max-width: $hd - 0.01px) {
+        display: none;
+    }
+    @include button-reset;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0 6px 6px 0;
+    height: 30px;
+    justify-content: center;
+    left: 100%;
+    position: absolute;
+    top: 38px;
+    transition: background-color 0.3s;
+    width: 30px;
+    z-index: 1;
+    @include hover {
+        background-color: #D3DDF2;
+    }
+
+    &.is-active {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    svg {
+        fill: var(--primary_color);
+        height: 11px;
+        width: 11px;
+    }
+}
+
+.user-profile {
+    &__button {
+        @include button-reset;
+        align-items: center;
+        display: flex;
+        gap: 15px;
+        font-size: 16px;
+        font-weight: 600;
+        transition: color 0.3s;
+        width: 100%;
+        @include hover {
+            color: var(--primary_color);
+        }
+    }
+
+    &__avatar {
+        align-items: center;
+        border-radius: 50%;
+        background-color: var(--grey_2);
+        color: var(--grey_3);
+        display: flex;
+        font-size: 18px;
+        font-weight: 600;
+        height: 40px;
+        justify-content: center;
+        min-width: 40px;
+        position: relative;
+        text-transform: uppercase;
+        width: 40px;
+        z-index: 1;
+    }
+
+    &__status {
+        border-radius: 50%;
+        border: 2px solid #fff;
+        height: 12px;
+        left: 100%;
+        position: absolute;
+        transform: translateX(-75%);
+        top: 0;
+        width: 12px;
+        z-index: 1;
+
+        &.online {
+            background-color: var(--green);
+        }
+
+        &.offline {
+            background-color: var(--red);
+        }
+    }
+
+    &__name {
+        max-width: calc(100% - 40px - 30px - 11px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    svg {
+        fill: var(--primary_color);
+        height: 11px;
+        margin-left: auto;
+        min-width: 11px;
+        width: 11px;
+    }
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    &__list {
+        @include list-reset;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        & + & {
+            margin-top: auto;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 2px;
+        }
+    }
+
+    &__link {
+        align-items: center;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        display: flex;
+        gap: 16px;
+        height: 42px;
+        padding-left: 20px;
+        padding-right: 20px;
+        transition: border-color 0.3s, background-color 0.3s, color 0.3s, padding 0.3s;
+        text-decoration: none;
+
+        &:not(.is-active) {
+            @include hover {
+                border-color: var(--primary_color);
+                color: var(--primary_color);
+
+                svg {
+                    fill: var(--primary_color);
+                }
+            }
+        }
+
+        &.is-active {
+            background-color: var(--grey_2);
+            color: var(--primary_color);
+            font-weight: 700;
+
+            svg {
+                fill: var(--primary_color);
+            }
+        }
+
+        svg {
+            fill: var(--grey_3);
+            height: 24px;
+            min-width: 24px;
+            width: 24px;
+        }
+    }
+}

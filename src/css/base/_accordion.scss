@@ -1,0 +1,81 @@
+.accordion {
+    &:not(:last-child) {
+        margin-bottom: 21px;
+        @media(min-width: $lg) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__toggler {
+        @include button-reset;
+        border-bottom: 2px solid var(--black);
+        display: flex;
+        font-size: 21px;
+        line-height: 1.14285;
+        padding-bottom: 16px;
+        text-align: left;
+        width: 100%;
+        @media(min-width: $middle) {
+            font-size: 32px;
+        }
+
+        svg {
+            align-self: flex-end;
+            fill: var(--beige);
+            height: 16px;
+            min-width: 16px;
+            margin-left: auto;
+            width: 16px;
+            @media(min-width: $middle) {
+                height: 32px;
+                min-width: 32px;
+                width: 32px;
+            }
+            @media(min-width: $lg) {
+                height: 42px;
+                min-width: 42px;
+                width: 42px;
+            }
+        }
+
+        &.is-active {
+            svg {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+
+    &__toggler-num {
+        color: var(--beige);
+        font-family: var(--secondary_font_family);
+        min-width: 45px;
+        width: 45px;
+        @media(min-width: $middle) {
+            min-width: 100px;
+            width: 100px;
+        }
+        @media(min-width: $lg) {
+            font-size: 42px;
+        }
+    }
+
+    &__toggler-title {
+        color: var(--green);
+        font-weight: 700;
+        margin-right: 20px;
+    }
+
+    &__body {
+        display: none;
+        padding-top: 16px;
+        padding-left: 45px;
+        @media(min-width: $middle) {
+            font-size: 18px;
+            padding-left: 100px;
+        }
+        @media(min-width: $lg) {
+            font-size: 21px;
+            padding-top: 42px;
+        }
+    }
+}

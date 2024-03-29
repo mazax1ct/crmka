@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>CRMka</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#4880ff">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="fonts/subset-Qanelas-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/subset-Qanelas-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/subset-Qanelas-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="page">
+    <div class="page__sidebar">
+        <button class="js-sidebar-resizer sidebar-resizer" type="button" title="Уменьшить">
+            <svg aria-hidden="true">
+                <use xlink:href="images/sprite.svg#chevron_left" />
+            </svg>
+        </button>
+    
+        <header class="sidebar">
+            <div class="sidebar__top">
+                <div class="sidebar__logo"><img src="images/logo.svg" alt="CRMka"></div>
+    
+                <div class="user-profile">
+                    <button class="user-profile__button" type="button">
+                        <span class="user-profile__avatar">
+                            <span class="user-profile__status online"></span>
+                            ЛВ
+                        </span>
+                        <span class="user-profile__name">Лидия В.</span>
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#chevron_down" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    
+            <nav class="main-menu">
+                <ul class="main-menu__list">
+                    <li class="main-menu__item">
+                        <a class="main-menu__link is-active" href="#" title="Дашборд">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#dashboard_icon" />
+                            </svg>
+                            <span>Дашборд</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Настройка">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#gear_icon" />
+                            </svg>
+                            <span>Настройка</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Объекты">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#building_icon" />
+                            </svg>
+                            <span>Объекты</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Арендаторы">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#users_icon" />
+                            </svg>
+                            <span>Арендаторы</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Документы">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#folder_icon" />
+                            </svg>
+                            <span>Документы</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Финансы">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#case_icon" />
+                            </svg>
+                            <span>Финансы</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Коммунальные платежи">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#invoice_icon" />
+                            </svg>
+                            <span>Коммунальные платежи</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Сервис">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#wrench_icon" />
+                            </svg>
+                            <span>Сервис</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Задачи">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#clipboard_icon" />
+                            </svg>
+                            <span>Задачи</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Заявки">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#edit_icon" />
+                            </svg>
+                            <span>Заявки</span>
+                        </a>
+                    </li>
+                </ul>
+    
+                <ul class="main-menu__list">
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Тариф">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#wallet_icon" />
+                            </svg>
+                            <span>Тариф</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Модули">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#modules_icon" />
+                            </svg>
+                            <span>Модули</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Блог">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#comment_icon" />
+                            </svg>
+                            <span>Блог</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Помощь">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#info_icon" />
+                            </svg>
+                            <span>Помощь</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <main class="page__content">
+        <div class="page__top">
+            <h1 class="page__top-title">Холдинг Аренда</h1>
+
+            <div class="page__top-buttons">
+                <button class="button button--type_1" type="button">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#circle_plus_icon" />
+                    </svg>
+                    <span>Поставить новую задачу</span>
+                </button>
+
+                <button class="button button--type_1" type="button">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#circle_plus_icon" />
+                    </svg>
+                    <span>Добавить нового арендатора</span>
+                </button>
+            </div>
+
+            <button class="js-sidebar-toggler burger button button--type_1" type="button" title="Открыть меню">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#burger_icon" />
+                </svg>
+            </button>
+        </div>
+    </main>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/fancybox-defaults.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

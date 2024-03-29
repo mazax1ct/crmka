@@ -1,0 +1,42 @@
+.qnt {
+    display: flex;
+
+    &__button {
+        @include button-reset;
+        align-items: center;
+        color: var(--green);
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        transition: color 0.3s;
+        width: 40px;
+        @media(min-width: $lg) {
+            height: 48px;
+            width: 48px;
+        }
+        @include hover {
+            color: var(--beige);
+        }
+
+        svg {
+            fill: currentColor;
+            height: 16px;
+            width: 16px;
+        }
+    }
+
+    &__input {
+        background-color: var(--beige);
+        border: none;
+        color: var(--green);
+        font-weight: 700;
+        height: 40px;
+        padding: 0 5px;
+        text-align: center;
+        width: 40px;
+        @media(min-width: $lg) {
+            height: 48px;
+            width: 48px;
+        }
+    }
+}

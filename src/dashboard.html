@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>CRMka</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="page">
+    //= template/common/sidebar.html
+
+    <main class="page__content">
+        <div class="page__top">
+            <h1 class="page__top-title">Холдинг Аренда</h1>
+
+            <div class="page__top-buttons">
+                <button class="button button--type_1" type="button">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#circle_plus_icon" />
+                    </svg>
+                    <span>Поставить новую задачу</span>
+                </button>
+
+                <button class="button button--type_1" type="button">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#circle_plus_icon" />
+                    </svg>
+                    <span>Добавить нового арендатора</span>
+                </button>
+            </div>
+
+            <button class="js-sidebar-toggler burger button button--type_1" type="button" title="Открыть меню">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#burger_icon" />
+                </svg>
+            </button>
+        </div>
+    </main>
+
+    //= template/common/scripts.html
+</body>
+
+</html>

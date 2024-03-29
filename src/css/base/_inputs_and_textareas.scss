@@ -1,0 +1,95 @@
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    @media(min-width: $middle) {
+        margin-bottom: 12px;
+    }
+    @media(min-width: $lg) {
+        margin-bottom: 21px;
+    }
+}
+
+.input,
+.textarea {
+    border-radius: 0;
+    border: 1px solid var(--input_border_default);
+    background-color: transparent;
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    padding: 15px 24px;
+    transition: border-color 0.3s;
+    width: 100%;
+    @media(min-width: $lg) {
+        padding: 20px 32px;
+    }
+
+    &::-webkit-input-placeholder {
+        color: var(--placeholder_color);
+        opacity: 1;
+    }
+
+    &::-moz-placeholder {
+        color: var(--placeholder_color);
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        color: var(--placeholder_color);
+        opacity: 1;
+    }
+
+    &:not(:disabled) {
+        @include hover {
+            border-color: var(--black);
+        }
+    }
+
+    &--filled {
+        background-color: #F9F9F9;
+        border-color: #F9F9F9;
+    }
+
+    &:focus {
+        border-color: var(--black);
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: 0.6;
+    }
+
+    &.error {
+        color: var(--error_color);
+    }
+}
+
+.input {
+    height: 52px;
+    @media(min-width: $lg) {
+        height: 64px;
+    }
+}
+
+.textarea {
+    height: 132px;
+    resize: none;
+}
+
+input,
+textarea {
+    &:focus {
+        outline: 0;
+    }
+}
+
+.error-text {
+    color: var(--error_color);
+    font-size: 12px;
+    margin-top: 4px;
+    @media(min-width: $middle) {
+        font-size: 14px;
+    }
+}

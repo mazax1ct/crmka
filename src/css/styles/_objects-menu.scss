@@ -1,0 +1,104 @@
+.objects-menu {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 45px;
+    @media(max-width: $sm - 0.01px) {
+        flex-wrap: wrap;
+    }
+
+    &__wrapper {
+        display: flex;
+        overflow-x: auto;
+        position: relative;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-behavior: smooth;
+        z-index: 1;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        @media(min-width: $sm) {
+            width: calc(100% - 210px);
+        }
+
+        &::after,
+        &::before {
+            content: '';
+            height: 100%;
+            min-width: 60px;
+            position: sticky;
+            pointer-events: none;
+            top: 0;
+            transition: opacity 0.3s;
+            width: 60px;
+            z-index: 1;
+        }
+
+        &::after {
+            background: linear-gradient(90deg, rgba(234,238,245,0.01) 0%, rgba(234,238,245,1) 100%);
+            left: auto;
+            margin-left: -60px;
+            right: 0;
+        }
+
+        &::before {
+            background: linear-gradient(90deg, rgba(234,238,245,1) 0%, rgba(234,238,245,0.01) 100%);
+            left: 0;
+            margin-right: -60px;
+        }
+
+        &[data-overflowing="right"] {
+            &::before {
+                opacity: 0;
+            }
+        }
+
+        &[data-overflowing="both"] {}
+
+        &[data-overflowing="left"] {
+            &::after {
+                opacity: 0;
+            }
+        }
+
+        &.is-open {
+            .objects-menu__list {
+                flex-wrap: wrap;
+            }
+
+            &::after,
+            &::before {
+                opacity: 0;
+            }
+        }
+    }
+
+    &__list {
+        @include list-reset;
+        display: flex;
+        gap: 10px;
+
+        .button {
+            white-space: nowrap;
+
+            &.is-active {
+                background-color: var(--primary_color);
+                border-color: var(--primary_color);
+                color: #fff;
+
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    .objects-menu-toggler {
+        min-width: 200px;
+        white-space: nowrap;
+        @media(max-width: $sm - 0.01px) {
+            width: 100%;
+        }
+    }
+}

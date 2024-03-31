@@ -1,0 +1,43 @@
+.search {
+    &__form {}
+
+    &__form-inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__input {
+        padding-right: 80px;
+    }
+
+    &__submit {
+        align-items: center;
+        border: 1px solid var(--primary_color);
+        background-color: var(--primary_color);
+        border-radius: 8px;
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 14px;
+        height: 60px;
+        justify-content: center;
+        line-height: 1.4;
+        left: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s;
+        width: 60px;
+        z-index: 1;
+        @include hover {
+            background-color: var(--primary_color_50);
+        }
+
+        svg {
+            fill: #fff;
+            height: 24px;
+            width: 24px;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.tabs-menu {
+    background-color: var(--grey_2);
+    border-radius: 8px;
+    display: flex;
+    padding: 2px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    z-index: 1;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .button {
+        flex-grow: 1;
+        padding-left: 24px;
+        padding-right: 24px;
+        width: auto;
+    }
+}

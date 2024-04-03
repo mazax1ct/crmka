@@ -1,0 +1,66 @@
+.about-object-table {
+    font-size: 16px;
+    margin-top: -15px;
+    margin-bottom: -15px;
+
+    &__item {
+        @include button-reset;
+        align-items: center;
+        color: var(--text_color);
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        padding: 15px 10px;
+        text-align: left;
+        transition: background-color 0.3s, border-color 0.3s;
+        text-decoration: none;
+        width: 100%;
+        @include hover {
+            background-color: var(--grey_6);
+            border-color: transparent;
+            border-radius: 8px;
+
+            & + .about-object-table__item {
+                border-top-color: transparent;
+            }
+        }
+
+        &:not(:first-child) {
+            border-top: 1px solid var(--grey_2);
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+    }
+
+    &__status {
+        align-items: center;
+        display: inline-flex;
+        gap: 10px;
+        white-space: nowrap;
+
+        &.status-green {
+            color: var(--green);
+
+            svg {
+                fill: var(--green_2);
+            }
+        }
+
+        &.status-red {
+            color: var(--red);
+
+            svg {
+                fill: var(--pink_3);
+            }
+        }
+
+        svg {
+            height: 10px;
+            min-width: 10px;
+            width: 10px;
+        }
+    }
+}

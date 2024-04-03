@@ -1,0 +1,98 @@
+.pseudo-select {
+    border: 1px solid transparent;
+    border-radius: 8px;
+    position: relative;
+    transition: border-color 0.3s;
+    z-index: 1;
+    @include hover {
+        border-color: var(--grey_2);
+    }
+
+    &.is-open {
+        border-color: var(--grey_2);
+
+        .pseudo-select__dropdown {
+            display: block;
+        }
+
+        .pseudo-select__arrow {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__value-wrapper {
+        @include button-reset;
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        height: 40px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    &__value {
+        align-items: center;
+        color: var(--grey_4);
+        display: flex;
+        gap: 8px;
+        font-weight: 600;
+    }
+
+    &__icon {
+        fill: var(--primary_color);
+        height: 24px;
+        min-width: 24px;
+        width: 24px;
+    }
+
+    &__arrow {
+        fill: var(--grey_4);
+        height: 12px;
+        min-width: 12px;
+        width: 12px;
+    }
+
+    &__dropdown {
+        border: 1px solid var(--grey_2);
+        border-radius: 8px;
+        background-color: #fff;
+        display: none;
+        left: 0;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__items-list {
+        @include scrollbar;
+        border-radius: 8px;
+        max-height: 160px;
+        overflow-y: auto;
+    }
+
+    &__item {
+        @include button-reset;
+        min-height: 40px;
+        padding: 8px;
+        text-align: left;
+        transition: background-color 0.3s;
+        width: 100%;
+
+        &:not(.is-active) {
+            @include hover {
+                background-color: var(--grey_6);
+            }
+        }
+
+        &.is-active {
+            background-color: var(--grey_7);
+            font-weight: 600;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--grey_2);
+        }
+    }
+}

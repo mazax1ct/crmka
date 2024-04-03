@@ -1,4 +1,8 @@
 .search {
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
     &__form {}
 
     &__form-inner {
@@ -31,7 +35,7 @@
         width: 60px;
         z-index: 1;
         @include hover {
-            background-color: var(--primary_color_50);
+            background-color: var(--primary_color_darker);
         }
 
         svg {

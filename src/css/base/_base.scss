@@ -6,10 +6,12 @@
 
 body,
 html {
-    height: 100%;
-    min-height: 100%;
     margin: 0;
     padding: 0;
+}
+
+html {
+    min-height: 100%;
 }
 
 .page {
@@ -21,6 +23,8 @@ html {
     font-family: 'Qanelas', Arial, sans-serif;
     font-weight: 500;
     line-height: 1.5;
+    height: 100%;
+    min-height: 100%;
     overflow-x: hidden;
 
     &.is-overflow {
@@ -123,10 +127,72 @@ html {
     }
 }
 
+.two-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @media(min-width: $md) {
+        flex-direction: row;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &__column {
+        .box {
+            height: 100%;
+        }
+        @media(min-width: $md) {
+            width: calc(100% / 2 - 30px / 2);
+        }
+    }
+}
+
 .box {
     background-color: #fff;
     border: 1px solid var(--grey);
     border-radius: 10px;
+    padding: 15px;
+    @media(min-width: $lg) {
+        padding: 30px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &__title-block {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+
+        &.justify-content-spacebetween {
+            justify-content: space-between;
+        }
+    }
+
+    &__title {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.25;
+        margin: 0;
+        @media(min-width: $lg) {
+            font-size: 24px;
+        }
+
+        &--big {
+            @media(min-width: $lg) {
+                font-size: 32px;
+            }
+        }
+    }
 }
 
 h1,

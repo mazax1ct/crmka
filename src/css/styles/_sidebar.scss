@@ -9,6 +9,12 @@
     overflow-x: hidden;
     padding: 30px 10px;
     scrollbar-gutter: both-edges;
+    @media(min-width: $hd) {
+        height: 100dvh;
+        min-height: 0;
+        position: sticky;
+        top: 0;
+    }
 
     &__top {
         border-bottom: 1px solid var(--grey_2);
@@ -29,9 +35,6 @@
 }
 
 .sidebar-resizer {
-    @media(max-width: $hd - 0.01px) {
-        display: none;
-    }
     @include button-reset;
     align-items: center;
     background-color: #fff;
@@ -41,14 +44,25 @@
     left: 100%;
     position: absolute;
     top: 38px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, left 0.3s;
     width: 30px;
     z-index: 1;
     @include hover {
         background-color: #D3DDF2;
     }
+    @media(min-width: $hd) {
+        left: 260px;
+        position: fixed;
+    }
+    @media(max-width: $hd - 0.01px) {
+        display: none;
+    }
 
     &.is-active {
+        @media(min-width: $hd) {
+            left: 68px;
+        }
+
         svg {
             transform: rotate(180deg);
         }
@@ -156,6 +170,7 @@
         align-items: center;
         border: 1px solid transparent;
         border-radius: 8px;
+        color: var(--grey_3);
         display: flex;
         gap: 16px;
         height: 42px;
@@ -168,10 +183,6 @@
             @include hover {
                 border-color: var(--primary_color);
                 color: var(--primary_color);
-
-                svg {
-                    fill: var(--primary_color);
-                }
             }
         }
 
@@ -179,14 +190,10 @@
             background-color: var(--grey_2);
             color: var(--primary_color);
             font-weight: 700;
-
-            svg {
-                fill: var(--primary_color);
-            }
         }
 
         svg {
-            fill: var(--grey_3);
+            fill: currentColor;
             height: 24px;
             min-width: 24px;
             width: 24px;

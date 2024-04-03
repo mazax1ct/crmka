@@ -72,6 +72,16 @@
                 opacity: 0;
             }
         }
+
+        &.is-dragging {
+            cursor: move;
+            scroll-behavior: auto;
+
+            .button {
+                cursor: move;
+                pointer-events: none;
+            }
+        }
     }
 
     &__list {
@@ -80,6 +90,7 @@
         gap: 10px;
 
         .button {
+            user-select: none;
             white-space: nowrap;
 
             &.is-active {

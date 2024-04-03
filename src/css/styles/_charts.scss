@@ -1,0 +1,36 @@
+.chart-manage {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    &__buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+
+.chart-block {
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.chart-manage_2 {
+    align-items: center;
+    display: flex;
+    flex-flow: wrap;
+    gap: 20px;
+    @media(min-width: $md) {
+        gap: 20px 40px;
+    }
+    @media(min-width: $lg) {
+        gap: 20px 60px;
+    }
+}

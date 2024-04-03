@@ -110,4 +110,101 @@
             }
         }
     }
+
+    &--type_4 {
+        background-color: #fff;
+        border-color: var(--primary_color);
+        border-radius: 8px;
+        color: var(--text_color);
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 700;
+        height: 40px;
+        padding-left: 15px;
+        padding-right: 10px;
+
+        svg {
+            fill: var(--primary_color);
+            height: 18px;
+            min-width: 18px;
+            width: 18px;
+        }
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--primary_color);
+                color: #fff;
+
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &--type_5 {
+        background-color: #fff;
+        border-color: var(--grey_2);
+        border-radius: 6px;
+        color: var(--primary_color);
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        height: 30px;
+        padding-left: 12px;
+        padding-right: 8px;
+
+        svg {
+            fill: var(--primary_color);
+            height: 16px;
+            min-width: 16px;
+            width: 16px;
+        }
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--grey_7);
+            }
+        }
+    }
+
+    &--type_6 {
+        background-color: var(--grey_2);
+        border-radius: 8px;
+        gap: 10px;
+        font-weight: 600;
+        height: 40px;
+        width: 40px;
+
+        svg {
+            fill: var(--grey_3);
+            height: 18px;
+            width: 18px;
+        }
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--grey_7);
+            }
+        }
+
+        &.is-active {
+            background-color: var(--primary_color);
+            color: #fff;
+            font-weight: 700;
+            @include hover {
+                background-color: var(--primary_color);
+            }
+
+            svg {
+                fill: #fff;
+            }
+        }
+    }
 }

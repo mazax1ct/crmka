@@ -23,10 +23,44 @@
     <main class="page__content">
         //= template/common/page__top.html
 
-
         //= template/common/objects-menu.html
 
         //= template/common/search.html
+
+        <div class="two-columns">
+            <div class="two-columns__column">
+                //= template/dashboard/about-object-table.html
+            </div>
+            <div class="two-columns__column">
+                //= template/dashboard/notifications.html
+            </div>
+        </div>
+
+        //= template/dashboard/finance-planing.html
+
+        <div class="box">
+            <div class="box__title-block">
+                <p class="box__title">Коммунальные услуги</p>
+            </div>
+
+            <div class="tabs-menu">
+                <button class="button button--type_6 is-active" type="button">Электроэнергия</button>
+                <button class="button button--type_6" type="button">Газоснабжение</button>
+                <button class="button button--type_6" type="button">Водоотведение</button>
+                <button class="button button--type_6" type="button">Другие</button>
+            </div>
+
+            <div class="counter-info">
+                <p class="counter-info__title"><b>Номер счетчика:</b> 12345678</p>
+                <p class="counter-info__date">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#calendar_icon" />
+                    </svg>
+                    <span class="counter-info__date-title">Дата следующей поверки</span>
+                    20.02.2025
+                </p>
+            </div>
+        </div>
 
     </main>
 

@@ -50,3 +50,113 @@
         width: 16px;
     }
 }
+
+.switch {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+
+    &.blue {
+        input:checked ~ .switch__icon {
+            background-color: var(--primary_color);
+        }
+
+        input:checked:disabled ~ .switch__icon {
+            background-color: var(--primary_color_50);
+
+            &::after {
+                background-color: #fff;
+            }
+        }
+    }
+
+    &.green {
+        input:checked ~ .switch__icon {
+            background-color: var(--green);
+        }
+
+        input:checked:disabled ~ .switch__icon {
+            background-color: var(--green_2);
+
+            &::after {
+                background-color: #fff;
+            }
+        }
+    }
+
+    &.red {
+        input:checked ~ .switch__icon {
+            background-color: var(--red);
+        }
+
+        input:checked:disabled ~ .switch__icon {
+            background-color: var(--pink);
+
+            &::after {
+                background-color: #fff;
+            }
+        }
+    }
+
+    input {
+        position: absolute;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 1px;
+
+        &:checked ~ .switch__icon {
+            &::after {
+                background-color: #fff;
+                left: 20px;
+            }
+        }
+
+        &:checked ~ .switch__text {
+            color: var(--text_color);
+        }
+
+        &:not(:disabled) ~ .switch__icon {
+            cursor: pointer;
+        }
+
+        &:disabled ~ .switch__icon {
+            background-color: var(--grey_6);
+
+            &::after {
+                background-color: var(--grey);
+            }
+        }
+
+        &:disabled ~ .switch__text {
+            color: var(--grey);
+        }
+    }
+
+    &__icon {
+        border-radius: 10px;
+        background-color: var(--grey_2);
+        height: 20px;
+        position: relative;
+        transition: background-color 0.3s;
+        width: 38px;
+        z-index: 1;
+
+        &::after {
+            border-radius: 50%;
+            background-color: var(--grey_3);
+            content: '';
+            height: 16px;
+            left: 2px;
+            position: absolute;
+            top: 2px;
+            transition: left 0.3s, background-color 0.3s;
+            width: 16px;
+            z-index: 1;
+        }
+    }
+
+    &__text {
+        color: var(--grey_3);
+    }
+}

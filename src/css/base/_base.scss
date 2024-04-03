@@ -64,7 +64,7 @@ html {
             position: fixed;
             transform: translateX(-100%);
             top: 0;
-            z-index: 10;
+            z-index: 11;
         }
 
         &.is-open {
@@ -74,10 +74,11 @@ html {
 
     &__content {
         flex-grow: 1;
-        padding: 28px 15px 54px;
+        padding: 95px 15px 54px;
         transition: width 0.3s;
         width: 100%;
         @media(min-width: $md) {
+            padding-top: 28px;
             padding-left: 45px;
             padding-right: 45px;
         }
@@ -96,31 +97,39 @@ html {
         margin-bottom: 45px;
         padding-bottom: 28px;
         @media(max-width: $hd - 0.01px) {
-            padding-right: 54px;
-            position: relative;
-            z-index: 1;
+            background-color: var(--grey_2);
+            height: 75px;
+            left: 0;
+            margin: 0;
+            padding: 15px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 10;
         }
     }
 
     &__top-title {
-        font-size: 28px;
+        font-size: 24px;
         font-weight: 700;
         line-height: 1.25;
         margin: 0;
+        @media(min-width: $hd) {
+            font-size: 28px;
+        }
     }
 
     &__top-buttons {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
+        @media(max-width: $hd - 0.01px) {
+            display: none;
+        }
     }
 }
 
 .burger {
-    left: auto;
-    position: absolute;
-    right: 0;
-    top: 0;
     width: 44px;
     @media(min-width: $hd) {
         display: none;

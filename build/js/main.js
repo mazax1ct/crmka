@@ -3,9 +3,11 @@ $(document).on('click', '.js-sidebar-toggler', function () {
   if(!$(this).hasClass('is-active')) {
     $(this).addClass('is-active');
     $(this).find('use').attr('xlink:href', 'images/sprite.svg#close_icon');
+    $('body').addClass('is-overflow');
   } else {
     $(this).removeClass('is-active');
     $(this).find('use').attr('xlink:href', 'images/sprite.svg#burger_icon');
+    $('body').removeClass('is-overflow');
   }
   $('.page__sidebar').toggleClass('is-open');
   return false;

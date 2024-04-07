@@ -24,3 +24,55 @@
         width: auto;
     }
 }
+
+.tabs-menu_2 {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .button {
+        &.is-active {
+            background-color: var(--primary_color);
+            color: #fff;
+
+            &.status-blue {
+                .cnt {
+                    background-color: var(--primary_color_darker);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.tabs-menu_3 {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .button {
+        &.is-active {
+            background-color: var(--primary_color);
+            color: #fff;
+        }
+    }
+}

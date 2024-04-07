@@ -1,12 +1,18 @@
-.notification {
+.tasks-list {
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.task {
     @include button-reset;
     align-items: center;
-    border: 1px solid;
+    border: 1px solid var(--grey_2);
     border-radius: 8px;
     display: flex;
     gap: 20px;
-    min-height: 60px;
-    padding: 15px 20px;
+    min-height: 50px;
+    padding: 10px 20px;
     text-decoration: none;
     transition: border-color 0.3s;
 
@@ -15,41 +21,36 @@
     }
 
     &.status-red {
-        border-color: var(--pink_2);
         @include hover {
             border-color: var(--red);
-
-            .notification__arrow-icon {
-                fill: var(--red);
-            }
         }
 
-        .notification__status {
+        .task__status {
             background-color: var(--red);
         }
 
-        .notification__text-status {
-            background-color: var(--red);
-        }
-
-        .notification__date {
+        .task__date {
             color: var(--red);
-        }
-
-        .notification__arrow-icon {
-            fill: var(--pink_3);
         }
     }
 
     &.status-red-filled {
         background-color: var(--pink);
 
-        .notification__title {
+        .task__title {
             font-weight: 700;
         }
     }
 
-    &.status-blue {}
+    &.status-blue {
+        @include hover {
+            border-color: var(--grey_3);
+        }
+
+        .task__status {
+            background-color: var(--primary_color);
+        }
+    }
 
     &.status-green {}
 
@@ -87,6 +88,7 @@
     }
 
     &__date {
+        color: var(--grey_3);
         margin-left: auto;
     }
 

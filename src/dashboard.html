@@ -14,7 +14,7 @@
 
     //= template/common/fonts_preload.html
 
-    <link rel="stylesheet" href="css/style.css" />
+    //= template/common/styles.html
 </head>
 
 <body class="page">
@@ -38,29 +38,20 @@
 
         //= template/dashboard/finance-planing.html
 
-        <div class="box">
-            <div class="box__title-block">
-                <p class="box__title">Коммунальные услуги</p>
-            </div>
+        //= template/dashboard/comm-services.html
 
-            <div class="tabs-menu">
-                <button class="button button--type_6 is-active" type="button">Электроэнергия</button>
-                <button class="button button--type_6" type="button">Газоснабжение</button>
-                <button class="button button--type_6" type="button">Водоотведение</button>
-                <button class="button button--type_6" type="button">Другие</button>
-            </div>
+        //= template/dashboard/free-objects.html
 
-            <div class="counter-info">
-                <p class="counter-info__title"><b>Номер счетчика:</b> 12345678</p>
-                <p class="counter-info__date">
-                    <svg aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#calendar_icon" />
-                    </svg>
-                    <span class="counter-info__date-title">Дата следующей поверки</span>
-                    20.02.2025
-                </p>
+        <div class="two-columns">
+            <div class="two-columns__column">
+                //= template/dashboard/my-tasks.html
+            </div>
+            <div class="two-columns__column">
+                //= template/dashboard/employes.html
             </div>
         </div>
+
+        //= template/dashboard/notifications_2.html
 
     </main>
 

@@ -1,19 +1,6 @@
 @mixin scrollbar {
     scrollbar-color: var(--primary_color) var(--grey);
     scrollbar-width: thin;
-
-    &::-webkit-scrollbar {
-        width: 4px;
-        height: 4px;
-        background-color: var(--grey_2);
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background: var(--primary_color);
-        border-radius: 2px;
-        height: 4px;
-        width: 4px;
-    }
 }
 @mixin list-reset {
     list-style: none;

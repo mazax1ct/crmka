@@ -1,0 +1,33 @@
+.free-objects-manage {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.free-objects-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    @media(max-width: $sm - 0.01px) {
+        flex-direction: column;
+    }
+
+    & > div {
+        @media(min-width: $sm) {
+            width: calc(100% / 3 - 10px * 2 / 3);
+        }
+    }
+}
+
+.free-objects-table {
+    th {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    td {
+        padding: 10px 15px;
+    }
+}

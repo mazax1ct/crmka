@@ -46,9 +46,11 @@ html {
         }
 
         .main-menu__link span,
+        .main-menu__submenu-toggler,
         .user-profile svg,
+        .user-profile__dropdown,
         .user-profile__name {
-            display: none;
+            display: none !important;
         }
     }
 
@@ -181,6 +183,12 @@ html {
         &.justify-content-spacebetween {
             justify-content: space-between;
         }
+
+        .tabs-menu,
+        .tabs-menu_2,
+        .tabs-menu_3 {
+            margin-bottom: 0 !important;
+        }
     }
 
     &__title {
@@ -209,6 +217,7 @@ html {
         gap: 10px;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin-top: 30px;
     }
 }
 
@@ -281,6 +290,7 @@ ul {
 
 .responsive-table,
 .table-responsive {
+    @include scrollbar;
     overflow-x: auto;
 
     &:not(:last-child) {
@@ -300,6 +310,10 @@ ul {
         line-height: 1;
         padding: 8px 5px;
         text-align: center;
+        @media(min-width: $lg) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 
     td {
@@ -307,6 +321,10 @@ ul {
         padding: 8px 5px;
         text-align: center;
         white-space: nowrap;
+        @media(min-width: $lg) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 
     .triangle {
@@ -394,5 +412,56 @@ ul {
         font-weight: 700;
         margin-right: 5px;
         margin-bottom: 0;
+        @media(max-width: $sm - 0.01px) {
+            min-width: 100%;
+        }
+    }
+}
+
+.text-status {
+    align-items: center;
+    display: inline-flex;
+    gap: 5px;
+    font-weight: 600;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &.red {
+        color: var(--red);
+
+        .text-status__icon {
+            background-color: var(--red);
+        }
+    }
+
+    &.blue {
+        color: var(--primary_color);
+
+        .text-status__icon {
+            background-color: var(--primary_color);
+        }
+    }
+
+    &.green {
+        color: var(--green);
+
+        .text-status__icon {
+            background-color: var(--green);
+        }
+    }
+
+    &.yellow {
+        color: var(--yellow);
+
+        .text-status__icon {
+            background-color: var(--yellow);
+        }
+    }
+
+    &__icon {
+        border-radius: 50%;
+        height: 8px;
+        min-width: 8px;
+        width: 8px;
     }
 }

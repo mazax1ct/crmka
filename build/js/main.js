@@ -31,18 +31,57 @@ $(document).on('click', '.js-sidebar-toggler', function () {
   return false;
 });
 
-
 //тогглер размера сайдбара
 $(document).on('click', '.js-sidebar-resizer', function () {
-  $(this).toggleClass('is-active');
-  $('.page').toggleClass('sidebar-collapsed');
+  if(!$(this).hasClass('is-active')) {
+    $(this).addClass('is-active');
+    $(this).attr('title', 'Увеличить');
+    $('.page').addClass('sidebar-collapsed');
+  } else {
+    $(this).removeClass('is-active');
+    $(this).attr('title', 'Уменьшить');
+    $('.page').removeClass('sidebar-collapsed');
+  }
   return false;
 });
 
-//тогглер размера сайдбара
+//тогглер блока пользователя
+$(document).on('click', '.js-user-profile-toggler', function () {
+  if(!$(this).hasClass('is-active')) {
+    $(this).addClass('is-active');
+    $('.user-profile__dropdown').fadeIn();
+  } else {
+    $(this).removeClass('is-active');
+    $('.user-profile__dropdown').fadeOut();
+  }
+  return false;
+});
+
+//тогглер сабменю
+$(document).on('click', '.js-submenu-toggler', function () {
+  if(!$(this).hasClass('is-active')) {
+    $(this).addClass('is-active');
+    $(this).attr('title', 'Закрыть меню');
+    $(this).closest('.main-menu__item').find('.main-menu__submenu').slideDown();
+  } else {
+    $(this).removeClass('is-active');
+    $(this).attr('title', 'Открыть меню');
+    $(this).closest('.main-menu__item').find('.main-menu__submenu').slideUp();
+  }
+  return false;
+});
+
+//тогглер меню объектов
 $(document).on('click', '.js-objects-menu-toggler', function () {
-  $(this).toggleClass('is-active');
-  $('.objects-menu__wrapper').toggleClass('is-open');
+  if(!$(this).hasClass('is-active')) {
+    $(this).addClass('is-active');
+    $(this).text('Сверуть список');
+    $('.objects-menu__wrapper').addClass('is-open');
+  } else {
+    $(this).removeClass('is-active');
+    $(this).text('Развернуть список');
+    $('.objects-menu__wrapper').removeClass('is-open');
+  }
   return false;
 });
 
@@ -134,5 +173,6 @@ $(document).on('click', '.pseudo-select__item', function () {
   $(this).closest('.pseudo-select').find('.pseudo-select__item').removeClass('is-active');
   $(this).addClass('is-active');
   $(this).closest('.pseudo-select').find('.pseudo-select__value span').text($(this).text());
+  $(this).closest('.pseudo-select').removeClass('is-open');
   return false
 });

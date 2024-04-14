@@ -1,0 +1,9 @@
+.comm-services-table {
+    td,
+    th {
+        @media(min-width: $lg) {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+}

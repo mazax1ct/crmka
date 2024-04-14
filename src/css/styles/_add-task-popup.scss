@@ -1,0 +1,34 @@
+.add-task-popup {
+    padding: 20px;
+    max-width: 830px;
+    @media(min-width: $sm) {
+        padding: 45px;
+    }
+
+    &.fancybox-content {
+        padding: 20px;
+        @media(min-width: $sm) {
+            padding: 45px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 30px;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__column {
+        width: calc(100% / 2 - 30px / 2);
+    }
+
+    &__label {
+        display: block;
+        font-weight: 700;
+        line-height: 1.21428;
+        margin-bottom: 10px;
+    }
+}

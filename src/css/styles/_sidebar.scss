@@ -7,6 +7,7 @@
     min-height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
+    overscroll-behavior: none;
     padding: 30px 10px;
     scrollbar-gutter: both-edges;
     @media(min-width: $hd) {
@@ -76,6 +77,9 @@
 }
 
 .user-profile {
+    position: relative;
+    z-index: 1;
+
     &__button {
         @include button-reset;
         align-items: center;
@@ -83,10 +87,18 @@
         gap: 15px;
         font-size: 16px;
         font-weight: 600;
+        position: relative;
         transition: color 0.3s;
         width: 100%;
+        z-index: 2;
         @include hover {
             color: var(--primary_color);
+        }
+
+        &.is-active {
+            svg {
+                transform: rotate(180deg);
+            }
         }
     }
 
@@ -141,6 +153,55 @@
         min-width: 11px;
         width: 11px;
     }
+
+    &__dropdown {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px 0 rgba(72, 128, 255, 0.2);
+        display: none;
+        left: -20px;
+        position: absolute;
+        padding: 75px 20px 20px;
+        top: -20px;
+        width: calc(100% + 40px);
+        z-index: 1;
+    }
+
+    &__dropdown-list {
+        @include list-reset;
+    }
+
+    &__dropdown-list-item {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__dropdown-link {
+        align-items: center;
+        color: var(--primary_color);
+        display: flex;
+        font-weight: 600;
+        justify-content: space-between;
+        line-height: 1.21428;
+        text-decoration: none;
+        @include hover {
+            color: var(--primary_color_50);
+        }
+
+        .cnt {
+            align-items: center;
+            background-color: var(--green);
+            border-radius: 4px;
+            color: #fff;
+            display: flex;
+            height: 20px;
+            justify-content: center;
+            min-width: 20px;
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+    }
 }
 
 .add-tasks-buttons {
@@ -183,11 +244,16 @@
         }
     }
 
+    &__link-container {
+        position: relative;
+        z-index: 1;
+    }
+
     &__link {
         align-items: center;
         border: 1px solid transparent;
         border-radius: 8px;
-        color: var(--grey_3);
+        color: var(--grey_10);
         display: flex;
         gap: 16px;
         height: 42px;
@@ -200,6 +266,10 @@
             @include hover {
                 border-color: var(--primary_color);
                 color: var(--primary_color);
+
+                svg {
+                    fill: var(--primary_color);
+                }
             }
         }
 
@@ -207,13 +277,82 @@
             background-color: var(--grey_2);
             color: var(--primary_color);
             font-weight: 700;
+
+            svg {
+                fill: var(--primary_color);
+            }
         }
 
         svg {
-            fill: currentColor;
+            fill: var(--grey_3);
             height: 24px;
             min-width: 24px;
             width: 24px;
+        }
+    }
+
+    &__submenu-toggler {
+        @include button-reset;
+        align-items: center;
+        //background-color: var(--grey_2);
+        border-radius: 8px;
+        display: flex;
+        height: 42px;
+        justify-content: center;
+        left: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: background-color 0.3s;
+        width: 42px;
+        z-index: 1;
+        @include hover {
+            background-color: var(--grey_2);
+        }
+
+        &.is-active {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        svg {
+            fill: var(--primary_color);
+            height: 11px;
+            width: 11px;
+        }
+    }
+
+    &__submenu {
+        @include list-reset;
+        border-radius: 8px;
+        background-color: var(--grey_2);
+        display: none;
+        margin-top: 2px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__submenu-item {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__submenu-link {
+        color: var(--grey_10);
+        display: block;
+        line-height: 1.21428;
+        padding-left: 60px;
+        padding-right: 20px;
+        text-decoration: none;
+        @include hover {
+            color: var(--primary_color);
+        }
+
+        &.is-active {
+            color: var(--primary_color);
+            font-weight: 700;
         }
     }
 }

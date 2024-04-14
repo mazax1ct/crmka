@@ -1,0 +1,38 @@
+.popup {
+    background-color: #fff;
+    border-radius: 8px;
+    display: none;
+    width: 100%;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 30px;
+    }
+
+    &__close {
+        @include button-reset;
+        @include active-area;
+        height: 24px;
+        left: auto;
+        position: absolute;
+        right: 45px;
+        top: 45px;
+        width: 24px;
+        z-index: 1;
+
+        &.fancybox-close-small {
+            opacity: 1;
+            padding: 0;
+            right: 45px;
+            top: 45px;
+        }
+
+        svg {
+            fill: var(--primary_color);
+            height: 24px;
+            width: 24px;
+        }
+    }
+}

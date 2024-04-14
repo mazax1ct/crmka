@@ -21,6 +21,7 @@
     }
 
     &.status-red {
+        color: var(--red);
         @include hover {
             border-color: var(--red);
         }
@@ -31,6 +32,7 @@
 
         .task__date {
             color: var(--red);
+            opacity: 0.8;
         }
     }
 

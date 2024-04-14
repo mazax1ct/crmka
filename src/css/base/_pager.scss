@@ -1,0 +1,59 @@
+.pager {
+    @include list-reset;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+
+    &__item {
+        &--arrow {
+            @media(max-width: $sm - 0.01px) {
+                display: none;
+            }
+
+            .pager__link {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+
+    &__link {
+        align-items: center;
+        border: 1px solid var(--grey_2);
+        border-radius: 8px;
+        color: var(--grey_5);
+        display: flex;
+        font-weight: 700;
+        gap: 8px;
+        height: 40px;
+        justify-content: center;
+        min-width: 40px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-decoration: none;
+        transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+        @include hover {
+            border-color: var(--primary_color);
+            color: var(--primary_color);
+        }
+
+        &.is-active {
+            background-color: var(--primary_color);
+            border-color: var(--primary_color);
+            color: #fff;
+            @include hover {
+                background-color: var(--primary_color);
+                border-color: var(--primary_color);
+                color: #fff;
+            }
+        }
+
+        svg {
+            fill: currentColor;
+            height: 12px;
+            width: 12px;
+        }
+    }
+}

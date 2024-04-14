@@ -27,6 +27,7 @@
 
 .tabs-menu_2 {
     display: flex;
+    gap: 5px;
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -54,7 +55,7 @@
 
 .tabs-menu_3 {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;

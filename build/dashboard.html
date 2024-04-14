@@ -25,6 +25,7 @@
     <link rel="preload" href="fonts/subset-Qanelas-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
     <link rel="stylesheet" href="plugins_css/select2.css" />
+    <link rel="stylesheet" href="plugins_css/jquery.fancybox.css" />
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -41,7 +42,7 @@
                 <div class="sidebar__logo"><img src="images/logo.svg" alt="CRMka"></div>
     
                 <div class="user-profile">
-                    <button class="user-profile__button" type="button">
+                    <button class="js-user-profile-toggler user-profile__button" type="button">
                         <span class="user-profile__avatar">
                             <span class="user-profile__status online"></span>
                             ЛВ
@@ -51,6 +52,17 @@
                             <use xlink:href="images/sprite.svg#chevron_down" />
                         </svg>
                     </button>
+    
+                    <div class="user-profile__dropdown">
+                        <ul class="user-profile__dropdown-list">
+                            <li class="user-profile__dropdown-list-item">
+                                <a class="user-profile__dropdown-link" href="#">Настройки</a>
+                            </li>
+                            <li class="user-profile__dropdown-list-item">
+                                <a class="user-profile__dropdown-link" href="#">Уведомления <span class="cnt">3</span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
     
@@ -97,12 +109,35 @@
                         </a>
                     </li>
                     <li class="main-menu__item">
-                        <a class="main-menu__link" href="#" title="Арендаторы">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#users_icon" />
-                            </svg>
-                            <span>Арендаторы</span>
-                        </a>
+                        <div class="main-menu__link-container">
+                            <a class="main-menu__link" href="#" title="Арендаторы">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#users_icon" />
+                                </svg>
+                                <span>Арендаторы</span>
+                            </a>
+    
+                            <button class="js-submenu-toggler main-menu__submenu-toggler" type="button" title="Открыть меню">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#chevron_down" />
+                                </svg>
+                            </button>
+                        </div>
+    
+                        <ul class="main-menu__submenu">
+                            <li class="main-menu__submenu-item">
+                                <a class="main-menu__submenu-link" href="#">Название подраздела</a>
+                            </li>
+                            <li class="main-menu__submenu-item">
+                                <a class="main-menu__submenu-link is-active" href="#">Название подраздела подлиннее</a>
+                            </li>
+                            <li class="main-menu__submenu-item">
+                                <a class="main-menu__submenu-link" href="#">Название подраздела ещё длиннее чем предыдущий</a>
+                            </li>
+                            <li class="main-menu__submenu-item">
+                                <a class="main-menu__submenu-link" href="#">И наконец самое длинное название подраздела для проверки всего и вся и прочего</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="main-menu__item">
                         <a class="main-menu__link" href="#" title="Документы">
@@ -197,7 +232,7 @@
             <h1 class="page__top-title">Холдинг Аренда</h1>
         
             <div class="page__top-buttons">
-                <button class="button button--type_1" type="button">
+                <button class="button button--type_1" type="button" data-fancybox data-src="#add-task-popup">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#circle_plus_icon" />
                     </svg>
@@ -260,7 +295,7 @@
                     </li>
                 </ul>
             </div>
-            <button class="js-objects-menu-toggler objects-menu-toggler button button--type_3" type="button"><span>Развернуть список</span></button>
+            <button class="js-objects-menu-toggler objects-menu-toggler button button--type_3" type="button">Развернуть список</button>
         </div>
 
         <div class="search">
@@ -496,7 +531,7 @@
             </div>
         
             <div class="responsive-table">
-                <table class="table">
+                <table class="table comm-services-table">
                     <tr>
                         <th></th>
                         <th>Январь</th>
@@ -961,48 +996,328 @@
                 </a>
             </div>
         
-            <div class="notification status-red status-red-filled">
-                <div class="notification__title-block">
-                    <span class="notification__text-status">Новое</span>
-                    <span class="notification__title">Долг за аренду ООО «Ромашка»</span>
+            <div class="box__title-block justify-content-spacebetween">
+                <div class="tabs-menu_3">
+                    <button class="button button--type_4 button--type_4_2 is-active" type="button">
+                        <span>Уведомления</span>
+                    </button>
+        
+                    <button class="button button--type_4 button--type_4_2" type="button">
+                        <span>Задачи</span>
+                    </button>
+        
+                    <button class="button button--type_4 button--type_4_2" type="button">
+                        <span>Напоминания</span>
+                    </button>
+        
+                    <button class="button button--type_4 button--type_4_2" type="button">
+                        <span>Все</span>
+                    </button>
                 </div>
-                <div class="notification__date">28.02.2024</div>
-                <svg class="notification__arrow-icon" aria-hidden="true">
-                    <use xlink:href="images/sprite.svg#chevron_right" />
-                </svg>
+        
+                <div class="tabs-menu_2">
+                    <button class="button button--type_8 status-blue" type="button">
+                        <span>Еще 1 день</span>
+                        <span class="cnt">6</span>
+                    </button>
+        
+                    <button class="button button--type_8 status-red" type="button">
+                        <span>Просрочено</span>
+                        <span class="cnt">2</span>
+                    </button>
+        
+                    <button class="button button--type_8 status-blue is-active" type="button">
+                        <span>Все</span>
+                        <span class="cnt">8</span>
+                    </button>
+                </div>
             </div>
         
-            <div class="notification status-red status-red-filled">
-                <div class="notification__title-block">
-                    <span class="notification__text-status">Новое</span>
-                    <span class="notification__title">Долг за аренду ООО «Ромашка»</span>
-                </div>
-                <div class="notification__date">28.02.2024</div>
-                <svg class="notification__arrow-icon" aria-hidden="true">
-                    <use xlink:href="images/sprite.svg#chevron_right" />
-                </svg>
-            </div>
-        
-            <div class="notification status-red">
+            <div class="notification status-blue status-blue-filled">
                 <div class="notification__title-block">
                     <span class="notification__status"></span>
-                    <span class="notification__title">Долг за аренду ООО «Ромашка»</span>
+                    <span class="notification__title">Выставить счет - помещение #456</span>
                 </div>
-                <div class="notification__date">28.02.2024</div>
-                <svg class="notification__arrow-icon" aria-hidden="true">
-                    <use xlink:href="images/sprite.svg#chevron_right" />
-                </svg>
+                <div class="notification__date">Крайний срок: 05.03.2024</div>
+            </div>
+        
+            <div class="notification status-blue status-blue-filled">
+                <div class="notification__title-block">
+                    <span class="notification__status"></span>
+                    <span class="notification__title">Выставить счет - помещение #789</span>
+                </div>
+                <div class="notification__date">Крайний срок: 05.03.2024</div>
+            </div>
+        
+            <div class="notification status-green">
+                <div class="notification__title-block">
+                    <span class="notification__status"></span>
+                    <span class="notification__title">Продлить договор ООО «Ромашка»</span>
+                </div>
+                <div class="notification__date">Крайний срок: 03.03.2024</div>
+            </div>
+        
+            <div class="notification status-green status-green-filled">
+                <div class="notification__title-block">
+                    <span class="notification__status"></span>
+                    <span class="notification__title">Продлить договор ООО «Ромашка»</span>
+                </div>
+                <div class="notification__date">Крайний срок: 03.03.2024</div>
+            </div>
+        
+            <div class="notification status-red status-red-filled">
+                <div class="notification__title-block">
+                    <span class="notification__status"></span>
+                    <span class="notification__title">Собрать информацию о коммунальных платежах</span>
+                </div>
+                <div class="notification__date">Крайний срок: 02.03.2024</div>
+            </div>
+        
+            <div class="notification status-red status-red-filled">
+                <div class="notification__title-block">
+                    <span class="notification__status"></span>
+                    <span class="notification__title">Проверка счетчика на воду помещение #198</span>
+                </div>
+                <div class="notification__date">Крайний срок: 28.02.2024</div>
             </div>
         
             <div class="box__footer">
+                <a class="button button--type_10" href="#">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#archive_icon" />
+                    </svg>
+                    <span>Архив</span>
+                </a>
         
+                <ul class="pager">
+                    <li class="pager__item">
+                        <a class="pager__link is-active" href="#">1</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">2</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">3</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">...</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">7</a>
+                    </li>
+                    <li class="pager__item pager__item--arrow">
+                        <a class="pager__link" href="#">
+                            <span>Вперед</span>
+                            <svg class="notification__arrow-icon" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box__title-block justify-content-spacebetween">
+                <p class="box__title">Финансы</p>
+                <button class="button button--type_1" type="button">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+                    </svg>
+                    <span>Добавить новый счет</span>
+                </button>
+            </div>
+        
+            <div class="box__title-block justify-content-spacebetween">
+                <div class="tabs-menu_3">
+                    <button class="button button--type_4 button--type_4_2 is-active" type="button">
+                        <span>Коммунальные услуги</span>
+                    </button>
+        
+                    <button class="button button--type_4 button--type_4_2" type="button">
+                        <span>Аренда</span>
+                    </button>
+        
+                    <button class="button button--type_4 button--type_4_2" type="button">
+                        <span>Все</span>
+                    </button>
+                </div>
+        
+                <div class="tabs-menu_2">
+                    <button class="button button--type_8 status-blue is-active" type="button">
+                        <span>Все</span>
+                        <span class="cnt">12</span>
+                    </button>
+        
+                    <button class="button button--type_8 status-blue" type="button">
+                        <span>Выставленные</span>
+                        <span class="cnt">9</span>
+                    </button>
+        
+                    <button class="button button--type_8 status-red" type="button">
+                        <span>Не оплаченные</span>
+                        <span class="cnt">3</span>
+                    </button>
+                </div>
+            </div>
+        
+            <div class="responsive-table">
+                <table class="table">
+                    <tr>
+                        <th class="text-left">Плательщик</th>
+                        <th>Помещение</th>
+                        <th>Сумма</th>
+                        <th class="text-right">Статус</th>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><b>OOO «Ромашка»</b></td>
+                        <td class="color-grey fw_600">#255</td>
+                        <td class="fw_600 color-red">25 000 ₽</td>
+                        <td class="text-right">
+                            <div class="text-status red">
+                                <span class="text-status__icon"></span>
+                                Не оплачено
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><b>OOO «Авансов»</b></td>
+                        <td class="color-grey fw_600">#198</td>
+                        <td class="fw_600">35 000 ₽</td>
+                        <td class="text-right">
+                            <div class="text-status yellow">
+                                <span class="text-status__icon"></span>
+                                В оплате
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><b>OOO «Эдельвейс»</b></td>
+                        <td class="color-grey fw_600">#18943</td>
+                        <td class="fw_600">35 000 ₽</td>
+                        <td class="text-right">
+                            <div class="text-status green">
+                                <span class="text-status__icon"></span>
+                                Оплачено
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><b>OOO «Ромашка»</b></td>
+                        <td class="color-grey fw_600">#255</td>
+                        <td class="fw_600 color-red">25 000 ₽</td>
+                        <td class="text-right">
+                            <div class="text-status red">
+                                <span class="text-status__icon"></span>
+                                Не оплачено
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><b>OOO «Авансов»</b></td>
+                        <td class="color-grey fw_600">#198</td>
+                        <td class="fw_600">35 000 ₽</td>
+                        <td class="text-right">
+                            <div class="text-status yellow">
+                                <span class="text-status__icon"></span>
+                                В оплате
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><b>OOO «Эдельвейс»</b></td>
+                        <td class="color-grey fw_600">#18943</td>
+                        <td class="fw_600">35 000 ₽</td>
+                        <td class="text-right">
+                            <div class="text-status green">
+                                <span class="text-status__icon"></span>
+                                Оплачено
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        
+            <div class="box__footer">
+                <a class="button button--type_10" href="#">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#archive_icon" />
+                    </svg>
+                    <span>Архив</span>
+                </a>
+        
+                <ul class="pager">
+                    <li class="pager__item">
+                        <a class="pager__link is-active" href="#">1</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">2</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">3</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">...</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">7</a>
+                    </li>
+                    <li class="pager__item pager__item--arrow">
+                        <a class="pager__link" href="#">
+                            <span>Вперед</span>
+                            <svg class="notification__arrow-icon" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
 
     </main>
 
+    <div id="add-task-popup" class="popup add-task-popup">
+        <p class="popup__title">Поставить новую задачу</p>
+    
+        <form action="">
+            <div class="add-task-popup__row">
+                <div class="add-task-popup__column">
+    
+                </div>
+    
+                <div class="add-task-popup__column">
+                    <label class="add-task-popup__label" for="">Добавить описание задачи</label>
+                    <textarea class="textarea" placeholder="Опишите задачу..."></textarea>
+                </div>
+            </div>
+    
+            <div class="add-task-popup__row">
+                <div class="add-task-popup__column">
+                    <label class="add-task-popup__label" for="">Выбрать ответственного</label>
+    
+                </div>
+    
+                <div class="add-task-popup__column">
+                    <label class="add-task-popup__label" for="">Поставить срок</label>
+                    <textarea class="textarea" placeholder="Опишите задачу..."></textarea>
+                </div>
+            </div>
+    
+            <div class="add-task-popup__row">
+                <div class="add-task-popup__column">
+                    <label class="add-task-popup__label" for="">Приоритет</label>
+    
+                </div>
+    
+                <div class="add-task-popup__column">
+                    <button class="button" type="submit">Добавить</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/slick.min.js"></script>
+    
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/fancybox-defaults.js"></script>
     

@@ -258,7 +258,7 @@
 
         &.status-blue {
             .cnt {
-                background-color: var(--primary_color_50);
+                background-color: #E4EDFF;
                 color: var(--primary_color);
             }
         }
@@ -272,6 +272,7 @@
 
         .cnt {
             border-radius: 4px;
+            min-width: 16px;
             padding: 2px 4px;
         }
     }
@@ -284,6 +285,32 @@
         width: 100%;
         @include hover {
             border-color: var(--grey_3);
+        }
+    }
+
+    &--type_10 {
+        background-color: var(--grey_11);
+        border-radius: 8px;
+        color: var(--grey_12);
+        font-weight: 700;
+        gap: 10px;
+        height: 40px;
+        padding-left: 12px;
+        padding-right: 16px;
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--grey_7);
+                color: var(--grey_3);
+            }
+        }
+
+        svg {
+            fill: currentColor;
+            height: 24px;
+            width: 24px;
         }
     }
 }

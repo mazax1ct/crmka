@@ -10,7 +10,7 @@
             <div class="sidebar__logo"><img src="images/logo.svg" alt="CRMka"></div>
 
             <div class="user-profile">
-                <button class="user-profile__button" type="button">
+                <button class="js-user-profile-toggler user-profile__button" type="button">
                     <span class="user-profile__avatar">
                         <span class="user-profile__status online"></span>
                         ЛВ
@@ -20,6 +20,17 @@
                         <use xlink:href="images/sprite.svg#chevron_down" />
                     </svg>
                 </button>
+
+                <div class="user-profile__dropdown">
+                    <ul class="user-profile__dropdown-list">
+                        <li class="user-profile__dropdown-list-item">
+                            <a class="user-profile__dropdown-link" href="#">Настройки</a>
+                        </li>
+                        <li class="user-profile__dropdown-list-item">
+                            <a class="user-profile__dropdown-link" href="#">Уведомления <span class="cnt">3</span></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -66,12 +77,35 @@
                     </a>
                 </li>
                 <li class="main-menu__item">
-                    <a class="main-menu__link" href="#" title="Арендаторы">
-                        <svg aria-hidden="true">
-                            <use xlink:href="images/sprite.svg#users_icon" />
-                        </svg>
-                        <span>Арендаторы</span>
-                    </a>
+                    <div class="main-menu__link-container">
+                        <a class="main-menu__link" href="#" title="Арендаторы">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#users_icon" />
+                            </svg>
+                            <span>Арендаторы</span>
+                        </a>
+
+                        <button class="js-submenu-toggler main-menu__submenu-toggler" type="button" title="Открыть меню">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_down" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="main-menu__submenu">
+                        <li class="main-menu__submenu-item">
+                            <a class="main-menu__submenu-link" href="#">Название подраздела</a>
+                        </li>
+                        <li class="main-menu__submenu-item">
+                            <a class="main-menu__submenu-link is-active" href="#">Название подраздела подлиннее</a>
+                        </li>
+                        <li class="main-menu__submenu-item">
+                            <a class="main-menu__submenu-link" href="#">Название подраздела ещё длиннее чем предыдущий</a>
+                        </li>
+                        <li class="main-menu__submenu-item">
+                            <a class="main-menu__submenu-link" href="#">И наконец самое длинное название подраздела для проверки всего и вся и прочего</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="main-menu__item">
                     <a class="main-menu__link" href="#" title="Документы">

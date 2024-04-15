@@ -9,6 +9,7 @@
         font-weight: 700;
         line-height: 1.25;
         margin-bottom: 30px;
+        padding-right: 50px;
     }
 
     &__close {
@@ -17,16 +18,22 @@
         height: 24px;
         left: auto;
         position: absolute;
-        right: 45px;
+        right: 20px;
         top: 45px;
         width: 24px;
         z-index: 1;
+        @media(min-width: $sm) {
+            right: 45px;
+        }
 
         &.fancybox-close-small {
             opacity: 1;
             padding: 0;
-            right: 45px;
+            right: 20px;
             top: 45px;
+            @media(min-width: $sm) {
+                right: 45px;
+            }
         }
 
         svg {

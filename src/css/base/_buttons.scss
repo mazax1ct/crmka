@@ -313,4 +313,27 @@
             width: 24px;
         }
     }
+
+    &--type_11 {
+        background-color: var(--primary_color);
+        border-radius: 8px;
+        color: #fff;
+        font-weight: 700;
+        height: 60px;
+        width: 100%;
+
+        &.disabled,
+        &:disabled,
+        &[data-disabled] {
+            background-color: var(--grey);
+        }
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--primary_color_darker);
+            }
+        }
+    }
 }

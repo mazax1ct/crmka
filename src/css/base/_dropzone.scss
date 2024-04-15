@@ -1,0 +1,54 @@
+.dropzone {
+    align-items: center;
+    border-radius: 8px;
+    border: 2px dashed var(--grey_3);
+    background-color: var(--grey_9);
+    display: flex;
+    flex-direction: column;
+    height: 190px;
+    justify-content: center;
+
+    svg {
+        fill: var(--primary_color);
+        height: 24px;
+        margin-bottom: 10px;
+        width: 24px;
+    }
+
+    &__title {
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+}
+
+.input-file {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    input {
+        position: absolute;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 1px;
+    }
+
+    &__text {
+        align-items: center;
+        border-radius: 8px;
+        background-color: var(--primary_color);
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        font-weight: 700;
+        height: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        transition: background-color 0.3s;
+        @include hover {
+            background-color: var(--primary_color_darker);
+        }
+    }
+}

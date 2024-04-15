@@ -8,30 +8,32 @@
     border: 1px solid var(--grey_2);
     background-color: #fff;
     color: inherit;
+    display: block;
     font-size: inherit;
     font-weight: inherit;
     line-height: inherit;
+    margin: 0;
     padding: 21px;
     transition: border-color 0.3s;
     width: 100%;
 
     &::-webkit-input-placeholder {
-        color: inherit;
+        color: var(--grey_3);
         opacity: 1;
     }
 
     &::-moz-placeholder {
-        color: inherit;
+        color: var(--grey_3);
         opacity: 1;
     }
 
     &:-ms-input-placeholder {
-        color: inherit;
+        color: var(--grey_3);
         opacity: 1;
     }
 
     &:focus {
-        border-color: var(--primary_color);
+        border-color: var(--grey_3);
     }
 
     &.disabled,
@@ -49,7 +51,7 @@
 }
 
 .textarea {
-    height: 180px;
+    height: 160px;
     resize: none;
 }
 

@@ -1,12 +1,13 @@
 .add-task-popup {
-    padding: 20px;
+    overflow: visible;
+    padding: 45px 20px 20px;
     max-width: 830px;
     @media(min-width: $sm) {
         padding: 45px;
     }
 
     &.fancybox-content {
-        padding: 20px;
+        padding: 45px 20px 20px;
         @media(min-width: $sm) {
             padding: 45px;
         }
@@ -15,6 +16,10 @@
     &__row {
         display: flex;
         gap: 30px;
+        flex-direction: column;
+        @media(min-width: $sm) {
+            flex-direction: row;
+        }
 
         &:not(:last-child) {
             margin-bottom: 30px;
@@ -22,7 +27,9 @@
     }
 
     &__column {
-        width: calc(100% / 2 - 30px / 2);
+        @media(min-width: $sm) {
+            width: calc(100% / 2 - 30px / 2);
+        }
     }
 
     &__label {
@@ -30,5 +37,20 @@
         font-weight: 700;
         line-height: 1.21428;
         margin-bottom: 10px;
+    }
+
+    .inputs-group {
+        display: flex;
+        gap: 10px;
+    }
+
+    .radios-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .textarea {
+        height: 163px;
     }
 }

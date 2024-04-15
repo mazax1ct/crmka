@@ -176,3 +176,25 @@ $(document).on('click', '.pseudo-select__item', function () {
   $(this).closest('.pseudo-select').removeClass('is-open');
   return false
 });
+
+//timepicker
+$(document).on('focus', '.js-time-picker input', function () {
+  $('.time-picker').removeClass('is-open');
+  $(this).closest('.time-picker').addClass('is-open');
+  document.addEventListener('click', closeTimePiker);
+});
+
+function closeTimePiker(evt) {
+  if (!$('.time-picker.is-open').is(evt.target) && $('.time-picker.is-open').has(evt.target).length === 0) {
+    $('.time-picker').removeClass('is-open');
+    document.removeEventListener('click', closeTimePiker);
+	}
+}
+
+$(document).on('click', '.time-picker__item', function () {
+  $(this).closest('.time-picker').find('.time-picker__item').removeClass('is-active');
+  $(this).addClass('is-active');
+  $(this).closest('.time-picker').find('.time-picker__input').val($(this).text());
+  $(this).closest('.time-picker').removeClass('is-open');
+  document.removeEventListener('click', closeTimePiker);
+});

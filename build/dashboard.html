@@ -1321,7 +1321,10 @@
                     <label class="add-task-popup__label" for="date">Поставить срок</label>
     
                     <div class="inputs-group">
-                        <input id="date" class="input" type="date">
+                        <div class="datepicker">
+                            <input class="datepicker__input input" type="date">
+                            <button class="js-datepicker datepicker__button" type="button" title="Показать календарь"></button>
+                        </div>
     
                         <div class="js-time-picker time-picker">
                             <input class="time-picker__input input" type="number" name="" value="00" readonly>

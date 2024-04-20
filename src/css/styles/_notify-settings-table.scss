@@ -1,0 +1,36 @@
+.notify-settings-table {
+    td,
+    th {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    th {
+        .checkbox {
+            vertical-align: middle;
+
+            input {
+                &:checked ~ .checkbox__text {
+                    color: var(--text_color);
+                }
+            }
+
+            .checkbox__text {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    td {
+        .checkbox {
+            display: inline-flex;
+            vertical-align: middle;
+
+            input {
+                &:checked ~ .checkbox__text {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

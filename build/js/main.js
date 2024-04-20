@@ -5,7 +5,7 @@ $(document).ready(function () {
     $(this).select2({
       minimumResultsForSearch: Infinity,
       dropdownPosition: 'below',
-      dropdownParent: $p,
+      dropdownParent: $p
     });
 	}).on("select2:open", function (e) {
     var $p = $(this).closest('.select-wrapper');
@@ -86,82 +86,84 @@ $(document).on('click', '.js-objects-menu-toggler', function () {
 });
 
 //меню объектов
-var wrap = document.querySelector(".objects-menu__wrapper");
-var list = document.querySelector(".objects-menu__list");
+if($('.objects-menu__wrapper').length) {
+  var wrap = document.querySelector(".objects-menu__wrapper");
+  var list = document.querySelector(".objects-menu__list");
 
-wrap.setAttribute("data-overflowing", determineOverflow(list, wrap));
-
-var last_known_scroll_position = 0;
-var ticking = false;
-
-function doSomething(scroll_pos) {
   wrap.setAttribute("data-overflowing", determineOverflow(list, wrap));
-}
 
-wrap.addEventListener("scroll", function() {
-  last_known_scroll_position = window.scrollY;
-  if (!ticking) {
-    window.requestAnimationFrame(function() {
-      doSomething(last_known_scroll_position);
-      ticking = false;
-    });
+  var last_known_scroll_position = 0;
+  var ticking = false;
+
+  function doSomething(scroll_pos) {
+    wrap.setAttribute("data-overflowing", determineOverflow(list, wrap));
   }
-  ticking = true;
-});
 
-function determineOverflow(content, container) {
-  var containerMetrics = container.getBoundingClientRect();
-  var containerMetricsRight = Math.floor(containerMetrics.right);
-  var containerMetricsLeft = Math.floor(containerMetrics.left);
-  var contentMetrics = content.getBoundingClientRect();
-  var contentMetricsRight = Math.floor(contentMetrics.right);
-  var contentMetricsLeft = Math.floor(contentMetrics.left);
-  if (containerMetricsLeft > contentMetricsLeft && containerMetricsRight < contentMetricsRight) {
-    return "both";
-  } else if (contentMetricsLeft < containerMetricsLeft) {
-    return "left";
-  } else if (contentMetricsRight > containerMetricsRight) {
-    return "right";
-  } else {
-    return "none";
+  wrap.addEventListener("scroll", function() {
+    last_known_scroll_position = window.scrollY;
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        doSomething(last_known_scroll_position);
+        ticking = false;
+      });
+    }
+    ticking = true;
+  });
+
+  function determineOverflow(content, container) {
+    var containerMetrics = container.getBoundingClientRect();
+    var containerMetricsRight = Math.floor(containerMetrics.right);
+    var containerMetricsLeft = Math.floor(containerMetrics.left);
+    var contentMetrics = content.getBoundingClientRect();
+    var contentMetricsRight = Math.floor(contentMetrics.right);
+    var contentMetricsLeft = Math.floor(contentMetrics.left);
+    if (containerMetricsLeft > contentMetricsLeft && containerMetricsRight < contentMetricsRight) {
+      return "both";
+    } else if (contentMetricsLeft < containerMetricsLeft) {
+      return "left";
+    } else if (contentMetricsRight > containerMetricsRight) {
+      return "right";
+    } else {
+      return "none";
+    }
   }
+
+  const scrollContainer = document.querySelector(".js-horizontal-scroll");
+
+  scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+  });
+
+  let mouseDown = false;
+  let startX, scrollLeft;
+  const slider = document.querySelector('.js-horizontal-scroll');
+
+  const startDragging = (e) => {
+    mouseDown = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  }
+
+  const stopDragging = (e) => {
+    slider.classList.remove("is-dragging");
+    mouseDown = false;
+  }
+
+  const move = (e) => {
+    e.preventDefault();
+    if(!mouseDown) { return; }
+    const x = e.pageX - slider.offsetLeft;
+    const scroll = x - startX;
+    slider.scrollLeft = scrollLeft - scroll;
+    slider.classList.add("is-dragging");
+  }
+
+  slider.addEventListener('mousemove', move, false);
+  slider.addEventListener('mousedown', startDragging, false);
+  slider.addEventListener('mouseup', stopDragging, false);
+  slider.addEventListener('mouseleave', stopDragging, false);
 }
-
-const scrollContainer = document.querySelector(".js-horizontal-scroll");
-
-scrollContainer.addEventListener("wheel", (evt) => {
-  evt.preventDefault();
-  scrollContainer.scrollLeft += evt.deltaY;
-});
-
-let mouseDown = false;
-let startX, scrollLeft;
-const slider = document.querySelector('.js-horizontal-scroll');
-
-const startDragging = (e) => {
-  mouseDown = true;
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-}
-
-const stopDragging = (e) => {
-  slider.classList.remove("is-dragging");
-  mouseDown = false;
-}
-
-const move = (e) => {
-  e.preventDefault();
-  if(!mouseDown) { return; }
-  const x = e.pageX - slider.offsetLeft;
-  const scroll = x - startX;
-  slider.scrollLeft = scrollLeft - scroll;
-  slider.classList.add("is-dragging");
-}
-
-slider.addEventListener('mousemove', move, false);
-slider.addEventListener('mousedown', startDragging, false);
-slider.addEventListener('mouseup', stopDragging, false);
-slider.addEventListener('mouseleave', stopDragging, false);
 
 //псевдо селект
 $(document).on('click', '.js-pseudo-select-toggler', function () {
@@ -197,4 +199,21 @@ $(document).on('click', '.time-picker__item', function () {
   $(this).closest('.time-picker').find('.time-picker__input').val($(this).text());
   $(this).closest('.time-picker').removeClass('is-open');
   document.removeEventListener('click', closeTimePiker);
+});
+
+//datepicker
+document.querySelectorAll(".js-datepicker").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    const input = event.srcElement.previousElementSibling;
+    try {
+      input.showPicker();
+    } catch (error) {
+      window.alert(error);
+    }
+  });
+});
+
+//множественный тогглер чекбоксов
+$(document).on('click', '.js-select-all', function () {
+  $(this).closest('table').find('input[type="checkbox"][data-checkbox="'+$(this).attr('data-checkbox')+'"]').prop('checked', this.checked);
 });

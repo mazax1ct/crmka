@@ -9,8 +9,10 @@ $lg: 1400px;
     --text_color: #202224;
     --primary_color: #4880FF;
     --primary_color_50: rgba(72, 128, 255, 0.5);
+    --primary_color_10: rgba(72, 128, 255, 0.1);
     --primary_color_darker: #3266DC;
     --red: #F63F3F;
+    --red_10: rgba(246, 63, 63, 0.1);
     --pink: #FFEDED;
     --pink_2: #F9E0DF;
     --pink_3: #ECD0CF;
@@ -30,4 +32,7 @@ $lg: 1400px;
     --grey_11: #F0F3F8;
     --grey_12: #A4AEBF;
     --yellow: #FFC700;
+    --yellow_10: rgba(255, 199, 0, 0.1);
+    --orange: #FF9548;
+    --orange_10: rgba(255, 149, 72, 0.1);
 }

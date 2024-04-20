@@ -1,0 +1,66 @@
+.roles-table {
+    td {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.user {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+
+    img {
+        border-radius: 50%;
+        min-width: 30px;
+        width: 30px;
+    }
+
+    span {
+        font-weight: 600;
+    }
+}
+
+.groups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.group {
+    border-radius: 5px;
+    border: 1px solid;
+    display: inline-block;
+    font-weight: 500;
+    padding: 4px 8px;
+
+    &--blue {
+        border-color: var(--primary_color);
+        background-color: var(--primary_color_10);
+        color: var(--primary_color);
+    }
+
+    &--orange {
+        border-color: var(--orange);
+        background-color: var(--orange_10);
+        color: var(--orange);
+    }
+
+    &--red {
+        border-color: var(--red);
+        background-color: var(--red_10);
+        color: var(--red);
+    }
+
+    &--yellow {
+        border-color: var(--yellow);
+        background-color: var(--yellow_10);
+        color: var(--yellow);
+    }
+
+    &--green {
+        border-color: var(--green);
+        background-color: var(--green_3);
+        color: var(--green);
+    }
+}

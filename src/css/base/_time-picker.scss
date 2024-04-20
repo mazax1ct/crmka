@@ -1,6 +1,7 @@
 .time-picker {
     display: block;
     position: relative;
+    width: 80px;
     z-index: 1;
 
     &.is-open {

@@ -49,13 +49,15 @@
 }
 
 .select2-container .select2-selection--single .select2-selection__rendered {
-  align-items: center;
-  display: flex;
+  display: block;
+  padding-top: 18px;
+  padding-bottom: 18px;
   padding-left: 20px;
   padding-right: 52px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: 100%;
 }
 
 .select2-container .select2-selection--single .select2-selection__clear {

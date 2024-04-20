@@ -288,6 +288,21 @@ ul {
     }
 }
 
+hr {
+    border: none;
+    color: var(--grey_2);
+    background-color: var(--grey_2);
+    height: 1px;
+
+    &:not(:first-child) {
+        margin-top: 30px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
 .responsive-table,
 .table-responsive {
     @include scrollbar;
@@ -356,6 +371,10 @@ ul {
 
 .color-grey {
     color: var(--grey_3);
+}
+
+.color-black {
+    color: var(--text_color);
 }
 
 .warning {

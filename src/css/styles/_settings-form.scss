@@ -1,0 +1,43 @@
+.settings-form {
+    max-width: 515px;
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+
+        &:not(:first-child) {
+            margin-top: 30px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        @media(min-width: $xs) {
+            align-items: center;
+            flex-direction: row;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .select-wrapper {
+            flex-grow: 1;
+            max-width: 100%;
+            @media(min-width: $xs) {
+                max-width: calc(100% - 10px - 160px);
+            }
+        }
+    }
+
+    &__label {
+        font-weight: 700;
+        min-width: 160px;
+    }
+}

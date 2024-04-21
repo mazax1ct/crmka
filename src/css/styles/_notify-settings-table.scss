@@ -5,10 +5,13 @@
         padding-right: 20px;
     }
 
+    .checkbox {
+        display: inline-flex;
+        vertical-align: middle;
+    }
+
     th {
         .checkbox {
-            vertical-align: middle;
-
             input {
                 &:checked ~ .checkbox__text {
                     color: var(--text_color);
@@ -23,9 +26,6 @@
 
     td {
         .checkbox {
-            display: inline-flex;
-            vertical-align: middle;
-
             input {
                 &:checked ~ .checkbox__text {
                     font-weight: 400;

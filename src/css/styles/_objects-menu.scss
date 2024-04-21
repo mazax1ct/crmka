@@ -1,7 +1,7 @@
 .objects-menu {
     display: flex;
     gap: 10px;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     @media(max-width: $sm - 0.01px) {
         flex-wrap: wrap;
     }

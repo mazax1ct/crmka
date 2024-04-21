@@ -24,7 +24,7 @@
         color: inherit;
         gap: 10px;
         font-weight: 700;
-        height: 44px;
+        height: 45px;
         padding-left: 15px;
         padding-right: 15px;
 
@@ -204,6 +204,10 @@
             }
         }
 
+        .cnt {
+            color: var(--grey_5);
+        }
+
         &.is-active {
             background-color: var(--primary_color);
             color: #fff;
@@ -215,7 +219,17 @@
             svg {
                 fill: #fff;
             }
+
+            .cnt {
+                color: #fff;
+            }
         }
+    }
+
+    &--type_6_1 {
+        padding-left: 14px;
+        padding-right: 14px;
+        width: auto;
     }
 
     &--type_7 {
@@ -333,6 +347,176 @@
         &:not([data-disabled]) {
             @include hover {
                 background-color: var(--primary_color_darker);
+            }
+        }
+    }
+
+    &--type_12 {
+        background-color: var(--primary_color);
+        border-color: var(--primary_color);
+        border-radius: 8px;
+        color: #fff;
+        gap: 10px;
+        font-weight: 700;
+        height: 45px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        svg {
+            fill: currentColor;
+            height: 12px;
+            min-width: 12px;
+            width: 12px;
+        }
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--primary_color_darker);
+            }
+        }
+    }
+
+    &--type_13 {
+        background-color: #fff;
+        border-color: var(--primary_color);
+        border-radius: 8px;
+        color: var(--grey_5);
+        gap: 10px;
+        font-weight: 700;
+        height: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        svg {
+            fill: var(--primary_color);
+            height: 12px;
+            min-width: 12px;
+            width: 12px;
+        }
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--primary_color);
+                color: #fff;
+
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &--type_14 {
+        background-color: var(--primary_color);
+        border-color: var(--primary_color);
+        border-radius: 6px;
+        color: #fff;
+        gap: 10px;
+        font-weight: 600;
+        height: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        svg {
+            fill: currentColor;
+            height: 12px;
+            min-width: 12px;
+            width: 12px;
+        }
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--primary_color_darker);
+            }
+        }
+    }
+
+    &--type_14_1 {
+        background-color: var(--grey_2);
+        border-color: var(--grey_2);
+        border-radius: 6px;
+        color: var(--text_color);
+        gap: 10px;
+        font-weight: 600;
+        height: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        svg {
+            fill: var(--primary_color);
+            height: 12px;
+            min-width: 12px;
+            width: 12px;
+        }
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--grey);
+                border-color: var(--grey);
+            }
+        }
+    }
+
+    &--type_15 {
+        background-color: var(--grey_2);
+        border-color: var(--grey_2);
+        border-radius: 6px;
+        color: var(--text_color);
+        gap: 10px;
+        font-weight: 700;
+        height: 45px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        svg {
+            fill: var(--primary_color);
+            height: 12px;
+            min-width: 12px;
+            width: 12px;
+        }
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--primary_color);
+                border-color: var(--primary_color);
+                color: #fff;
+
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &--type_16 {
+        background-color: #fff;
+        border-color: var(--grey_2);
+        border-radius: 8px;
+        color: var(--primary_color);
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        height: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--primary_color);
+                border-color: var(--primary_color);
+                color: #fff;
             }
         }
     }

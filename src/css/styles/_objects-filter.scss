@@ -1,0 +1,55 @@
+.objects-filter {
+    position: relative;
+    z-index: 1;
+
+    &__inner {
+        max-width: 500px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @media(min-width: $xs) {
+            align-items: center;
+            flex-direction: row;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .select-wrapper {
+            flex-grow: 1;
+        }
+    }
+
+    &__label {
+        font-weight: 700;
+        min-width: 85px;
+    }
+
+    .tabs-menu_2 {
+        margin-bottom: 0;
+        max-width: 100%;
+    }
+
+    &__reset {
+        @media(max-width: $sm - 0.01px) {
+            margin-top: 20px;
+        }
+        @media(min-width: $sm) {
+            left: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+    }
+}
+
+.liters-radios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}

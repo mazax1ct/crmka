@@ -24,7 +24,7 @@
             }
         }
 
-        .notification__status {
+        .status-icon {
             background-color: var(--red);
         }
 
@@ -59,7 +59,7 @@
             }
         }
 
-        .notification__status {
+        .status-icon {
             background-color: var(--primary_color);
         }
 
@@ -94,7 +94,7 @@
             }
         }
 
-        .notification__status {
+        .status-icon {
             background-color: var(--green);
         }
 
@@ -126,13 +126,6 @@
         gap: 8px;
         max-width: calc(100% - 120px);
         white-space: nowrap;
-    }
-
-    &__status {
-        border-radius: 50%;
-        height: 8px;
-        min-width: 8px;
-        width: 8px;
     }
 
     &__title {

@@ -210,3 +210,51 @@
         }
     }
 }
+
+.radio_2 {
+    display: inline-block;
+
+    input {
+        position: absolute;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 1px;
+
+        &:checked ~ .radio_2__text {
+            background-color: var(--primary_color);
+            border-color: var(--primary_color);
+            color: #fff;
+        }
+
+        &:not(:disabled) ~ .radio_2__text {
+            cursor: pointer;
+        }
+
+        &:not(:disabled):not(:checked) ~ .radio_2__text {
+            &:hover {
+                background-color: var(--grey_2);
+            }
+        }
+
+        &:disabled ~ .radio_2__text {
+            opacity: 0.6;
+            user-select: none;
+        }
+    }
+
+    &__text {
+        align-items: center;
+        border: 1px solid var(--grey_2);
+        border-radius: 6px;
+        background-color: #fff;
+        color: var(--primary_color);
+        display: inline-flex;
+        font-weight: 600;
+        height: 40px;
+        justify-content: center;
+        min-width: 50px;
+        transition: all 0.3s;
+        width: 50px;
+    }
+}

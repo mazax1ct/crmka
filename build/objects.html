@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>CRMka</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#4880ff">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="fonts/subset-Qanelas-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/subset-Qanelas-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/subset-Qanelas-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="plugins_css/select2.css" />
+    <link rel="stylesheet" href="plugins_css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="page">
+    <div class="page__sidebar">
+        <button class="js-sidebar-resizer sidebar-resizer" type="button" title="Уменьшить">
+            <svg aria-hidden="true">
+                <use xlink:href="images/sprite.svg#chevron_left" />
+            </svg>
+        </button>
+    
+        <header class="sidebar">
+            <div class="sidebar__top">
+                <div class="sidebar__logo"><img src="images/logo.svg" alt="CRMka"></div>
+    
+                <div class="user-profile">
+                    <button class="js-user-profile-toggler user-profile__button" type="button">
+                        <span class="user-profile__avatar">
+                            <span class="user-profile__status online"></span>
+                            ЛВ
+                        </span>
+                        <span class="user-profile__name">Лидия В.</span>
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#chevron_down" />
+                        </svg>
+                    </button>
+    
+                    <div class="user-profile__dropdown">
+                        <ul class="user-profile__dropdown-list">
+                            <li class="user-profile__dropdown-list-item">
+                                <a class="user-profile__dropdown-link" href="#">Настройки</a>
+                            </li>
+                            <li class="user-profile__dropdown-list-item">
+                                <a class="user-profile__dropdown-link" href="#">Уведомления <span class="cnt">3</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="add-tasks-buttons">
+                <button class="button button--type_1" type="button" data-fancybox="sidebar_add_task" data-src="#add-task-popup">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#circle_plus_icon" />
+                    </svg>
+                    <span>Поставить новую задачу</span>
+                </button>
+    
+                <button class="button button--type_1" type="button">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#circle_plus_icon" />
+                    </svg>
+                    <span>Добавить нового арендатора</span>
+                </button>
+            </div>
+    
+            <nav class="main-menu">
+                <ul class="main-menu__list">
+                    <li class="main-menu__item">
+                        <a class="main-menu__link is-active" href="#" title="Дашборд">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#dashboard_icon" />
+                            </svg>
+                            <span>Дашборд</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Настройка">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#gear_icon" />
+                            </svg>
+                            <span>Настройка</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Объекты">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#building_icon" />
+                            </svg>
+                            <span>Объекты</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <div class="main-menu__link-container">
+                            <a class="main-menu__link" href="#" title="Арендаторы">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#users_icon" />
+                                </svg>
+                                <span>Арендаторы</span>
+                            </a>
+    
+                            <button class="js-submenu-toggler main-menu__submenu-toggler" type="button" title="Открыть меню">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#chevron_down" />
+                                </svg>
+                            </button>
+                        </div>
+    
+                        <ul class="main-menu__submenu">
+                            <li class="main-menu__submenu-item">
+                                <a class="main-menu__submenu-link" href="#">Название подраздела</a>
+                            </li>
+                            <li class="main-menu__submenu-item">
+                                <a class="main-menu__submenu-link is-active" href="#">Название подраздела подлиннее</a>
+                            </li>
+                            <li class="main-menu__submenu-item">
+                                <a class="main-menu__submenu-link" href="#">Название подраздела ещё длиннее чем предыдущий</a>
+                            </li>
+                            <li class="main-menu__submenu-item">
+                                <a class="main-menu__submenu-link" href="#">И наконец самое длинное название подраздела для проверки всего и вся и прочего</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Документы">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#folder_icon" />
+                            </svg>
+                            <span>Документы</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Финансы">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#case_icon" />
+                            </svg>
+                            <span>Финансы</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Коммунальные платежи">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#invoice_icon" />
+                            </svg>
+                            <span>Коммунальные платежи</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Сервис">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#wrench_icon" />
+                            </svg>
+                            <span>Сервис</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Задачи">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#clipboard_icon" />
+                            </svg>
+                            <span>Задачи</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Заявки">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#edit_icon" />
+                            </svg>
+                            <span>Заявки</span>
+                        </a>
+                    </li>
+                </ul>
+    
+                <ul class="main-menu__list">
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Тариф">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#wallet_icon" />
+                            </svg>
+                            <span>Тариф</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Модули">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#modules_icon" />
+                            </svg>
+                            <span>Модули</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Блог">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#comment_icon" />
+                            </svg>
+                            <span>Блог</span>
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Помощь">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#info_icon" />
+                            </svg>
+                            <span>Помощь</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <main class="page__content">
+        <div class="page__top">
+            <h1 class="page__top-title">Холдинг Аренда</h1>
+        
+            <div class="page__top-buttons">
+                <button class="button button--type_1" type="button" data-fancybox data-src="#add-task-popup">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#circle_plus_icon" />
+                    </svg>
+                    <span>Поставить новую задачу</span>
+                </button>
+        
+                <button class="button button--type_1" type="button">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#circle_plus_icon" />
+                    </svg>
+                    <span>Добавить нового арендатора</span>
+                </button>
+            </div>
+        
+            <button class="js-sidebar-toggler burger button button--type_1" type="button" title="Открыть меню">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#burger_icon" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="objects-menu">
+            <div class="js-horizontal-scroll objects-menu__wrapper">
+                <ul class="objects-menu__list">
+                    <li class="objects-menu__item">
+                        <a class="button button--type_2 is-active" href="#" draggable="false"><span>БЦ Возрождение</span></a>
+                    </li>
+                    <li class="objects-menu__item">
+                        <a class="button button--type_2" href="#" draggable="false"><span>БЦ Космос</span></a>
+                    </li>
+                    <li class="objects-menu__item">
+                        <a class="button button--type_2" href="#" draggable="false"><span>Желтый угол</span></a>
+                    </li>
+                    <li class="objects-menu__item">
+                        <a class="button button--type_2" href="#" draggable="false"><span>БЦ Возрождение</span></a>
+                    </li>
+                    <li class="objects-menu__item">
+                        <a class="button button--type_2" href="#" draggable="false"><span>БЦ Космос</span></a>
+                    </li>
+                    <li class="objects-menu__item">
+                        <a class="button button--type_2" href="#" draggable="false"><span>Желтый угол</span></a>
+                    </li>
+                    <li class="objects-menu__item">
+                        <a class="button button--type_2" href="#" draggable="false"><span>БЦ Возрождение</span></a>
+                    </li>
+                    <li class="objects-menu__item">
+                        <a class="button button--type_2" href="#" draggable="false"><span>БЦ Космос</span></a>
+                    </li>
+                    <li class="objects-menu__item">
+                        <a class="button button--type_2" href="#" draggable="false"><span>Желтый угол</span></a>
+                    </li>
+                    <li class="objects-menu__item">
+                        <a class="button button--type_2" href="#" draggable="false"><span>БЦ Возрождение</span></a>
+                    </li>
+                    <li class="objects-menu__item">
+                        <a class="button button--type_2" href="#" draggable="false"><span>БЦ Космос</span></a>
+                    </li>
+                    <li class="objects-menu__item">
+                        <a class="button button--type_2" href="#" draggable="false"><span>Желтый угол</span></a>
+                    </li>
+                </ul>
+            </div>
+            <button class="js-objects-menu-toggler objects-menu-toggler button button--type_3" type="button">Развернуть список</button>
+        </div>
+
+        <div class="box">
+            <div class="box__title-block justify-content-spacebetween">
+                <p class="box__title">Объекты</p>
+
+                <button class="button button--type_1" type="button">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#circle_plus_icon" />
+                    </svg>
+                    <span>Добавить объект</span>
+                </button>
+            </div>
+
+            <hr>
+
+            <div class="objects-filter">
+                <div class="objects-filter__inner">
+                    <div class="select-wrapper select-wrapper--h_45">
+                        <select id="object" class="js-select" data-placeholder="Выберите объект">
+                            <option></option>
+                            <option value="1">Объект 1</option>
+                            <option value="2">Объект 2</option>
+                            <option value="3">Объект 3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="tabs-menu_2">
+                <button class="button button--type_6 button--type_6_1 is-active" type="button">
+                    <span>Все</span>
+                    <span class="cnt">15</span>
+                </button>
+
+                <button class="button button--type_6 button--type_6_1" type="button">
+                    <span>По важным уведомлениям</span>
+                    <span class="cnt">6</span>
+                </button>
+
+                <button class="button button--type_6 button--type_6_1" type="button">
+                    <span>Долг за аренду или КУ</span>
+                    <span class="cnt">6</span>
+                </button>
+            </div>
+
+            <div class="responsive-table">
+                <table class="table objects-table">
+                    <tr>
+                        <th class="js-sort text-left">
+                            <span class="sorting">
+                                <span>Название</span>
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#double_arrow_icon" />
+                                </svg>
+                            </span>
+                        </th>
+                        <th class="js-sort">
+                            <span class="sorting">
+                                <span>Площадь м2</span>
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#double_arrow_icon" />
+                                </svg>
+                            </span>
+                        </th>
+                        <th>Арендатор</th>
+                        <th class="js-sort">
+                            <span class="sorting">
+                                <span>Просрочка (аренда или КУ)</span>
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#double_arrow_icon" />
+                                </svg>
+                            </span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="text-left">БЦ Возрождение</td>
+                        <td>1000</td>
+                        <td>ООО «Ромашка»</td>
+                        <td class="color-red">75 000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">БЦ Космос</td>
+                        <td>2000</td>
+                        <td>ООО «Ромашка»</td>
+                        <td class="color-red">46 000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Желтый угол</td>
+                        <td>1200</td>
+                        <td>ООО «Ромашка»</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">БЦ Ромашка</td>
+                        <td>630</td>
+                        <td>ООО «Ромашка»</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="box__footer">
+                <div></div>
+                <ul class="pager">
+                    <li class="pager__item">
+                        <a class="pager__link is-active" href="#">1</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">2</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">3</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">...</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">7</a>
+                    </li>
+                    <li class="pager__item pager__item--arrow">
+                        <a class="pager__link" href="#">
+                            <span>Вперед</span>
+                            <svg class="notification__arrow-icon" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <div id="add-task-popup" class="popup add-task-popup">
+        <p class="popup__title">Поставить новую задачу</p>
+    
+        <form action="">
+            <div class="add-task-popup__row">
+                <div class="add-task-popup__column">
+                    <div class="dropzone">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#circle_plus_icon" />
+                        </svg>
+    
+                        <p class="dropzone__title">Прикрепить фото или видео</p>
+    
+                        <label class="input-file">
+                            <input type="file">
+                            <span class="input-file__text">Выбрать...</span>
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="add-task-popup__column">
+                    <label class="add-task-popup__label" for="">Добавить описание задачи</label>
+                    <textarea class="textarea" placeholder="Опишите задачу..."></textarea>
+                </div>
+            </div>
+    
+            <div class="add-task-popup__row">
+                <div class="add-task-popup__column">
+                    <label class="add-task-popup__label" for="tasker">Выбрать ответственного</label>
+                    <div class="select-wrapper select-wrapper--h_60">
+                        <select id="tasker" class="js-select" data-placeholder="Ответственный">
+                            <option></option>
+                            <option value="1">Иванов И.А.</option>
+                            <option value="2">Петров К.К.</option>
+                            <option value="3">Сидоров А.Д.</option>
+                            <option value="4">Головатенко С.С.</option>
+                            <option value="5">Константинопольский К.К.</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="add-task-popup__column">
+                    <label class="add-task-popup__label" for="date">Поставить срок</label>
+    
+                    <div class="inputs-group">
+                        <div class="datepicker">
+                            <input class="datepicker__input input" type="date">
+                            <button class="js-datepicker datepicker__button" type="button" title="Показать календарь"></button>
+                        </div>
+    
+                        <div class="js-time-picker time-picker">
+                            <input class="time-picker__input input" type="number" name="" value="00" readonly>
+                            <span class="time-picker__dropdown">
+                                <span class="time-picker__items-list">
+                                    <span class="time-picker__item">00</span>
+                                    <span class="time-picker__item">01</span>
+                                    <span class="time-picker__item">02</span>
+                                    <span class="time-picker__item">03</span>
+                                    <span class="time-picker__item">04</span>
+                                    <span class="time-picker__item">05</span>
+                                    <span class="time-picker__item">06</span>
+                                    <span class="time-picker__item">07</span>
+                                    <span class="time-picker__item">08</span>
+                                    <span class="time-picker__item">09</span>
+                                    <span class="time-picker__item">10</span>
+                                    <span class="time-picker__item">11</span>
+                                    <span class="time-picker__item">12</span>
+                                    <span class="time-picker__item">13</span>
+                                    <span class="time-picker__item">14</span>
+                                    <span class="time-picker__item">15</span>
+                                    <span class="time-picker__item">16</span>
+                                    <span class="time-picker__item">17</span>
+                                    <span class="time-picker__item">18</span>
+                                    <span class="time-picker__item">19</span>
+                                    <span class="time-picker__item">20</span>
+                                    <span class="time-picker__item">21</span>
+                                    <span class="time-picker__item">22</span>
+                                    <span class="time-picker__item">23</span>
+                                </span>
+    
+                            </span>
+                        </div>
+    
+                        <div class="js-time-picker time-picker">
+                            <input class="time-picker__input input" type="number" name="" value="00" readonly>
+                            <span class="time-picker__dropdown">
+                                <span class="time-picker__items-list">
+                                    <span class="time-picker__item">00</span>
+                                    <span class="time-picker__item">01</span>
+                                    <span class="time-picker__item">02</span>
+                                    <span class="time-picker__item">03</span>
+                                    <span class="time-picker__item">04</span>
+                                    <span class="time-picker__item">05</span>
+                                    <span class="time-picker__item">06</span>
+                                    <span class="time-picker__item">07</span>
+                                    <span class="time-picker__item">08</span>
+                                    <span class="time-picker__item">09</span>
+                                    <span class="time-picker__item">10</span>
+                                    <span class="time-picker__item">11</span>
+                                    <span class="time-picker__item">12</span>
+                                    <span class="time-picker__item">13</span>
+                                    <span class="time-picker__item">14</span>
+                                    <span class="time-picker__item">15</span>
+                                    <span class="time-picker__item">16</span>
+                                    <span class="time-picker__item">17</span>
+                                    <span class="time-picker__item">18</span>
+                                    <span class="time-picker__item">19</span>
+                                    <span class="time-picker__item">20</span>
+                                    <span class="time-picker__item">21</span>
+                                    <span class="time-picker__item">22</span>
+                                    <span class="time-picker__item">23</span>
+                                    <span class="time-picker__item">24</span>
+                                    <span class="time-picker__item">25</span>
+                                    <span class="time-picker__item">26</span>
+                                    <span class="time-picker__item">27</span>
+                                    <span class="time-picker__item">28</span>
+                                    <span class="time-picker__item">29</span>
+                                    <span class="time-picker__item">30</span>
+                                    <span class="time-picker__item">31</span>
+                                    <span class="time-picker__item">32</span>
+                                    <span class="time-picker__item">33</span>
+                                    <span class="time-picker__item">34</span>
+                                    <span class="time-picker__item">35</span>
+                                    <span class="time-picker__item">36</span>
+                                    <span class="time-picker__item">37</span>
+                                    <span class="time-picker__item">38</span>
+                                    <span class="time-picker__item">39</span>
+                                    <span class="time-picker__item">40</span>
+                                    <span class="time-picker__item">41</span>
+                                    <span class="time-picker__item">42</span>
+                                    <span class="time-picker__item">43</span>
+                                    <span class="time-picker__item">44</span>
+                                    <span class="time-picker__item">45</span>
+                                    <span class="time-picker__item">46</span>
+                                    <span class="time-picker__item">47</span>
+                                    <span class="time-picker__item">48</span>
+                                    <span class="time-picker__item">49</span>
+                                    <span class="time-picker__item">50</span>
+                                    <span class="time-picker__item">51</span>
+                                    <span class="time-picker__item">52</span>
+                                    <span class="time-picker__item">53</span>
+                                    <span class="time-picker__item">54</span>
+                                    <span class="time-picker__item">55</span>
+                                    <span class="time-picker__item">56</span>
+                                    <span class="time-picker__item">57</span>
+                                    <span class="time-picker__item">58</span>
+                                    <span class="time-picker__item">59</span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="add-task-popup__row">
+                <div class="add-task-popup__column">
+                    <label class="add-task-popup__label">Приоритет</label>
+    
+                    <div class="radios-group">
+                        <label class="radio">
+                            <input type="radio" name="prioritet" value="1" checked>
+                            <span class="radio__icon"></span>
+                            <span class="radio__text">Обычный</span>
+                        </label>
+    
+                        <label class="radio">
+                            <input type="radio" name="prioritet" value="2">
+                            <span class="radio__icon"></span>
+                            <span class="radio__text">Высокий</span>
+                        </label>
+    
+                        <label class="radio">
+                            <input type="radio" name="prioritet" value="3">
+                            <span class="radio__icon"></span>
+                            <span class="radio__text">Срочно</span>
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="add-task-popup__column">
+                    <button class="button button--type_11" type="submit" disabled>Добавить</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/fancybox-defaults.js"></script>
+    
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/select2-addon.js"></script>
+    
+    <script src="js/main.js"></script>
+
+    <script src="js/table-sort.js"></script>
+</body>
+
+</html>

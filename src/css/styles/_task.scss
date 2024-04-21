@@ -26,7 +26,7 @@
             border-color: var(--red);
         }
 
-        .task__status {
+        .status-icon {
             background-color: var(--red);
         }
 
@@ -49,7 +49,7 @@
             border-color: var(--grey_3);
         }
 
-        .task__status {
+        .status-icon {
             background-color: var(--primary_color);
         }
     }
@@ -63,13 +63,6 @@
         gap: 8px;
         max-width: calc(100% - 120px);
         white-space: nowrap;
-    }
-
-    &__status {
-        border-radius: 50%;
-        height: 8px;
-        min-width: 8px;
-        width: 8px;
     }
 
     &__title {

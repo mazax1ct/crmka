@@ -1,0 +1,39 @@
+.legend {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    @media(min-width: $hd) {
+        gap: 10px 30px;
+    }
+
+    &__item {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+
+        &.status-red {
+            .status-icon {
+                background-color: var(--red);
+            }
+        }
+
+        &.status-blue {
+            .status-icon {
+                background-color: var(--primary_color);
+            }
+        }
+
+        &.status-green {
+            .status-icon {
+                background-color: var(--green);
+            }
+        }
+
+        &.status-grey {
+            .status-icon {
+                background-color: var(--grey_4);
+            }
+        }
+    }
+}

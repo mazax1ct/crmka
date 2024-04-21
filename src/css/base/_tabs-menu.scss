@@ -14,7 +14,7 @@
     }
 
     &:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .button {
@@ -38,9 +38,20 @@
         display: none;
     }
 
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &--mb_15 {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
     .button {
         &.is-active {
             background-color: var(--primary_color);
+            border-color: var(--primary_color);
             color: #fff;
 
             &.status-blue {
@@ -49,31 +60,6 @@
                     color: #fff;
                 }
             }
-        }
-    }
-}
-
-.tabs-menu_3 {
-    display: flex;
-    gap: 5px;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-
-    &:not(:last-child) {
-        margin-bottom: 15px;
-    }
-
-    .button {
-        &.is-active {
-            background-color: var(--primary_color);
-            color: #fff;
         }
     }
 }

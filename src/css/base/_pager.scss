@@ -8,7 +8,7 @@
 
     &__item {
         &--arrow {
-            @media(max-width: $sm - 0.01px) {
+            @media(max-width: $lg - 0.01px) {
                 display: none;
             }
 

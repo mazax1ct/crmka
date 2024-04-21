@@ -26,6 +26,8 @@
 
 .select-wrapper--h_45 .select2-container .select2-selection--single .select2-selection__rendered {
   height: 43px;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 .select-wrapper--h_60 .select2-container .select2-selection--single {
@@ -34,6 +36,8 @@
 
 .select-wrapper--h_60 .select2-container .select2-selection--single .select2-selection__rendered {
   height: 58px;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .select-wrapper--grey .select2-container--default .select2-selection--single {
@@ -50,8 +54,6 @@
 
 .select2-container .select2-selection--single .select2-selection__rendered {
   display: block;
-  padding-top: 18px;
-  padding-bottom: 18px;
   padding-left: 20px;
   padding-right: 52px;
   overflow: hidden;

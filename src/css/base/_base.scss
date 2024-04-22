@@ -315,6 +315,7 @@ hr {
 
 .table {
     border-collapse: collapse;
+    border-spacing: 0;
     width: 100%;
 
     th {
@@ -325,10 +326,6 @@ hr {
         line-height: 1;
         padding: 8px 20px;
         text-align: center;
-        /*@media(min-width: $lg) {
-            padding-left: 20px;
-            padding-right: 20px;
-        }*/
     }
 
     td {
@@ -336,10 +333,6 @@ hr {
         padding: 8px 20px;
         text-align: center;
         white-space: nowrap;
-        /*@media(min-width: $lg) {
-            padding-left: 20px;
-            padding-right: 20px;
-        }*/
     }
 
     .triangle {

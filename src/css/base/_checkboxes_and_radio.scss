@@ -2,6 +2,8 @@
     align-items: center;
     display: flex;
     gap: 10px;
+    position: relative;
+    z-index: 1;
 
     input {
         position: absolute;
@@ -48,6 +50,8 @@
     align-items: center;
     display: flex;
     gap: 10px;
+    position: relative;
+    z-index: 1;
 
     &.blue {
         input:checked ~ .switch__icon {
@@ -158,6 +162,8 @@
     align-items: center;
     display: flex;
     gap: 6px;
+    position: relative;
+    z-index: 1;
 
     input {
         position: absolute;
@@ -213,6 +219,8 @@
 
 .radio_2 {
     display: inline-block;
+    position: relative;
+    z-index: 1;
 
     input {
         position: absolute;

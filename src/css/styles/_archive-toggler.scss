@@ -1,0 +1,36 @@
+.archive-toggler {
+    @include button-reset;
+    @include active-area;
+    align-items: center;
+    color: var(--grey_5);
+    cursor: pointer;
+    display: flex;
+    font-weight: 700;
+    gap: 10px;
+    transition: color 0.3s;
+    position: relative;
+    z-index: 1;
+    @include hover {
+        color: var(--primary_color);
+    }
+
+    &.is-active {
+        .archive-toggler__arrow {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__icon {
+        fill: currentcolor;
+        height: 24px;
+        min-width: 24px;
+        width: 24px;
+    }
+
+    &__arrow {
+        fill: currentcolor;
+        height: 12px;
+        min-width: 12px;
+        width: 12px;
+    }
+}

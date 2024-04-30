@@ -1,0 +1,27 @@
+.files {
+    display: grid;
+    gap: 10px;
+    @media(min-width: $sm) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media(min-width: $hd) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.file-link {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    text-decoration: none;
+    @include hover {
+        color: var(--primary_color);
+    }
+
+    svg {
+        fill: var(--grey_5);
+        height: 26px;
+        min-width: 26px;
+        width: 26px;
+    }
+}

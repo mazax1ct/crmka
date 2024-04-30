@@ -520,4 +520,32 @@
             }
         }
     }
+
+    &--type_17 {
+        background-color: #fff;
+        border-color: var(--grey_2);
+        border-radius: 8px;
+        color: var(--grey_5);
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 700;
+        height: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                border-color: var(--primary_color);
+                color: var(--primary_color);
+            }
+        }
+
+        svg {
+            fill: currentColor;
+            height: 12px;
+            width: 12px;
+        }
+    }
 }

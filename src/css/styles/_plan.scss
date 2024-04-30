@@ -101,42 +101,7 @@
     }
 
     &__tooltip-status {
-        align-items: center;
-        border-radius: 7px;
-        display: inline-flex;
-        font-size: 16px;
-        gap: 10px;
-        height: 40px;
         margin-bottom: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
-
-        &.blue {
-            background-color: var(--primary_color_20);
-            color: var(--primary_color);
-
-            .status-icon {
-                background-color: var(--primary_color);
-            }
-        }
-
-        &.green {
-            background-color: var(--green_20);
-            color: var(--green);
-
-            .status-icon {
-                background-color: var(--green);
-            }
-        }
-
-        &.red {
-            background-color: var(--red_20);
-            color: var(--red);
-
-            .status-icon {
-                background-color: var(--red);
-            }
-        }
     }
 
     &__tooltip-prop {

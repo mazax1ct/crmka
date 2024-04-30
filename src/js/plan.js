@@ -19,7 +19,7 @@ function tooltipConstructor(key) {
 
   tipString = tipString +
     '<div class="plan__tooltip-inner"><div class="plan__tooltip-title">' + $this.data('title') + '</div>' +
-    '<div class="plan__tooltip-status '+ $this.data('status') +'"><div class="status-icon"></div> ' + $this.data('status-text') + '</div>' +
+    '<div class="plan__tooltip-status text-status_2 '+ $this.data('status') +'"><div class="status-icon"></div> ' + $this.data('status-text') + '</div>' +
     '<div class="plan__tooltip-props"><div class="plan__tooltip-prop"><div class="plan__tooltip-prop-title">Площадь</div> ' + $this.data('square') + ' м2</div>' +
     '<div class="plan__tooltip-prop"><div class="plan__tooltip-prop-title">Стоимость м2</div> ' + addSeparatorsNF($this.data('price'), ' ', ' ', ' ') + ' ₽</div>' +
     '<div class="plan__tooltip-prop"><div class="plan__tooltip-prop-title">Стоимость аренды</div> ' + addSeparatorsNF($this.data('cost'), ' ', ' ', ' ') + ' ₽/мес.</div></div>' +

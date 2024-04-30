@@ -217,3 +217,40 @@ document.querySelectorAll(".js-datepicker").forEach((button) => {
 $(document).on('click', '.js-select-all', function () {
   $(this).closest('table').find('input[type="checkbox"][data-checkbox="'+$(this).attr('data-checkbox')+'"]').prop('checked', this.checked);
 });
+
+//слайдер на деталке объекта
+if($('.js-object-thumbs').length) {
+  var objectThumbs = new Swiper(".js-object-thumbs", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    freeMode: true,
+    watchSlidesProgress: true
+  });
+}
+
+if($('.js-object-slider').length) {
+  var objectSlider = new Swiper(".js-object-slider", {
+    loop: true,
+    spaceBetween: 8,
+    thumbs: {
+      swiper: objectThumbs
+    },
+    navigation: {
+      nextEl: '.js-object-slider-next',
+      prevEl: '.js-object-slider-prev',
+    },
+  });
+}
+
+//тогглер архива документов на деталке объекта
+$(document).on('click', '.js-archive-toggler', function () {
+  if(!$(this).hasClass('is-active')){
+    $(this).addClass('is-active');
+    $('.object-detail__files-archive').slideDown();
+  }else{
+    $(this).removeClass('is-active');
+    $('.object-detail__files-archive').slideUp();
+  }
+  return false;
+});

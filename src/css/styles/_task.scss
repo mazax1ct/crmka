@@ -10,7 +10,9 @@
     border: 1px solid var(--grey_2);
     border-radius: 8px;
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 5px 20px;
+    justify-content: space-between;
     min-height: 50px;
     padding: 10px 20px;
     text-decoration: none;
@@ -61,8 +63,8 @@
         display: flex;
         font-size: 16px;
         gap: 8px;
-        max-width: calc(100% - 120px);
-        white-space: nowrap;
+        /*max-width: calc(100% - 120px);
+        white-space: nowrap;*/
     }
 
     &__title {
@@ -84,7 +86,7 @@
 
     &__date {
         color: var(--grey_3);
-        margin-left: auto;
+        /*margin-left: auto;*/
     }
 
     &__arrow-icon {

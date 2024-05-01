@@ -1,0 +1,38 @@
+.checks-list {}
+
+.check_2 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, border-radius 0.3s, border-color 0.3s;
+    @include hover {
+        background-color: var(--grey_9);
+        border-color: var(--grey_9);
+        border-radius: 8px;
+
+        & + .check_2 {
+            border-top-color: transparent;
+        }
+    }
+
+    &:not(:first-child) {
+        border-top: 1px solid var(--grey_2);
+    }
+
+    &__title-block {}
+
+    &__title {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &__office {
+        color: var(--grey_5);
+    }
+
+    &__info {
+        text-align: right;
+    }
+}

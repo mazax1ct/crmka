@@ -6,4 +6,12 @@
     &:not(:last-child) {
         margin-bottom: 30px;
     }
+
+    .button {
+        svg {
+            height: 12px;
+            min-width: 12px;
+            width: 12px;
+        }
+    }
 }

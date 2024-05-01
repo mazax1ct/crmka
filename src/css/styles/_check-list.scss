@@ -1,0 +1,24 @@
+.check-list {
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+.check {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid var(--grey_2);
+    }
+
+    &__value-block {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px 10px;
+    }
+}

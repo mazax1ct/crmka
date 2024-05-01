@@ -79,13 +79,13 @@ html {
         padding: 95px 15px 54px;
         transition: width 0.3s;
         width: 100%;
-        @media(min-width: $md) {
-            padding-left: 45px;
-            padding-right: 45px;
-        }
         @media(min-width: $hd) {
             padding-top: 28px;
             width: calc(100% - var(--sidebar_width));
+        }
+        @media(min-width: $lg) {
+            padding-left: 45px;
+            padding-right: 45px;
         }
     }
 
@@ -129,12 +129,29 @@ html {
             display: none;
         }
     }
-}
 
-.burger {
-    width: 44px;
-    @media(min-width: $hd) {
-        display: none;
+    &__top-burger {
+        align-items: center;
+        background-color: transparent;
+        border: 1px solid var(--primary_color);
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        height: 45px;
+        justify-content: center;
+        padding: 0;
+        transition: all 0.3s;
+        width: 45px;
+        @media(min-width: $hd) {
+            display: none;
+        }
+
+        svg {
+            fill: var(--primary_color);
+            height: 24px;
+            min-width: 24px;
+            width: 24px;
+        }
     }
 }
 
@@ -209,6 +226,13 @@ html {
                 font-size: 32px;
             }
         }
+
+        .renter-title {
+            color: var(--grey_5);
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+        }
     }
 
     &__footer {
@@ -218,6 +242,13 @@ html {
         flex-wrap: wrap;
         justify-content: space-between;
         margin-top: 30px;
+    }
+
+    &__footer-block {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 30px;
     }
 }
 
@@ -386,7 +417,8 @@ hr {
     color: var(--red);
     display: flex;
     gap: 10px;
-    padding: 8px 20px 8px 10px;
+    min-height: 40px;
+    padding: 6px 10px;
 
     svg {
         fill: currentColor;

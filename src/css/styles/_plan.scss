@@ -1,6 +1,8 @@
 .plan {
     background-color: var(--grey_9);
-    padding: 40px;
+    @media(min-width: $hd) {
+        padding: 40px;
+    }
 
     &__inner {
         position: relative;
@@ -86,6 +88,32 @@
         .button {
             margin-top: 20px;
             width: 100%;
+        }
+    }
+
+    &__tooltip-closer {
+        @include button-reset;
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        left: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+
+        svg {
+            fill: var(--primary_color);
+            height: 16px;
+            transition: fill 0.3s;
+            width: 16px;
+        }
+        @include hover {
+            svg {
+                fill: var(--primary_color_darker);
+            }
         }
     }
 

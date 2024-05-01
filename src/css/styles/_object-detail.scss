@@ -13,6 +13,14 @@
         }
     }
 
+    &__back {
+        svg {
+            height: 12px;
+            min-width: 12px;
+            width: 12px;
+        }
+    }
+
     &__title-block {
         align-items: center;
         display: flex;
@@ -273,7 +281,7 @@
         display: none;
         @media(min-width: $hd) {
             @include scrollbar;
-            height: 100px;
+            height: 150px;
             overflow-y: auto;
         }
 

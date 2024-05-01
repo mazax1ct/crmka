@@ -1,0 +1,53 @@
+.agent {
+    display: flex;
+    flex-direction: column;
+    gap: 5px 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 80px;
+    position: relative;
+    z-index: 1;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid var(--grey_2);
+    }
+
+    .user {}
+
+    &__contacts {
+        color: var(--grey_5);
+        padding-left: 40px;
+        word-break: break-all;
+    }
+
+    &__controls {
+        display: flex;
+        gap: 15px;
+        left: auto;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    &__control {
+        @include button-reset;
+        @include active-area;
+        height: 24px;
+        position: relative;
+        width: 24px;
+        z-index: 1;
+        @include hover {
+            svg {
+                fill: var(--primary_color);
+            }
+        }
+
+        svg {
+            fill: var(--grey_5);
+            height: 24px;
+            width: 24px;
+        }
+    }
+}

@@ -18,12 +18,13 @@ function tooltipConstructor(key) {
     tipString = '';
 
   tipString = tipString +
+    '<button class="plan__tooltip-closer" type="button" title="Закрыть"><svg aria-hidden="true"><use xlink:href="images/sprite.svg#close_icon" /></svg></button>' +
     '<div class="plan__tooltip-inner"><div class="plan__tooltip-title">' + $this.data('title') + '</div>' +
     '<div class="plan__tooltip-status text-status_2 '+ $this.data('status') +'"><div class="status-icon"></div> ' + $this.data('status-text') + '</div>' +
     '<div class="plan__tooltip-props"><div class="plan__tooltip-prop"><div class="plan__tooltip-prop-title">Площадь</div> ' + $this.data('square') + ' м2</div>' +
     '<div class="plan__tooltip-prop"><div class="plan__tooltip-prop-title">Стоимость м2</div> ' + addSeparatorsNF($this.data('price'), ' ', ' ', ' ') + ' ₽</div>' +
     '<div class="plan__tooltip-prop"><div class="plan__tooltip-prop-title">Стоимость аренды</div> ' + addSeparatorsNF($this.data('cost'), ' ', ' ', ' ') + ' ₽/мес.</div></div>' +
-    '<a class="button button--type_1" href="'+ $this.data('href') +'">Подробнее</a></div>';
+    '<a class="button button--h_40 button--type_1" href="'+ $this.data('href') +'">Подробнее</a></div>';
 
   return tipString;
 }
@@ -31,18 +32,24 @@ function tooltipConstructor(key) {
 var tooltip = $('.js-tooltip');
 
 $(document).on('click', '.plan', function(evt) {
-    if ($('polygon').is(evt.target)) {
-      $('polygon').removeClass('is-active');
-      $(evt.target).addClass('is-active');
-      tooltip.html('').hide();
-      tooltip.html(tooltipConstructor(evt.target.dataset.key));
-      tooltip.show();
-      return false
-    } else if ($('.js-tooltip *').is(evt.target)) {
+  if ($('polygon').is(evt.target)) {
+    $('polygon').removeClass('is-active');
+    $(evt.target).addClass('is-active');
+    tooltip.html('').hide();
+    tooltip.html(tooltipConstructor(evt.target.dataset.key));
+    tooltip.show();
+    return false
+  } else if ($('.js-tooltip *').is(evt.target)) {
 
-    } else {
-      $('polygon').removeClass('is-active');
-      tooltip.html('').hide();
-      return false
-    }
+  } else {
+    $('polygon').removeClass('is-active');
+    tooltip.html('').hide();
+    return false
+  }
+});
+
+$(document).on('click', '.plan__tooltip-closer', function(evt) {
+  $('polygon').removeClass('is-active');
+  tooltip.html('').hide();
+  return false
 });

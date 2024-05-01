@@ -1,11 +1,14 @@
 .files {
     display: grid;
-    gap: 10px;
+    gap: 10px 30px;
     @media(min-width: $sm) {
         grid-template-columns: 1fr 1fr;
     }
     @media(min-width: $hd) {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media(min-width: $lg) {
+        gap: 10px 90px;
     }
 }
 

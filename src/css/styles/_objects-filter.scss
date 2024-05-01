@@ -45,6 +45,12 @@
             top: 0;
             z-index: 1;
         }
+
+        svg {
+            height: 12px;
+            min-width: 12px;
+            width: 12px;
+        }
     }
 }
 

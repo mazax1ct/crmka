@@ -22,5 +22,11 @@
         @media(min-width: $sm) {
             margin-left: auto;
         }
+
+        svg {
+            height: 12px;
+            min-width: 12px;
+            width: 12px;
+        }
     }
 }

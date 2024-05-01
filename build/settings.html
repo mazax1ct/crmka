@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="plugins_css/select2.css" />
     <link rel="stylesheet" href="plugins_css/jquery.fancybox.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="plugins_css/external.css" />
 </head>
 
 <body class="page">
@@ -67,14 +68,14 @@
             </div>
     
             <div class="add-tasks-buttons">
-                <button class="button button--type_1" type="button" data-fancybox="sidebar_add_task" data-src="#add-task-popup">
+                <button class="button button--h_40 button--type_1" type="button" data-fancybox="sidebar_add_task" data-src="#add-task-popup">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#circle_plus_icon" />
                     </svg>
                     <span>Поставить новую задачу</span>
                 </button>
     
-                <button class="button button--type_1" type="button">
+                <button class="button button--h_40 button--type_1" type="button">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#circle_plus_icon" />
                     </svg>
@@ -232,14 +233,14 @@
             <h1 class="page__top-title">Холдинг Аренда</h1>
         
             <div class="page__top-buttons">
-                <button class="button button--type_1" type="button" data-fancybox data-src="#add-task-popup">
+                <button class="button button--h_45 button--type_1" type="button" data-fancybox data-src="#add-task-popup">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#circle_plus_icon" />
                     </svg>
                     <span>Поставить новую задачу</span>
                 </button>
         
-                <button class="button button--type_1" type="button">
+                <button class="button button--h_45 button--type_1" type="button">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#circle_plus_icon" />
                     </svg>
@@ -247,21 +248,20 @@
                 </button>
             </div>
         
-            <button class="js-sidebar-toggler burger button button--type_1" type="button" title="Открыть меню">
+            <button class="js-sidebar-toggler page__top-burger" type="button" title="Открыть меню">
                 <svg aria-hidden="true">
                     <use xlink:href="images/sprite.svg#burger_icon" />
                 </svg>
             </button>
         </div>
 
-
         <div class="box">
             <div class="box__title-block justify-content-spacebetween">
                 <p class="box__title">Общие настройки</p>
         
                 <div class="tabs-menu">
-                    <button class="button button--type_6 is-active" type="button">Светлая тема</button>
-                    <button class="button button--type_6" type="button">Темная тема</button>
+                    <button class="button button--h_40 button--type_6 is-active" type="button">Светлая тема</button>
+                    <button class="button button--h_40 button--type_6" type="button">Темная тема</button>
                 </div>
             </div>
         
@@ -273,7 +273,7 @@
                 <div class="settings-form__row">
                     <label class="settings-form__label" for="country">Страна</label>
         
-                    <div class="select-wrapper select-wrapper--h_60 select-wrapper--grey">
+                    <div class="select-wrapper select-wrapper--h_60">
                         <select id="country" class="js-select">
                             <option value="1">Россия</option>
                             <option value="2">Беларусь</option>
@@ -284,7 +284,7 @@
                 <div class="settings-form__row">
                     <label class="settings-form__label" for="timezone">Часовой пояс</label>
         
-                    <div class="select-wrapper select-wrapper--h_60 select-wrapper--grey">
+                    <div class="select-wrapper select-wrapper--h_60">
                         <select id="timezone" class="js-select">
                             <option value="1">(UTC/GMT +05:00) Екатеринбург, Россия</option>
                             <option value="2">(UTC/GMT +05:00) Екатеринбург, Россия</option>
@@ -301,7 +301,7 @@
                 <div class="settings-form__row">
                     <label class="settings-form__label" for="time_format">Формат времени</label>
         
-                    <div class="select-wrapper select-wrapper--h_60 select-wrapper--grey">
+                    <div class="select-wrapper select-wrapper--h_60">
                         <select id="time_format" class="js-select">
                             <option value="1">ЧЧ.ММ.СС</option>
                             <option value="2">СС.ММ.ЧЧ</option>
@@ -312,7 +312,7 @@
                 <div class="settings-form__row">
                     <label class="settings-form__label" for="date_format">Формат даты</label>
         
-                    <div class="select-wrapper select-wrapper--h_60 select-wrapper--grey">
+                    <div class="select-wrapper select-wrapper--h_60">
                         <select id="date_format" class="js-select">
                             <option value="1">ДД.ММ.ГГГГ</option>
                             <option value="2">ММ.ДД.ГГГГ</option>
@@ -379,7 +379,9 @@
                         <td>
                             <div class="user">
                                 <img src="images/content/avatar.jpg" srcset="images/content/avatar@2x.jpg 2x" alt="">
-                                <span>Сидоров Иван Петрович</span>
+                                <div>
+                                    <div class="user__name">Сидоров Иван Петрович</div>
+                                </div>
                             </div>
                         </td>
                         <td class="color-grey text-left">Администратор</td>
@@ -399,7 +401,9 @@
                         <td>
                             <div class="user">
                                 <img src="images/content/avatar.jpg" srcset="images/content/avatar@2x.jpg 2x" alt="">
-                                <span>Сидоров Иван Петрович</span>
+                                <div>
+                                    <div class="user__name">Сидоров Иван Петрович</div>
+                                </div>
                             </div>
                         </td>
                         <td class="color-grey text-left">Администратор</td>
@@ -417,7 +421,9 @@
                         <td>
                             <div class="user">
                                 <img src="images/content/avatar.jpg" srcset="images/content/avatar@2x.jpg 2x" alt="">
-                                <span>Сидоров Иван Петрович</span>
+                                <div>
+                                    <div class="user__name">Сидоров Иван Петрович</div>
+                                </div>
                             </div>
                         </td>
                         <td class="color-grey text-left">Администратор</td>
@@ -435,7 +441,9 @@
                         <td>
                             <div class="user">
                                 <img src="images/content/avatar.jpg" srcset="images/content/avatar@2x.jpg 2x" alt="">
-                                <span>Сидоров Иван Петрович</span>
+                                <div>
+                                    <div class="user__name">Сидоров Иван Петрович</div>
+                                </div>
                             </div>
                         </td>
                         <td class="color-grey text-left">Администратор</td>
@@ -1067,7 +1075,7 @@
                 </div>
     
                 <div class="add-task-popup__column">
-                    <button class="button button--type_11" type="submit" disabled>Добавить</button>
+                    <button class="button button--h_60 button--wide button--type_11" type="submit" disabled>Добавить</button>
                 </div>
             </div>
         </form>

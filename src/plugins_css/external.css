@@ -1,0 +1,65 @@
+.agents-list {
+  container-name: agents-list;
+  container-type: inline-size;
+}
+
+.agent {
+  container-name: agent;
+  container-type: inline-size;
+
+  @container agents-list (width > 430px) {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  @container agent (width > 350px) {
+    .user {
+      flex-grow: 1;
+      width: calc(55% - 10px / 2);
+    }
+
+    .agent__contacts {
+      padding-left: 0;
+      text-align: right;
+      max-width: calc(45% - 10px / 2);
+    }
+  }
+}
+
+.check {
+  container-name: check;
+  container-type: inline-size;
+
+  @container check (width > 400px) {
+    .check__value-block {
+      gap: 5px 20px;
+    }
+  }
+}
+
+.contacts-users-list {
+  container-name: contacts-users-list;
+  container-type: inline-size;
+}
+
+.contact-user {
+  container-name: contact-user;
+  container-type: inline-size;
+
+  @container contacts-users-list (width > 430px) {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  @container contact-user (width > 430px) {
+    .user {
+      flex-grow: 1;
+      width: calc(55% - 10px / 2);
+    }
+
+    .contact-user__contacts {
+      padding-left: 0;
+      max-width: calc(45% - 10px / 2);
+    }
+  }
+}

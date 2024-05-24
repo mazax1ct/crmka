@@ -26,10 +26,13 @@
             cursor: pointer;
         }
 
-        &:disabled ~ .checkbox__icon,
+        &:disabled ~ .checkbox__icon {
+            border-color: var(--grey_2);
+            background-color: var(--grey_2);
+        }
+
         &:disabled ~ .checkbox__text {
-            opacity: 0.6;
-            user-select: none;
+            color: var(--grey_3);
         }
     }
 
@@ -186,10 +189,18 @@
             cursor: pointer;
         }
 
-        &:disabled ~ .radio__icon,
+        &:disabled ~ .radio__icon {
+            border-color: var(--grey_2);
+        }
+
         &:disabled ~ .radio__text {
-            opacity: 0.6;
-            user-select: none;
+            color: var(--grey_3);
+        }
+
+        &:checked:disabled ~ .radio__icon {
+            &::after {
+                background-color: var(--grey_2);
+            }
         }
     }
 

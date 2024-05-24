@@ -54,6 +54,10 @@ html {
         }
     }
 
+    &--auth {
+        min-height: 100vh;
+    }
+
     &__sidebar {
         min-width: var(--sidebar_width);
         position: relative;
@@ -276,6 +280,9 @@ h3 {
 a {
     color: var(--text_color);
     transition: color 0.3s;
+    @include hover {
+        color: var(--primary_color);
+    }
 }
 
 img {
@@ -298,6 +305,11 @@ textarea {
     font-size: inherit;
     font-family: inherit;
     line-height: inherit;
+}
+
+input:autofill {
+    background-color: #fff;
+    box-shadow: 0 0 0 1000px white inset !important;
 }
 
 p {

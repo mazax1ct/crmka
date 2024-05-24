@@ -24,41 +24,335 @@
     <link rel="preload" href="fonts/subset-Qanelas-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/subset-Qanelas-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="plugins_css/select2.css" />
+    <link rel="stylesheet" href="plugins_css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="plugins_css/air-datepicker.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="plugins_css/external.css" />
 </head>
 
 <body class="page">
-    <div class="page__content">
-        <div class="container">
-            <h1 class="title">Заголовок блока, страницы и прочего</h1>
+    <div class="page__content" style="background: #fff">
+        <div style="margin-left: auto; margin-right: auto; max-width: 1400px; padding-left: 20px; padding-right: 20px;">
 
-            <form action="">
-                <label class="form-label">
-                    <input id="email" class="input" type="text" value="" name="email" placeholder="example@mail.ru">
-                </label>
+            <h2>Поля ввода</h2>
 
-                <label class="form-label">
-                    <input id="email" class="input error" type="text" value="example@mail.ru" name="email" placeholder="example@mail.ru">
-                    <div class="error-text">Правильный формат ввода email: login@example.com</div>
-                </label>
+            <label class="form-label" for="email">E-mail</label>
 
-                <label class="form-label" for="email">
-                    <input id="email" class="input" type="text" value="" name="email" placeholder="example@mail.ru" disabled>
-                </label>
-
-                <label class="form-label" for="email">
-                    <input id="email" class="input input--filled" type="text" value="" name="email" placeholder="example@mail.ru">
-                </label>
-
-                <label class="checkbox">
-                    <input type="checkbox" name="" value="">
-                    <span class="checkbox__icon"></span>
-                    <span class="checkbox__text">Я согласен с <a href="#">политикой конфиденциальности</a> и на обработку персональных данных</span>
-                </label>
-            </form>
+            <input id="email" class="js-email-mask input" type="text" value="" name="email" placeholder="example@mail.ru">
 
             <br>
+
+            <label class="form-label" for="phone">Телефон</label>
+
+            <input id="phone" class="js-phone-mask input" type="text" value="" name="phone" placeholder="+7 (___) ___-__-__">
+
             <br>
+
+            <label class="form-label" for="address">Адрес</label>
+
+            <input id="address" class="input valid" type="text" value="" name="address" placeholder="Например: ул. Ленина д. 1">
+
+            <br>
+
+            <label class="form-label" for="password">Пароль</label>
+
+            <input id="password" class="input error" type="password" value="password" name="password">
+
+            <div class="error-text">Неверный пароль</div>
+
+            <br>
+
+            <label class="form-label" for="last_name">Фамилия</label>
+
+            <input id="last_name" class="input" type="text" value="Иванов" name="name" placeholder="Например: Иванов">
+
+            <br>
+
+            <label class="form-label" for="name">Имя</label>
+
+            <input id="name" class="input" type="text" value="" name="name" placeholder="Например: Пётр">
+
+            <br>
+
+            <label class="form-label" for="second_name">Отчество</label>
+
+            <input id="second_name" class="input" type="text" value="Сидорович" name="name" placeholder="Например: Сидорович" disabled>
+
+            <br>
+
+            <label class="form-label" for="message">Сообщение</label>
+
+            <textarea id="message" class="textarea" placeholder="Введите ваше сообщение"></textarea>
+
+            <br>
+
+            <label class="form-label" for="message_2">Сообщение</label>
+
+            <textarea id="message_2" class="textarea"
+              placeholder="Введите ваше сообщение">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dolore officia, non modi dolor enim totam magni, aliquid harum molestias repellat necessitatibus corrupti unde nihil earum vitae velit? Voluptatum, ab!</textarea>
+
+            <br>
+
+            <label class="form-label" for="message_3">Сообщение</label>
+
+            <textarea id="message_3" class="textarea valid"
+              placeholder="Введите ваше сообщение">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dolore officia, non modi dolor enim totam magni, aliquid harum molestias repellat necessitatibus corrupti unde nihil earum vitae velit? Voluptatum, ab!</textarea>
+
+            <br>
+
+            <label class="form-label" for="message_4">Сообщение</label>
+
+            <textarea id="message_4" class="textarea error"
+              placeholder="Введите ваше сообщение">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dolore officia, non modi dolor enim totam magni, aliquid harum molestias repellat necessitatibus corrupti unde nihil earum vitae velit? Voluptatum, ab!</textarea>
+
+            <br>
+
+            <label class="form-label" for="message_5">Сообщение</label>
+
+            <textarea id="message_5" class="textarea error" placeholder="Введите ваше сообщение" disabled></textarea>
+
+            <br>
+
+            <h2>Чекбоксы</h2>
+
+            <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__text">Я согласен с <a href="#">политикой конфиденциальности</a> и на обработку персональных данных</span>
+            </label>
+
+            <br>
+
+            <label class="checkbox">
+                <input type="checkbox" name="" value="" checked>
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__text">Я согласен с <a href="#">политикой конфиденциальности</a> и на обработку персональных данных</span>
+            </label>
+
+            <br>
+
+            <label class="checkbox">
+                <input type="checkbox" name="" value="" disabled>
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__text">Я согласен с <a href="#">политикой конфиденциальности</a> и на обработку персональных данных</span>
+            </label>
+
+            <br>
+
+            <label class="checkbox">
+                <input type="checkbox" name="" value="" checked disabled>
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__text">Я согласен с <a href="#">политикой конфиденциальности</a> и на обработку персональных данных</span>
+            </label>
+
+            <br>
+
+            <h2>Радио-кнопки</h2>
+
+            <label class="radio">
+                <input type="radio" name="radio" value="1">
+                <span class="radio__icon"></span>
+                <span class="radio__text">Вариант 1</span>
+            </label>
+
+            <br>
+
+            <label class="radio">
+                <input type="radio" name="radio" value="2">
+                <span class="radio__icon"></span>
+                <span class="radio__text">Вариант 2</span>
+            </label>
+
+            <br>
+
+            <label class="radio">
+                <input type="radio" name="radio" value="3" disabled>
+                <span class="radio__icon"></span>
+                <span class="radio__text">Вариант 3</span>
+            </label>
+
+            <br>
+
+            <label class="radio">
+                <input type="radio" name="radio_2" value="1" checked disabled>
+                <span class="radio__icon"></span>
+                <span class="radio__text">Отдельный вариант</span>
+            </label>
+
+            <br>
+
+            <h2>Селект</h2>
+
+            <label class="form-label" for="select_1">Селект высотой 45</label>
+
+            <div class="select-wrapper select-wrapper--h_45">
+                <select id="select_1" class="js-select" data-placeholder="Селект высотой 45">
+                    <option></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+
+            <br>
+
+            <label class="form-label" for="select_2">Селект высотой 60</label>
+
+            <div class="select-wrapper select-wrapper--h_60">
+                <select id="select_2" class="js-select" data-placeholder="Селект высотой 60">
+                    <option></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+
+            <br>
+
+            <label class="form-label" for="select_3">Выключенный селект</label>
+
+            <div class="select-wrapper select-wrapper--h_60">
+                <select id="select_3" class="js-select" disabled data-placeholder="Селект высотой 60">
+                    <option></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4" selected>4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+
+            <br>
+
+            <h2>Поле выбора даты</h2>
+
+            <label class="form-label" for="date">Выберите дату</label>
+
+            <input id="date" class="js-date-mask input input--datepicker" type="text" name="date" placeholder="дд.мм.гггг">
+
+            <br>
+
+            <h2>Выбор времени</h2>
+
+            <label class="form-label">Выберите время</label>
+
+            <div style="display: flex; gap: 10px;">
+
+                <div class="js-time-picker time-picker">
+                    <input class="time-picker__input input" type="number" name="" value="00" readonly="">
+                    <span class="time-picker__dropdown">
+                        <span class="time-picker__items-list">
+                            <span class="time-picker__item">00</span>
+                            <span class="time-picker__item">01</span>
+                            <span class="time-picker__item">02</span>
+                            <span class="time-picker__item">03</span>
+                            <span class="time-picker__item">04</span>
+                            <span class="time-picker__item">05</span>
+                            <span class="time-picker__item">06</span>
+                            <span class="time-picker__item">07</span>
+                            <span class="time-picker__item">08</span>
+                            <span class="time-picker__item">09</span>
+                            <span class="time-picker__item">10</span>
+                            <span class="time-picker__item">11</span>
+                            <span class="time-picker__item">12</span>
+                            <span class="time-picker__item">13</span>
+                            <span class="time-picker__item">14</span>
+                            <span class="time-picker__item">15</span>
+                            <span class="time-picker__item">16</span>
+                            <span class="time-picker__item">17</span>
+                            <span class="time-picker__item">18</span>
+                            <span class="time-picker__item">19</span>
+                            <span class="time-picker__item">20</span>
+                            <span class="time-picker__item">21</span>
+                            <span class="time-picker__item">22</span>
+                            <span class="time-picker__item">23</span>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="js-time-picker time-picker">
+                    <input class="time-picker__input input" type="number" name="" value="00" readonly>
+                    <span class="time-picker__dropdown">
+                        <span class="time-picker__items-list">
+                            <span class="time-picker__item">00</span>
+                            <span class="time-picker__item">01</span>
+                            <span class="time-picker__item">02</span>
+                            <span class="time-picker__item">03</span>
+                            <span class="time-picker__item">04</span>
+                            <span class="time-picker__item">05</span>
+                            <span class="time-picker__item">06</span>
+                            <span class="time-picker__item">07</span>
+                            <span class="time-picker__item">08</span>
+                            <span class="time-picker__item">09</span>
+                            <span class="time-picker__item">10</span>
+                            <span class="time-picker__item">11</span>
+                            <span class="time-picker__item">12</span>
+                            <span class="time-picker__item">13</span>
+                            <span class="time-picker__item">14</span>
+                            <span class="time-picker__item">15</span>
+                            <span class="time-picker__item">16</span>
+                            <span class="time-picker__item">17</span>
+                            <span class="time-picker__item">18</span>
+                            <span class="time-picker__item">19</span>
+                            <span class="time-picker__item">20</span>
+                            <span class="time-picker__item">21</span>
+                            <span class="time-picker__item">22</span>
+                            <span class="time-picker__item">23</span>
+                            <span class="time-picker__item">24</span>
+                            <span class="time-picker__item">25</span>
+                            <span class="time-picker__item">26</span>
+                            <span class="time-picker__item">27</span>
+                            <span class="time-picker__item">28</span>
+                            <span class="time-picker__item">29</span>
+                            <span class="time-picker__item">30</span>
+                            <span class="time-picker__item">31</span>
+                            <span class="time-picker__item">32</span>
+                            <span class="time-picker__item">33</span>
+                            <span class="time-picker__item">34</span>
+                            <span class="time-picker__item">35</span>
+                            <span class="time-picker__item">36</span>
+                            <span class="time-picker__item">37</span>
+                            <span class="time-picker__item">38</span>
+                            <span class="time-picker__item">39</span>
+                            <span class="time-picker__item">40</span>
+                            <span class="time-picker__item">41</span>
+                            <span class="time-picker__item">42</span>
+                            <span class="time-picker__item">43</span>
+                            <span class="time-picker__item">44</span>
+                            <span class="time-picker__item">45</span>
+                            <span class="time-picker__item">46</span>
+                            <span class="time-picker__item">47</span>
+                            <span class="time-picker__item">48</span>
+                            <span class="time-picker__item">49</span>
+                            <span class="time-picker__item">50</span>
+                            <span class="time-picker__item">51</span>
+                            <span class="time-picker__item">52</span>
+                            <span class="time-picker__item">53</span>
+                            <span class="time-picker__item">54</span>
+                            <span class="time-picker__item">55</span>
+                            <span class="time-picker__item">56</span>
+                            <span class="time-picker__item">57</span>
+                            <span class="time-picker__item">58</span>
+                            <span class="time-picker__item">59</span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+
             <br>
 
             <button class="button" type="button">Войти</button>
@@ -73,9 +367,6 @@
 
             <a class="button button--bordered" href="#">Ссылка кнопка</a>
 
-            <br>
-            <br>
-            <br>
             <div class="responsive-table">
                 <table class="table">
                     <thead>
@@ -126,30 +417,32 @@
                     </tbody>
                 </table>
             </div>
-
-            <br>
-            <br>
-            <br>
-
-            <p>CREAMSHOP – это отечественный street wear-магазин основанный в северной столице в 2008 году и представляющий собственный бренд Anteater.</p>
-
-            <p>
-                В магазине собрана полная линейка марки: <b>анораки, футболки, брюки, свитшоты, рубашки, куртки, поясные сумки и кепки</b> — она постоянно обновляется за счет новых коллабораций с известными художниками, иллюстраторами и другими
-                участниками
-                уличного движения.
-            </p>
-
-            <p>Магазин воплощает идею о том, что уличная одежда в своем первозданном виде должна быть доступной. Настоящая уличная одежда далека от массовой моды, она является мерчем уличного сообщества, впитывает дух и энергетику людей.</p>
-
-            <p>
-                <b>Бренд Anteater</b> тесно сотрудничает с экстремалами, татуировщиками, граффити-художниками, иллюстраторами, дизайнерами и другими активистами стрит-комьюнити. Продукт постоянно тестируется и совершенствуется благодаря тесному
-                контакту с
-                целевой аудиторией.
-            </p>
         </div>
     </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
+    
+    <script src="js/swiper-bundle.min.js"></script>
+    
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/fancybox-defaults.js"></script>
+    
+    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="js/inputmask-init.js"></script>
+    
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/select2-addon.js"></script>
+    
+    <script src="js/air-datepicker.js"></script>
+    
+    <script src="js/main.js"></script>
+
+    <script>
+        var dp = new AirDatepicker('.js-date-mask', {
+            prevHtml: '<svg title="Назад"><use xlink:href="images/sprite.svg#circle_arrow_left" /></svg>',
+            nextHtml: '<svg title="Вперёд"><use xlink:href="images/sprite.svg#circle_arrow_right" /></svg>',
+        });
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,126 @@
+.auth {
+    display: flex;
+    width: 100%;
+
+    &__form-block {
+        align-items: center;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 40px 20px;
+        @media(min-width: $hd) {
+            max-width: 720px;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+
+    &__form-block-inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        max-width: 420px;
+        width: 100%;
+    }
+
+    &__form-wrapper {
+        margin-top: auto;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 30px;
+    }
+
+    &__separator {
+        align-items: center;
+        display: flex;
+        color: var(--grey_5);
+        gap: 10px;
+        line-height: 1.21428;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        &::after,
+        &::before {
+            content: '';
+            border-top: 1px solid var(--grey_2);
+            flex-grow: 1;
+            margin-top: 1px;
+        }
+    }
+
+    &__label {}
+
+    .input {
+        margin-bottom: 10px;
+    }
+
+    &__remember-forgot {
+        align-items: center;
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+
+        a {
+            color: var(--primary_color);
+            text-decoration: none;
+            @include hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__submit {
+        display: flex;
+        margin-top: 30px;
+    }
+
+    &__form {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__copyright {
+        color: var(--grey_5);
+        line-height: 1.21428;
+        margin-top: auto;
+        text-align: center;
+    }
+
+    &__logo {
+        align-items: center;
+        background-color: var(--primary_color);
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        @media(max-width: $hd - 0.01px) {
+            display: none;
+        }
+    }
+}
+
+.auth-button {
+    align-items: center;
+    border: 1px solid var(--grey_2);
+    border-radius: 8px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    gap: 10px;
+    justify-content: center;
+    height: 60px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s, background-color 0.3s;
+    text-decoration: none;
+    @include hover {
+        border-color: var(--grey);
+        background-color: var(--grey_9);
+    }
+}

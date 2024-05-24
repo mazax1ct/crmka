@@ -199,8 +199,10 @@
 }
 
 .select2-container--default.select2-container--disabled .select2-selection--single {
+  border-color: var(--grey_2);
+  background-color: var(--grey_9);
+  color: var(--grey_3);
   cursor: default;
-  opacity: 0.5;
 }
 
 .select2-container--default.select2-container--disabled .select2-selection--single .select2-selection__clear {

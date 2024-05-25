@@ -20,6 +20,7 @@
             background-color: var(--grey_6);
             border-color: transparent;
             border-radius: 8px;
+            color: var(--text_color);
 
             & + .about-object-table__item {
                 border-top-color: transparent;

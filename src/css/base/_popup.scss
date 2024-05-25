@@ -4,6 +4,46 @@
     display: none;
     width: 100%;
 
+    &--920 {
+        max-width: 920px;
+
+        &.fancybox-content {
+            padding: 20px;
+            @media(min-width: $md) {
+                padding: 45px;
+            }
+        }
+
+        .popup__close {
+            right: 20px;
+            top: 22px;
+            @media(min-width: $md) {
+                right: 45px;
+                top: 47px;
+            }
+
+            &.fancybox-close-small {
+                right: 20px;
+                top: 22px;
+                @media(min-width: $md) {
+                    right: 45px;
+                    top: 47px;
+                }
+            }
+        }
+    }
+
+    &--620 {
+        max-width: 620px;
+
+        &.fancybox-content {
+            padding: 20px;
+            @media(min-width: $sm) {
+                padding: 45px;
+            }
+        }
+    }
+
     &__title {
         font-size: 24px;
         font-weight: 700;
@@ -18,22 +58,12 @@
         height: 24px;
         left: auto;
         position: absolute;
-        right: 20px;
-        top: 45px;
         width: 24px;
         z-index: 1;
-        @media(min-width: $sm) {
-            right: 45px;
-        }
 
         &.fancybox-close-small {
             opacity: 1;
             padding: 0;
-            right: 20px;
-            top: 45px;
-            @media(min-width: $sm) {
-                right: 45px;
-            }
         }
 
         svg {

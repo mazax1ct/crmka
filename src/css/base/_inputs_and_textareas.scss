@@ -71,8 +71,8 @@
     &--datepicker {
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.2222 6H5.77778C4.79594 6 4 6.69645 4 7.55556V18.4444C4 19.3036 4.79594 20 5.77778 20H18.2222C19.2041 20 20 19.3036 20 18.4444V7.55556C20 6.69645 19.2041 6 18.2222 6Z' stroke='%239AA7C3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5 11L19 11' stroke='%239AA7C3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 4V8' stroke='%239AA7C3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 4V8' stroke='%239AA7C3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
-        background-position: calc(100% - 16px) 50%;
-        padding-right: 58px;
+        background-position: 18px 50%;
+        padding-left: 58px;
     }
 }
 

@@ -1,0 +1,42 @@
+.new-object-popup {
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+.new-object {
+    border-bottom: 1px solid var(--grey_2);
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+
+    &__title-block {
+        align-items: center;
+        display: flex;
+        gap: 10px 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .new-object__title {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 20px;
+    }
+
+    &__row {}
+}

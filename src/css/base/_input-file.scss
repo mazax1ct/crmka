@@ -1,0 +1,90 @@
+.input-file-wrapper {}
+
+.input-file-info {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    &__type-block {
+        align-items: center;
+        color: var(--grey_3);
+        display: flex;
+        gap: 6px;
+        font-weight: 600;
+        line-height: 1;
+
+        svg {
+            height: 17px;
+            min-width: 17px;
+            width: 17px;
+        }
+    }
+
+    &__type {
+        fill: var(--grey_3);
+    }
+
+    span {
+        border-bottom: 1px dashed currentColor;
+    }
+
+    &__check {
+        fill: var(--green);
+    }
+
+    &__delete {
+        @include button-reset;
+        @include active-area;
+        align-items: center;
+        color: var(--grey_3);
+        display: flex;
+        gap: 6px;
+        font-weight: 600;
+        position: relative;
+        transition: color 0.3s;
+        z-index: 1;
+        @include hover {
+            color: var(--grey_4);
+        }
+
+        svg {
+            fill: currentColor;
+            height: 17px;
+            min-width: 17px;
+            width: 17px;
+        }
+    }
+}
+
+.input-file {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    input {
+        position: absolute;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 1px;
+    }
+
+    &__text {
+        align-items: center;
+        border-radius: 8px;
+        background-color: var(--primary_color);
+        color: #fff;
+        cursor: pointer;
+        display: inline-flex;
+        font-weight: 700;
+        height: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        transition: background-color 0.3s;
+        @include hover {
+            background-color: var(--primary_color_darker);
+        }
+    }
+}

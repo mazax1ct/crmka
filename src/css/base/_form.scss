@@ -1,0 +1,46 @@
+.form-row {
+    display: flex;
+    gap: 10px 20px;
+    flex-wrap: wrap;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &--centered {
+        align-items: center;
+    }
+
+    .form-label {
+        margin-bottom: 0;
+        @media(max-width: $md - 0.01px) {
+            width: 100%;
+        }
+        @media(min-width: $md) {
+            min-width: 180px;
+            width: 180px;
+        }
+    }
+
+    .grow {
+        @media(min-width: $md) {
+            width: calc(100% - 200px);
+        }
+    }
+
+    .w_80 {
+        width: 80px;
+    }
+
+    .w_120 {
+        width: 120px;
+    }
+
+    .w_180 {
+        width: 180px;
+    }
+
+    .w_400 {
+        width: 400px;
+    }
+}

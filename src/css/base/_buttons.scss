@@ -9,12 +9,20 @@
     text-decoration: none;
     text-align: center;
     transition: all 0.3s;
+    vertical-align: middle;
 
     &.disabled,
     &:disabled,
     &[data-disabled] {
+        background-color: var(--grey);
+        border-color: var(--grey);
+        color: #fff;
         cursor: default;
         pointer-events: none;
+
+        svg {
+            fill: #fff;
+        }
     }
 
     &--h_30 {
@@ -146,56 +154,76 @@
             }
         }
     }
-    /*&--type_2 {
-        background-color: #fff;
-        border-color: var(--primary_color_50);
-        border-radius: 10px;
-        color: var(--primary_color);
+
+    &--type_2 {
+        background-color: var(--grey_13);
+        border-color: var(--grey_13);
+        border-radius: 8px;
+        color: var(--text_color);
         gap: 10px;
         font-weight: 700;
-        height: 45px;
-        padding-left: 28px;
-        padding-right: 28px;
 
         svg {
             fill: var(--primary_color);
-            height: 24px;
-            min-width: 24px;
-            width: 24px;
         }
 
         &:not(.disabled),
         &:not(:disabled),
         &:not([data-disabled]) {
             @include hover {
-                background-color: var(--primary_color);
-                border-color: var(--primary_color);
-                color: #fff;
-
-                svg {
-                    fill: #fff;
-                }
+                background-color: var(--grey);
+                border-color: var(--grey);
+                color: var(--text_color);
             }
         }
     }
 
     &--type_3 {
-        background-color: #fff;
-        border-color: #fff;
-        border-radius: 10px;
-        color: var(--grey_3);
-        gap: 10px;
-        font-weight: 700;
-        height: 45px;
-        opacity: 0.6;
-        padding-left: 38px;
-        padding-right: 38px;
+        background-color: var(--primary_color);
+        border-color: var(--primary_color);
+        color: #fff;
+        font-weight: 600;
 
         svg {
-            fill: var(--grey_3);
-            height: 24px;
-            min-width: 24px;
-            width: 24px;
+            fill: currentColor;
+        }
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--primary_color_darker);
+            }
+        }
+    }
+
+    &--type_4 {
+        background-color: transparent;
+        border-color: var(--grey_14);
+        color: var(--text_color);
+        font-weight: 700;
+
+        svg {
+            fill: var(--grey_14);
+        }
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--grey);
+            }
+        }
+    }
+
+    &--type_5 {
+        background-color: transparent;
+        color: var(--text_color);
+        font-weight: 700;
+        padding: 0;
+
+        svg {
+            fill: var(--primary_color);
         }
 
         &:not(.disabled),
@@ -203,36 +231,10 @@
         &:not([data-disabled]) {
             @include hover {
                 color: var(--primary_color);
-                opacity: 1;
-            }
-        }
-    }*/
-    &--type_4 {
-        background-color: #fff;
-        border-color: var(--primary_color);
-        color: var(--text_color);
-        font-size: 14px;
-        font-weight: 700;
-
-        svg {
-            fill: var(--primary_color);
-        }
-
-        &:not(.disabled),
-        &:not(:disabled),
-        &:not([data-disabled]) {
-            @include hover {
-                background-color: var(--primary_color);
-                color: #fff;
-
-                svg {
-                    fill: #fff;
-                }
             }
         }
     }
-
-    &--type_5 {
+    /*&--type_5 {
         background-color: #fff;
         border-color: var(--grey_2);
         color: var(--primary_color);
@@ -530,5 +532,5 @@
         svg {
             fill: currentColor;
         }
-    }
+    }*/
 }

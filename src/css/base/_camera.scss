@@ -1,0 +1,82 @@
+.camera {
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--grey_8);
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &__image {
+        border-radius: 8px;
+        min-width: 60px;
+        overflow: hidden;
+        width: 60px;
+
+        img {
+            display: block;
+        }
+    }
+
+    &__description {
+        line-height: 1.21428;
+        max-width: calc(100% - 60px - 40px - 60px);
+    }
+
+    &__link,
+    &__title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__title {
+        color: var(--primary_color);
+    }
+
+    &__link {
+        color: var(--grey_14);
+    }
+
+    &__manage {
+        display: flex;
+        gap: 20px;
+        margin-left: auto;
+    }
+
+    &__button {
+        @include button-reset;
+        @include active-area;
+        height: 20px;
+        min-width: 20px;
+        position: relative;
+        z-index: 1;
+        @include hover {
+            svg {
+                fill: var(--grey_3);
+            }
+        }
+
+        svg {
+            fill: var(--grey_14);
+            height: 20px;
+            transition: fill 0.3s;
+            width: 20px;
+        }
+    }
+}
+
+.camera-add {
+    .input {
+        margin-bottom: 10px;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+    }
+}

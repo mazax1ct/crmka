@@ -261,8 +261,8 @@
                 <p class="box__title">Общие настройки</p>
         
                 <div class="tabs-menu">
-                    <button class="button button--h_40 button--type_6 is-active" type="button">Светлая тема</button>
-                    <button class="button button--h_40 button--type_6" type="button">Темная тема</button>
+                    <button class="button button--h_40 button--type_3" type="button">Светлая тема</button>
+                    <button class="button button--h_40 button--type_2" type="button">Темная тема</button>
                 </div>
             </div>
         
@@ -271,92 +271,114 @@
             <form class="settings-form">
                 <p class="settings-form__title">Общая информация</p>
         
-                <div class="settings-form__row">
-                    <label class="settings-form__label" for="country">Страна</label>
+                <div class="form-row form-row--centered">
+                    <label class="form-label" for="country">Страна</label>
         
-                    <div class="select-wrapper select-wrapper--h_60">
-                        <select id="country" class="js-select">
-                            <option value="1">Россия</option>
-                            <option value="2">Беларусь</option>
-                        </select>
+                    <div class="w_400">
+                        <div class="select-wrapper select-wrapper--h_60">
+                            <select id="country" class="js-select">
+                                <option value="1">Россия</option>
+                                <option value="2">Беларусь</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
         
-                <div class="settings-form__row">
-                    <label class="settings-form__label" for="timezone">Часовой пояс</label>
+                <div class="form-row form-row--centered">
+                    <label class="form-label" for="timezone">Часовой пояс</label>
         
-                    <div class="select-wrapper select-wrapper--h_60">
-                        <select id="timezone" class="js-select">
-                            <option value="1">(UTC/GMT +05:00) Екатеринбург, Россия</option>
-                            <option value="2">(UTC/GMT +05:00) Екатеринбург, Россия</option>
-                        </select>
+                    <div class="w_400">
+                        <div class="select-wrapper select-wrapper--h_60">
+                            <select id="timezone" class="js-select">
+                                <option value="1">(UTC/GMT +05:00) Екатеринбург, Россия</option>
+                                <option value="2">(UTC/GMT +05:00) Екатеринбург, Россия</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
         
-                <div class="settings-form__row">
-                    <label class="settings-form__label" for="company_name">Название организации</label>
+                <div class="form-row form-row--centered">
+                    <label class="form-label" for="company_name">Название организации</label>
         
-                    <input id="company_name" class="input" type="text" value="БЦ Возрождение">
-                </div>
-        
-                <div class="settings-form__row">
-                    <label class="settings-form__label" for="time_format">Формат времени</label>
-        
-                    <div class="select-wrapper select-wrapper--h_60">
-                        <select id="time_format" class="js-select">
-                            <option value="1">ЧЧ.ММ.СС</option>
-                            <option value="2">СС.ММ.ЧЧ</option>
-                        </select>
+                    <div class="w_400">
+                        <input id="company_name" class="input" type="text" value="БЦ Возрождение">
                     </div>
                 </div>
         
-                <div class="settings-form__row">
-                    <label class="settings-form__label" for="date_format">Формат даты</label>
+                <div class="form-row form-row--centered">
+                    <label class="form-label" for="time_format">Формат времени</label>
         
-                    <div class="select-wrapper select-wrapper--h_60">
-                        <select id="date_format" class="js-select">
-                            <option value="1">ДД.ММ.ГГГГ</option>
-                            <option value="2">ММ.ДД.ГГГГ</option>
-                        </select>
+                    <div class="w_400">
+                        <div class="select-wrapper select-wrapper--h_60">
+                            <select id="time_format" class="js-select">
+                                <option value="1">ЧЧ.ММ.СС</option>
+                                <option value="2">СС.ММ.ЧЧ</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="form-row form-row--centered">
+                    <label class="form-label" for="date_format">Формат даты</label>
+        
+                    <div class="w_400">
+                        <div class="select-wrapper select-wrapper--h_60">
+                            <select id="date_format" class="js-select">
+                                <option value="1">ДД.ММ.ГГГГ</option>
+                                <option value="2">ММ.ДД.ГГГГ</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
         
                 <p class="settings-form__title">Реквизиты</p>
         
-                <div class="settings-form__row">
-                    <label class="settings-form__label" for="inn">ИНН</label>
+                <div class="form-row form-row--centered">
+                    <label class="form-label" for="inn">ИНН</label>
         
-                    <input id="inn" class="input" type="text" value="6912006811">
+                    <div class="w_400">
+                        <input id="inn" class="input" type="text" value="6912006811">
+                    </div>
                 </div>
         
-                <div class="settings-form__row">
-                    <label class="settings-form__label" for="ogrn">ОГРН</label>
+                <div class="form-row form-row--centered">
+                    <label class="form-label" for="ogrn">ОГРН</label>
         
-                    <input id="ogrn" class="input" type="text" value="1026901781488">
+                    <div class="w_400">
+                        <input id="ogrn" class="input" type="text" value="1026901781488">
+                    </div>
                 </div>
         
-                <div class="settings-form__row">
-                    <label class="settings-form__label" for="kpp">КПП</label>
+                <div class="form-row form-row--centered">
+                    <label class="form-label" for="kpp">КПП</label>
         
-                    <input id="kpp" class="input" type="text" value="6912006811">
+                    <div class="w_400">
+                        <input id="kpp" class="input" type="text" value="6912006811">
+                    </div>
                 </div>
         
-                <div class="settings-form__row">
-                    <label class="settings-form__label" for="okpo">ОКПО</label>
+                <div class="form-row form-row--centered">
+                    <label class="form-label" for="okpo">ОКПО</label>
         
-                    <input id="okpo" class="input" type="text" value="50376986">
+                    <div class="w_400">
+                        <input id="okpo" class="input" type="text" value="50376986">
+                    </div>
                 </div>
         
-                <div class="settings-form__row">
-                    <label class="settings-form__label" for="ur_address">Юридический адрес</label>
+                <div class="form-row form-row--centered">
+                    <label class="form-label" for="ur_address">Юридический адрес</label>
         
-                    <input id="ur_address" class="input" type="text" value="172531, Тверская обл, г. Нелидово, Ул. Невского, д.1">
+                    <div class="w_400">
+                        <input id="ur_address" class="input" type="text" value="172531, Тверская обл, г. Нелидово, Ул. Невского, д.1">
+                    </div>
                 </div>
         
-                <div class="settings-form__row">
-                    <label class="settings-form__label" for="fakt_address">Фактический адрес</label>
+                <div class="form-row form-row--centered">
+                    <label class="form-label" for="fakt_address">Фактический адрес</label>
         
-                    <input id="fakt_address" class="input" type="text" value="172531, Тверская обл, г. Нелидово, Ул. Невского, д.1">
+                    <div class="w_400">
+                        <input id="fakt_address" class="input" type="text" value="172531, Тверская обл, г. Нелидово, Ул. Невского, д.1">
+                    </div>
                 </div>
             </form>
         </div>
@@ -1096,6 +1118,10 @@
     <script src="js/select2-addon.js"></script>
     
     <script src="js/air-datepicker.js"></script>
+    
+    <script src="js/plan.js"></script>
+    
+    <script src="js/table-sort.js"></script>
     
     <script src="js/main.js"></script>
 </body>

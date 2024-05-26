@@ -69,6 +69,18 @@
 
             <br>
 
+            //= template/ui/voice-recorder.html
+
+            <br>
+
+            //= template/ui/groups.html
+
+            <br>
+
+            //= template/ui/text-status.html
+
+            <br><br>
+
             <div class="responsive-table">
                 <table class="table">
                     <thead>
@@ -119,121 +131,10 @@
                     </tbody>
                 </table>
             </div>
-
-            <br>
-
-            <button class="button button--type_1" type="button" name="button" data-fancybox="add-new-object" data-src="#add-new-object">Добавть новый объект</button>
-
-            <div id="add-new-object" class="popup popup--920 new-object-popup">
-                <p class="popup__title">Шаг 1. Новый объект</p>
-
-                <div class="new-object">
-                    <p class="new-object__title">Объект 1</p>
-
-                    <div>
-                        <div class="form-row form-row--centered">
-                            <label class="form-label" for="new_object_title">Название</label>
-
-                            <input id="new_object_title" class="input grow" type="text" name="new_object_title" value="">
-                        </div>
-
-                        <div class="form-row form-row--centered">
-                            <label class="form-label" for="new_object_square">Общая площадь, м2</label>
-
-                            <input id="new_object_square" class="input w_80" type="text" name="new_object_square" value="">
-                        </div>
-
-                        <div class="form-row form-row--centered">
-                            <label class="form-label" for="new_object_liter">Литера</label>
-
-                            <input id="new_object_liter" class="input w_80" type="text" name="new_object_liter" value="">
-
-                            <label class="checkbox">
-                                <input type="checkbox" name="" value="">
-                                <span class="checkbox__icon"></span>
-                                <span class="checkbox__text">Без литеры</span>
-                            </label>
-                        </div>
-
-                        <div class="form-row form-row--centered">
-                            <label class="form-label" for="new_object_floors">Кол-во этажей</label>
-
-                            <input id="new_object_floors" class="input w_80" type="text" name="new_object_floors" value="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="new-object">
-                    <div class="new-object__title-block">
-                        <p class="new-object__title">Объект 2</p>
-
-                        <button class="button button--type_5 button--h_40" type="button">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#circle_minus_icon"></use>
-                            </svg>
-                            Удалить объект
-                        </button>
-                    </div>
-
-                    <div>
-                        <div class="form-row form-row--centered">
-                            <label class="form-label" for="new_object_title">Название</label>
-
-                            <input id="new_object_title" class="input grow" type="text" name="new_object_title" value="">
-                        </div>
-
-                        <div class="form-row form-row--centered">
-                            <label class="form-label" for="new_object_square">Общая площадь, м2</label>
-
-                            <input id="new_object_square" class="input w_80" type="text" name="new_object_square" value="">
-                        </div>
-
-                        <div class="form-row form-row--centered">
-                            <label class="form-label" for="new_object_liter">Литера</label>
-
-                            <input id="new_object_liter" class="input w_80" type="text" name="new_object_liter" value="">
-
-                            <label class="checkbox">
-                                <input type="checkbox" name="" value="">
-                                <span class="checkbox__icon"></span>
-                                <span class="checkbox__text">Без литеры</span>
-                            </label>
-                        </div>
-
-                        <div class="form-row form-row--centered">
-                            <label class="form-label" for="new_object_floors">Кол-во этажей</label>
-
-                            <input id="new_object_floors" class="input w_80" type="text" name="new_object_floors" value="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="new-object-popup__bottom">
-                    <button class="button button--type_5 button--h_60" type="button">
-                        <svg aria-hidden="true">
-                            <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
-                        </svg>
-                        Добавить дополнительный объект
-                    </button>
-
-                    <div class="new-object-popup__buttons">
-                        <button class="button button--type_2 button--h_60" type="button">Отменить</button>
-                        <button class="button button--type_3 button--h_60" type="button">Далее</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 
     //= template/common/scripts.html
-
-    <script>
-        var dp = new AirDatepicker('.js-date-mask', {
-            prevHtml: '<svg title="Назад"><use xlink:href="images/sprite.svg#circle_arrow_left" /></svg>',
-            nextHtml: '<svg title="Вперёд"><use xlink:href="images/sprite.svg#circle_arrow_right" /></svg>',
-        });
-    </script>
 </body>
 
 </html>

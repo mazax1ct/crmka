@@ -49,6 +49,7 @@
 
     &--h_40 {
         border-radius: 8px;
+        font-weight: 600;
         gap: 10px;
         height: 40px;
         padding-left: 15px;
@@ -110,6 +111,7 @@
     &--h_60 {
         border-radius: 8px;
         gap: 10px;
+        font-weight: 600;
         height: 60px;
         padding-left: 42px;
         padding-right: 42px;
@@ -158,10 +160,8 @@
     &--type_2 {
         background-color: var(--grey_13);
         border-color: var(--grey_13);
-        border-radius: 8px;
         color: var(--text_color);
         gap: 10px;
-        font-weight: 700;
 
         svg {
             fill: var(--primary_color);
@@ -175,6 +175,10 @@
                 border-color: var(--grey);
                 color: var(--text_color);
             }
+        }
+
+        .cnt {
+            color: var(--grey_14);
         }
     }
 
@@ -234,58 +238,30 @@
             }
         }
     }
-    /*&--type_5 {
-        background-color: #fff;
-        border-color: var(--grey_2);
-        color: var(--primary_color);
+
+    &--type_6 {
+        @include active-area;
+        background-color: transparent;
+        border: none;
+        color: var(--text_color);
+        font-weight: 700;
+        gap: 10px;
+        padding: 0;
+        position: relative;
+        z-index: 1;
 
         svg {
             fill: var(--primary_color);
+            height: 24px;
+            min-width: 24px;
+            width: 24px;
         }
 
         &:not(.disabled),
         &:not(:disabled),
         &:not([data-disabled]) {
             @include hover {
-                background-color: var(--grey_7);
-            }
-        }
-    }
-
-    &--type_6 {
-        background-color: var(--grey_2);
-        font-weight: 600;
-
-        svg {
-            fill: var(--grey_3);
-        }
-
-        &:not(.disabled),
-        &:not(:disabled),
-        &:not([data-disabled]) {
-            @include hover {
-                background-color: var(--grey_7);
-            }
-        }
-
-        .cnt {
-            color: var(--grey_5);
-        }
-
-        &.is-active {
-            background-color: var(--primary_color);
-            color: #fff;
-            font-weight: 700;
-            @include hover {
-                background-color: var(--primary_color);
-            }
-
-            svg {
-                fill: #fff;
-            }
-
-            .cnt {
-                color: #fff;
+                color: var(--primary_color);
             }
         }
     }
@@ -306,6 +282,42 @@
     }
 
     &--type_8 {
+        background-color: var(--grey_11);
+        color: var(--grey_12);
+        font-weight: 700;
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--grey_7);
+                color: var(--grey_3);
+            }
+        }
+
+        svg {
+            fill: currentColor;
+        }
+    }
+
+    &--type_9 {
+        background-color: #fff;
+        border: none;
+
+        svg {
+            fill: var(--grey_14);
+        }
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--grey_2);
+            }
+        }
+    }
+    /*
+    &--type_8 {
         background-color: transparent;
         color: var(--text_color);
         font-weight: 600;
@@ -318,26 +330,6 @@
                     background-color: var(--grey_7);
                 }
             }
-        }
-
-        &.status-blue {
-            .cnt {
-                background-color: #E4EDFF;
-                color: var(--primary_color);
-            }
-        }
-
-        &.status-red {
-            .cnt {
-                background-color: var(--pink);
-                color: var(--red);
-            }
-        }
-
-        .cnt {
-            border-radius: 4px;
-            min-width: 16px;
-            padding: 2px 4px;
         }
     }
 

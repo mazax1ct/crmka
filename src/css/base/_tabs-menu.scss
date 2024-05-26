@@ -3,6 +3,7 @@
     border-radius: 10px;
     display: flex;
     padding: 2px;
+    overflow-y: hidden;
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -29,6 +30,7 @@
     @include scrollbar;
     display: flex;
     gap: 5px;
+    overflow-y: hidden;
     overflow-x: auto;
     /*scrollbar-width: none;
     -ms-overflow-style: none;*/
@@ -47,15 +49,59 @@
         }
     }
 
-    .button {
+    &__button {
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        border-radius: 6px;
+        cursor: pointer;
+        display: inline-flex;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        height: 30px;
+        justify-content: center;
+        line-height: 1.4;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s;
+        vertical-align: middle;
+
+        &.status-blue {
+            .cnt {
+                background-color: #E4EDFF;
+                color: var(--primary_color);
+            }
+        }
+
+        &.status-red {
+            .cnt {
+                background-color: var(--pink);
+                color: var(--red);
+            }
+        }
+
+        .cnt {
+            border-radius: 4px;
+            min-width: 16px;
+            padding: 2px 4px;
+        }
+
+        &:not(.is-active) {
+            @include hover {
+                background-color: var(--grey_2);
+            }
+        }
+
         &.is-active {
             background-color: var(--primary_color);
-            border-color: var(--primary_color);
             color: #fff;
 
             &.status-blue {
                 .cnt {
-                    background-color: var(--primary_color_darker);
+                    background-color: #3266DC;
                     color: #fff;
                 }
             }

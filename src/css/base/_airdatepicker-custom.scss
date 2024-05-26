@@ -1,3 +1,15 @@
+.air-datepicker-global-container {
+    z-index: 20000;
+}
+
+.air-datepicker.-is-mobile- {
+    --adp-mobile-width: 340px;
+}
+
+.air-datepicker.-is-mobile-.-active-:not(.-custom-position-) {
+    transform: translate(-50%, -50%) !important;
+}
+
 .air-datepicker {
     --adp-font-family: 'Montserrat', Arial, sans-serif;
     --adp-border-radius: 7px;
@@ -51,13 +63,14 @@
 }
 
 .air-datepicker-nav--title {
-    //color: var(--blue_1);
     font-weight: 700;
-    //transition: color 0.3s;
-    /*@include hover {
-        background-color: transparent;
-        color: var(--blue_7);
-    }*/
+    padding: 8px;
+    transition: color 0.3s, background-color 0.3s;
+    @include hover {
+        background-color: var(--primary_color);
+        color: #fff;
+    }
+
     i {
         color: inherit;
     }

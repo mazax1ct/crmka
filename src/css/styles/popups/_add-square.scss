@@ -1,0 +1,13 @@
+.add-square {
+    &__price-block {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    &__status {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+}

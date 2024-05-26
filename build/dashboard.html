@@ -304,7 +304,7 @@
             <form class="search__form" action="">
                 <div class="search__form-inner">
                     <input class="input search__input" type="text" placeholder="Поиск по ИНН или названию">
-                    <button class="search__submit" type="submit" title="Найти">
+                    <button class="search__submit button button--type_3 button--h_60 button--square" type="submit" title="Найти">
                         <svg aria-hidden="true">
                             <use xlink:href="images/sprite.svg#search_icon" />
                         </svg>
@@ -367,7 +367,7 @@
                 <div class="box">
                     <div class="box__title-block justify-content-spacebetween">
                         <p class="box__title">Уведомления</p>
-                        <a class="button button--h_40 button--type_4" href="#">
+                        <a class="button button--type_1 button--h_40" href="#">
                             <span>Смотреть все</span>
                             <svg aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#arrow_top_right" />
@@ -413,241 +413,6 @@
 
         <div class="box">
             <div class="box__title-block justify-content-spacebetween">
-                <p class="box__title">
-                    Финансовое планирование
-                    <a class="button button--h_30 button--type_5" href="#">
-                        <span>Подробнее</span>
-                        <svg aria-hidden="true">
-                            <use xlink:href="images/sprite.svg#arrow_top_right" />
-                        </svg>
-                    </a>
-                </p>
-        
-                <div class="chart-manage">
-                    <div class="pseudo-select">
-                        <button class="js-pseudo-select-toggler pseudo-select__value-wrapper" type="button">
-                            <div class="pseudo-select__value">
-                                <svg class="pseudo-select__icon" aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#calendar_icon" />
-                                </svg>
-                                <span>2024 год</span>
-                            </div>
-                            <svg class="pseudo-select__arrow" aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#chevron_down" />
-                            </svg>
-                        </button>
-        
-                        <div class="pseudo-select__dropdown">
-                            <div class="pseudo-select__items-list">
-                                <button class="pseudo-select__item is-active" type="button">2024 год</button>
-                                <button class="pseudo-select__item" type="button">2023 год</button>
-                                <button class="pseudo-select__item" type="button">2022 год</button>
-                                <button class="pseudo-select__item" type="button">2021 год</button>
-                                <button class="pseudo-select__item" type="button">2020 год</button>
-                                <button class="pseudo-select__item" type="button">2019 год</button>
-                                <button class="pseudo-select__item" type="button">2018 год</button>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="chart-manage__buttons">
-                        <button class="button button--h_40 button--square button--type_6 is-active" type="button" title="Пирог">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#chart_pie_icon" />
-                            </svg>
-                        </button>
-        
-                        <button class="button button--h_40 button--square button--type_6" type="button" title="Линия">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#chart_line_icon" />
-                            </svg>
-                        </button>
-        
-                        <button class="button button--h_40 button--square button--type_6" type="button" title="Столбец">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#chart_columns_icon" />
-                            </svg>
-                        </button>
-        
-                        <button class="button button--h_40 button--square button--type_6" type="button" title="Вектор">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#chart_vector_icon" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="chart-block">
-                <img src="images/content/chart.svg" alt="">
-            </div>
-        
-            <div class="chart-manage_2">
-                <label class="switch blue">
-                    <input type="checkbox">
-                    <span class="switch__icon"></span>
-                    <span class="switch__text">Общая прибыль</span>
-                </label>
-        
-                <label class="switch blue">
-                    <input type="checkbox" checked>
-                    <span class="switch__icon"></span>
-                    <span class="switch__text">Получено</span>
-                </label>
-        
-                <label class="switch green">
-                    <input type="checkbox" checked>
-                    <span class="switch__icon"></span>
-                    <span class="switch__text">Свободные помещения</span>
-                </label>
-        
-                <label class="switch red">
-                    <input type="checkbox" checked>
-                    <span class="switch__icon"></span>
-                    <span class="switch__text">Задолженность</span>
-                </label>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="box__title-block">
-                <p class="box__title">Коммунальные услуги</p>
-            </div>
-        
-            <div class="tabs-menu">
-                <button class="button button--h_40 button--type_6 is-active" type="button">Электроэнергия</button>
-                <button class="button button--h_40 button--type_6" type="button">Газоснабжение</button>
-                <button class="button button--h_40 button--type_6" type="button">Водоотведение</button>
-                <button class="button button--h_40 button--type_6" type="button">Другие</button>
-            </div>
-        
-            <div class="counter-info">
-                <p class="counter-info__title"><b>Номер счетчика:</b> 12345678</p>
-                <p class="counter-info__date">
-                    <svg aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#calendar_icon" />
-                    </svg>
-                    <span class="counter-info__date-title">Дата следующей поверки</span>
-                    20.02.2025
-                </p>
-            </div>
-        
-            <div class="responsive-table">
-                <table class="table comm-services-table">
-                    <tr>
-                        <th></th>
-                        <th>Январь</th>
-                        <th>Февраль</th>
-                        <th>Март</th>
-                        <th>Апрель</th>
-                        <th>Май</th>
-                        <th>Июнь</th>
-                        <th>Июль</th>
-                        <th>Август</th>
-                        <th>Сентябрь</th>
-                        <th>Октябрь</th>
-                        <th>Ноябрь</th>
-                        <th>Декабрь</th>
-                    </tr>
-                    <tr>
-                        <td class="color-grey">Опатили</td>
-                        <td>200 500 ₽</td>
-                        <td>210 500 ₽</td>
-                        <td>220 500 ₽</td>
-                        <td>230 500 ₽</td>
-                        <td>240 500 ₽</td>
-                        <td>250 500 ₽</td>
-                        <td>260 500 ₽</td>
-                        <td>270 500 ₽</td>
-                        <td>280 500 ₽</td>
-                        <td>290 500 ₽</td>
-                        <td>300 000 ₽</td>
-                        <td>300 000 ₽</td>
-                    </tr>
-                    <tr>
-                        <td class="color-grey">Собрали</td>
-                        <td class="color-green">
-                            200 600 ₽
-                            <svg class="triangle" aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#triangle_up" />
-                            </svg>
-                        </td>
-                        <td class="color-red">
-                            210 500 ₽
-                            <svg class="triangle" aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#triangle_down" />
-                            </svg>
-                        </td>
-                        <td>220 500 ₽</td>
-                        <td class="color-green">
-                            230 500 ₽
-                            <svg class="triangle" aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#triangle_up" />
-                            </svg>
-                        </td>
-                        <td class="color-green">
-                            240 500 ₽
-                            <svg class="triangle" aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#triangle_up" />
-                            </svg>
-                        </td>
-                        <td class="color-red">
-                            250 500 ₽
-                            <svg class="triangle" aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#triangle_down" />
-                            </svg>
-                        </td>
-                        <td class="color-red">
-                            260 500 ₽
-                            <svg class="triangle" aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#triangle_down" />
-                            </svg>
-                        </td>
-                        <td class="color-green">
-                            270 500 ₽
-                            <svg class="triangle" aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#triangle_up" />
-                            </svg>
-                        </td>
-                        <td>280 500 ₽</td>
-                        <td>290 500 ₽</td>
-                        <td>300 000 ₽</td>
-                        <td>300 000 ₽</td>
-                    </tr>
-                </table>
-            </div>
-        
-            <div class="box__footer">
-                <div class="box__footer-block">
-                    <div class="warning">
-                        <svg aria-hidden="true">
-                            <use xlink:href="images/sprite.svg#alert_icon"></use>
-                        </svg>
-                        <span>Значительное отклонение показателей</span>
-                    </div>
-        
-                    <div class="legend">
-                        <div class="legend__item status-green">
-                            <div class="status-icon"></div> <span class="color-green">– Оплачено</span>
-                        </div>
-        
-                        <div class="legend__item status-red">
-                            <div class="status-icon"></div> <span class="color-red">– Не оплачено</span>
-                        </div>
-                    </div>
-                </div>
-        
-                <a class="button button--h_40 button--type_4" href="#">
-                    <span>Подробнее</span>
-                    <svg aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#arrow_top_right"></use>
-                    </svg>
-                </a>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="box__title-block justify-content-spacebetween">
                 <p class="box__title">Свободные помещения</p>
         
                 <div class="free-objects-manage">
@@ -663,7 +428,7 @@
                         <span class="checkbox__text">Освобождаемые</span>
                     </label>
         
-                    <button class="button button--h_40 button--square button--type_4" type="button" title="Настройки">
+                    <button class="button button--type_1 button--h_40 button--square" type="button" title="Настройки">
                         <svg aria-hidden="true">
                             <use xlink:href="images/sprite.svg#gear_icon" />
                         </svg>
@@ -673,7 +438,7 @@
         
             <div class="free-objects-filter">
                 <div>
-                    <div class="select-wrapper select-wrapper--h_45">
+                    <div class="select-wrapper select-wrapper--h_60">
                         <select class="js-select" data-placeholder="Корпус">
                             <option></option>
                             <option value="1">1</option>
@@ -688,7 +453,7 @@
                     </div>
                 </div>
                 <div>
-                    <div class="select-wrapper select-wrapper--h_45">
+                    <div class="select-wrapper select-wrapper--h_60">
                         <select class="js-select" data-placeholder="Этаж">
                             <option></option>
                             <option value="1">1</option>
@@ -703,7 +468,7 @@
                     </div>
                 </div>
                 <div>
-                    <div class="select-wrapper select-wrapper--h_45">
+                    <div class="select-wrapper select-wrapper--h_60">
                         <select class="js-select" data-placeholder="По площади">
                             <option></option>
                             <option value="1">от 50 до 70</option>
@@ -853,22 +618,22 @@
             <div class="box__footer">
                 <div class="buttons-group">
                     <p class="buttons-group__title">Отправить КП:</p>
-                    <a class="button button--h_30 button--type_7" href="#">E-mail</a>
-                    <a class="button button--h_30 button--type_7" href="#">Telegram</a>
-                    <a class="button button--h_30 button--type_7" href="#">WhatsApp</a>
+                    <button class="button button--h_30 button--type_7" href="#">E-mail</button>
+                    <button class="button button--h_30 button--type_7" href="#">Telegram</button>
+                    <button class="button button--h_30 button--type_7" href="#">WhatsApp</button>
                 </div>
         
                 <div class="buttons-group">
                     <p class="buttons-group__title">Создать фид:</p>
-                    <a class="button button--h_30 button--type_7" href="#">
+                    <button class="button button--h_30 button--type_7" href="#">
                         <img width="50" height="14" src="images/icons/logos/avito.png" alt="Avito">
-                    </a>
-                    <a class="button button--h_30 button--type_7" href="#">
+                    </button>
+                    <button class="button button--h_30 button--type_7" href="#">
                         <img width="52" height="19" src="images/icons/logos/cian.png" alt="Циан" style="margin-top: -5px;">
-                    </a>
-                    <a class="button button--h_30 button--type_7" href="#">
+                    </button>
+                    <button class="button button--h_30 button--type_7" href="#">
                         <img width="48" height="14" src="images/icons/logos/yandex.png" alt="Яндекс">
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -880,12 +645,12 @@
                         <p class="box__title">Мои задачи</p>
                 
                         <div class="tabs-menu_2">
-                            <button class="button button--h_30 button--type_8 status-blue is-active" type="button">
+                            <button class="tabs-menu_2__button status-blue is-active" type="button">
                                 <span>Ближайшие</span>
                                 <span class="cnt">10</span>
                             </button>
                 
-                            <button class="button button--h_30 button--type_8 status-red" type="button">
+                            <button class="tabs-menu_2__button status-red" type="button">
                                 <span>Просроченные</span>
                                 <span class="cnt">2</span>
                             </button>
@@ -926,7 +691,7 @@
                         </div>
                     </div>
                 
-                    <a class="button button--h_50 button--wide button--type_9" href="#">Все задачи</a>
+                    <a class="button button--type_2 button--h_50 button--wide" href="#">Все задачи</a>
                 </div>
             </div>
             <div class="two-columns__column">
@@ -935,12 +700,12 @@
                         <p class="box__title">Сотрудники</p>
                 
                         <div class="tabs-menu_2">
-                            <button class="button button--h_30 button--type_8 status-blue is-active" type="button">
+                            <button class="tabs-menu_2__button status-blue is-active" type="button">
                                 <span>Ближайшие</span>
                                 <span class="cnt">10</span>
                             </button>
                 
-                            <button class="button button--h_30 button--type_8 status-red" type="button">
+                            <button class="tabs-menu_2__button status-red" type="button">
                                 <span>Просроченные</span>
                                 <span class="cnt">2</span>
                             </button>
@@ -948,19 +713,19 @@
                     </div>
                 
                     <div class="tabs-menu_2 tabs-menu_2--mb_15">
-                        <button class="button button--h_40 button--type_4 is-active" type="button">
+                        <button class="button button--type_3 button--h_40" type="button">
                             <span>Все</span>
                         </button>
                 
-                        <button class="button button--h_40 button--type_4" type="button">
+                        <button class="button button--type_1 button--h_40" type="button">
                             <span>Администратор БЦ</span>
                         </button>
                 
-                        <button class="button button--h_40 button--type_4" type="button">
+                        <button class="button button--type_1 button--h_40" type="button">
                             <span>Электрик</span>
                         </button>
                 
-                        <button class="button button--h_40 button--type_4" type="button">
+                        <button class="button button--type_1 button--h_40" type="button">
                             <span>Охрана</span>
                         </button>
                     </div>
@@ -991,7 +756,7 @@
                         </div>
                     </div>
                 
-                    <a class="button button--h_50 button--wide button--type_9" href="#">Все задачи</a>
+                    <a class="button button--type_2 button--h_50 button--wide" href="#">Все задачи</a>
                 </div>
             </div>
         </div>
@@ -1002,7 +767,7 @@
                     Оповещения
                     <img src="images/icons/notify_icon.svg" alt="">
                 </p>
-                <a class="button button--h_40 button--type_4" href="#">
+                <a class="button button--type_1 button--h_40" href="#">
                     <span>Смотреть все</span>
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#arrow_top_right" />
@@ -1012,35 +777,35 @@
         
             <div class="box__title-block justify-content-spacebetween">
                 <div class="tabs-menu_2">
-                    <button class="button button--h_40 button--type_4 is-active" type="button">
+                    <button class="button button--type_3 button--h_40" type="button">
                         <span>Уведомления</span>
                     </button>
         
-                    <button class="button button--h_40 button--type_4  type=" button">
+                    <button class="button button--type_1 button--h_40" type="button">
                         <span>Задачи</span>
                     </button>
         
-                    <button class="button button--h_40 button--type_4" type="button">
+                    <button class="button button--type_1 button--h_40" type="button">
                         <span>Напоминания</span>
                     </button>
         
-                    <button class="button button--h_40 button--type_4" type="button">
+                    <button class="button button--type_1 button--h_40" type="button">
                         <span>Все</span>
                     </button>
                 </div>
         
                 <div class="tabs-menu_2">
-                    <button class="button button--h_30 button--type_8 status-blue" type="button">
+                    <button class="tabs-menu_2__button status-blue" type="button">
                         <span>Еще 1 день</span>
                         <span class="cnt">6</span>
                     </button>
         
-                    <button class="button button--h_30 button--type_8 status-red" type="button">
+                    <button class="tabs-menu_2__button status-red" type="button">
                         <span>Просрочено</span>
                         <span class="cnt">2</span>
                     </button>
         
-                    <button class="button button--h_30 button--type_8 status-blue is-active" type="button">
+                    <button class="tabs-menu_2__button button--h_30 status-blue is-active" type="button">
                         <span>Все</span>
                         <span class="cnt">8</span>
                     </button>
@@ -1088,7 +853,7 @@
             </div>
         
             <div class="box__footer">
-                <a class="button button--h_40 button--type_10" href="#">
+                <a class="button button--type_8 button--h_40" href="#">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#archive_icon" />
                     </svg>
@@ -1126,7 +891,8 @@
         <div class="box">
             <div class="box__title-block justify-content-spacebetween">
                 <p class="box__title">Финансы</p>
-                <button class="button button--h_40 button--type_1" type="button">
+        
+                <button class="button button--type_1 button--h_40" type="button">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
                     </svg>
@@ -1136,31 +902,31 @@
         
             <div class="box__title-block justify-content-spacebetween">
                 <div class="tabs-menu_2">
-                    <button class="button button--h_40 button--type_4 is-active" type="button">
+                    <button class="button button--type_3 button--h_40" type="button">
                         <span>Коммунальные услуги</span>
                     </button>
         
-                    <button class="button button--h_40 button--type_4" type="button">
+                    <button class="button button--type_1 button--h_40" type="button">
                         <span>Аренда</span>
                     </button>
         
-                    <button class="button button--h_40 button--type_4" type="button">
+                    <button class="button button--type_1 button--h_40" type="button">
                         <span>Все</span>
                     </button>
                 </div>
         
                 <div class="tabs-menu_2">
-                    <button class="button button--h_30 button--type_8 status-blue is-active" type="button">
+                    <button class="tabs-menu_2__button status-blue is-active" type="button">
                         <span>Все</span>
                         <span class="cnt">12</span>
                     </button>
         
-                    <button class="button button--h_30 button--type_8 status-blue" type="button">
+                    <button class="tabs-menu_2__button status-blue" type="button">
                         <span>Выставленные</span>
                         <span class="cnt">9</span>
                     </button>
         
-                    <button class="button button--h_30 button--type_8 status-red" type="button">
+                    <button class="tabs-menu_2__button status-red" type="button">
                         <span>Не оплаченные</span>
                         <span class="cnt">3</span>
                     </button>
@@ -1245,7 +1011,7 @@
             </div>
         
             <div class="box__footer">
-                <a class="button button--h_40 button--type_10" href="#">
+                <a class="button button--type_8 button--h_40" href="#">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#archive_icon" />
                     </svg>
@@ -1482,6 +1248,10 @@
     <script src="js/select2-addon.js"></script>
     
     <script src="js/air-datepicker.js"></script>
+    
+    <script src="js/plan.js"></script>
+    
+    <script src="js/table-sort.js"></script>
     
     <script src="js/main.js"></script>
 </body>

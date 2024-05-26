@@ -1,3 +1,13 @@
+.form-label {
+    display: block;
+    font-weight: 700;
+    line-height: 1.21428;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
 .form-row {
     display: flex;
     gap: 10px 20px;
@@ -8,7 +18,13 @@
     }
 
     &--centered {
-        align-items: center;
+        .form-label {
+            @media(min-width: $md) {
+                align-items: center;
+                display: flex;
+                height: 60px;
+            }
+        }
     }
 
     .form-label {
@@ -23,24 +39,9 @@
     }
 
     .grow {
+        width: 100%;
         @media(min-width: $md) {
             width: calc(100% - 200px);
         }
-    }
-
-    .w_80 {
-        width: 80px;
-    }
-
-    .w_120 {
-        width: 120px;
-    }
-
-    .w_180 {
-        width: 180px;
-    }
-
-    .w_400 {
-        width: 400px;
     }
 }

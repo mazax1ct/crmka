@@ -1,8 +1,45 @@
 .objects-table {
+    tr {
+        @include hover {
+            background-color: var(--grey_2);
+        }
+
+        &[data-href] {
+            cursor: pointer;
+        }
+    }
+
     td {
         font-weight: 600;
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+
+    &__arrow {
+        width: 10px;
+        height: 10px;
+        transition: fill 0.3s;
+        fill: var(--grey_5);
+    }
+
+    &__edit {
+        @include active-area;
+        @include button-reset;
+        position: relative;
+        z-index: 1;
+        @include hover {
+            svg {
+                fill: var(--grey_4);
+            }
+        }
+
+        svg {
+            fill: var(--grey_14);
+            height: 24px;
+            min-width: 24px;
+            transition: fill 0.3s;
+            width: 24px;
+        }
     }
 }
 

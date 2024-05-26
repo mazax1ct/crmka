@@ -1,0 +1,28 @@
+.plan-preview {
+    border-radius: 8px;
+    border: 2px dashed var(--grey_3);
+    padding: 30px;
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+
+        img {
+            display: block;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 10px;
+        left: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    &__button {
+        filter: drop-shadow(0px 1px 10px rgba(32, 34, 36, 0.2));
+    }
+}

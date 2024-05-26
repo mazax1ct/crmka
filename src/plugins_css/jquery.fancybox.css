@@ -27,7 +27,7 @@ body.compensate-for-scrollbar {
   touch-action: manipulation;
   transform: translateZ(0);
   width: 100%;
-  z-index: 99992;
+  z-index: 10000;
 }
 
 .fancybox-container * {

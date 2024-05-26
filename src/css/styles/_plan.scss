@@ -1,7 +1,9 @@
 .plan {
     background-color: var(--grey_9);
+    border-radius: 8px;
+    margin-top: 30px;
     @media(min-width: $hd) {
-        padding: 40px;
+        padding: 30px;
     }
 
     &__inner {
@@ -159,7 +161,6 @@
     justify-content: space-between;
     gap: 10px;
     margin-top: 30px;
-    margin-bottom: 30px;
 }
 
 .square-info {
@@ -168,10 +169,7 @@
     gap: 5px;
 
     span {
-        background-color: var(--grey_2);
-        border-radius: 4px;
-        color: var(--grey_3);
+        color: var(--grey_14);
         font-weight: 700;
-        padding: 4px 8px;
     }
 }

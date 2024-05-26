@@ -27,102 +27,145 @@
 
         <div class="box">
             <div class="box__title-block justify-content-spacebetween">
-                <p class="box__title">Объекты</p>
+                <p class="box__title">БЦ Возрождение</p>
 
-                <button class="button button--h_45 button--type_1" type="button">
-                    <svg aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#circle_plus_icon" />
-                    </svg>
-                    <span>Добавить объект</span>
-                </button>
+                <div class="objects-manage">
+                    <button class="button button--type_1 button--h_45" type="button">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#circle_plus_icon" />
+                        </svg>
+                        <span>Добавить площадь</span>
+                    </button>
+
+                    <div class="objects-manage__select-block">
+                        <div class="objects-manage__select-title">Показать:</div>
+
+                        <div class="select-wrapper select-wrapper--h_45">
+                            <select class="js-select">
+                                <option value="1">Только объекты</option>
+                                <option value="2" selected>План + список</option>
+                                <option value="3">Только план</option>
+                                <option value="4">Только список</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <hr>
 
-            <div class="objects-filter">
-                <div class="objects-filter__inner">
-                    <div class="objects-filter__row">
-                        <div class="select-wrapper select-wrapper--h_45">
-                            <select id="object" class="js-select" data-placeholder="Выберите объект">
-                                <option></option>
-                                <option value="1">Объект 1</option>
-                                <option value="2">Объект 2</option>
-                                <option value="3">Объект 3</option>
-                            </select>
-                        </div>
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="litera">Литера:</label>
+
+                <div class="w_400">
+                    <div class="select-wrapper select-wrapper--h_60">
+                        <select id="litera" class="js-select" data-placeholder="Не выбрано">
+                            <option></option>
+                            <option value="1">Литера А</option>
+                            <option value="2">Литера Б</option>
+                            <option value="3">Литера В</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="floor">Этаж:</label>
+
+                <div class="grow">
+                    <div class="liters-radios">
+                        <label class="radio_2">
+                            <input type="radio" name="floor" value="1">
+                            <span class="radio_2__text">1</span>
+                        </label>
+
+                        <label class="radio_2">
+                            <input type="radio" name="floor" value="2">
+                            <span class="radio_2__text">2</span>
+                        </label>
+
+                        <label class="radio_2">
+                            <input type="radio" name="floor" value="3">
+                            <span class="radio_2__text">3</span>
+                        </label>
+
+                        <label class="radio_2">
+                            <input type="radio" name="floor" value="4">
+                            <span class="radio_2__text">4</span>
+                        </label>
+
+                        <label class="radio_2">
+                            <input type="radio" name="floor" value="5">
+                            <span class="radio_2__text">5</span>
+                        </label>
+
+                        <label class="radio_2">
+                            <input type="radio" name="floor" value="6">
+                            <span class="radio_2__text">6</span>
+                        </label>
+
+                        <label class="radio_2">
+                            <input type="radio" name="floor" value="7">
+                            <span class="radio_2__text">7</span>
+                        </label>
+
+                        <label class="radio_2">
+                            <input type="radio" name="floor" value="8">
+                            <span class="radio_2__text">8</span>
+                        </label>
+
+                        <label class="radio_2">
+                            <input type="radio" name="floor" value="9">
+                            <span class="radio_2__text">9</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plan">
+                <div class="plan__inner">
+                    <div class="js-tooltip plan__tooltip"></div>
+
+                    <img class="plan__image" src="images/content/plan.jpg" srcset="images/content/plan@2x.jpg 2x" alt="">
+
+                    <svg class="plan__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 983 433">
+                        <polygon class="blue" data-key="1" data-title="OOO «Ромашка»" data-status="status-blue" data-status-text="Сдан" data-square="15" data-price="1500" data-cost="22500" data-href="#" points="737,27,957,27,957,144,737,144">
+                        </polygon>
+                        <polygon class="red" data-key="2" data-title="OOO «Ромашка»" data-status="status-red" data-status-text="Долг за аренду или КУ" data-square="30" data-price="3000" data-cost="30000" data-href="#"
+                          points="262,27,381,27,381,225,262,225">
+                        </polygon>
+                        <polygon class="green" data-key="3" data-title="OOO «Ромашка»" data-status="status-green" data-status-text="Свободен" data-square="20" data-price="2000" data-cost="25000" data-href="#" points="27,186,246,185,246,402,27,402">
+                        </polygon>
+                        <polygon class="blue" data-key="4" data-title="OOO «Ромашка»" data-status="status-blue" data-status-text="Сдан" data-square="17" data-price="1700" data-cost="2300" data-href="#" points="148,27,246,27,246,181,149,181">
+                        </polygon>
+                        <polygon class="blue" data-key="5" data-title="OOO «Ромашка»" data-status="status-blue" data-status-text="Сдан" data-square="16" data-price="1600" data-cost="22000" data-href="#" points="27,28,144,28,144,181,27,180"></polygon>
+                    </svg>
+                </div>
+
+                <div class="plan-legend">
+                    <div class="square-info">
+                        <span>Общая площадь, S</span>
+                        = 18,6…26&nbsp;=&nbsp;106&nbsp;м²
                     </div>
 
-                    <div class="objects-filter__row">
-                        <label class="objects-filter__label" for="">Корпус:</label>
-
-                        <div class="select-wrapper select-wrapper--h_45">
-                            <select id="korp" class="js-select" data-placeholder="Выберите корпус">
-                                <option></option>
-                                <option value="1">Корпус 1</option>
-                                <option value="2">Корпус 2</option>
-                                <option value="3">Корпус 3</option>
-                            </select>
+                    <div class="legend">
+                        <div class="legend__item status-green color-green">
+                            <div class="status-icon"></div> Свободных – 2
                         </div>
-                    </div>
 
-                    <div class="objects-filter__row">
-                        <label class="objects-filter__label">Литера:</label>
+                        <div class="legend__item status-green color-blue">
+                            <div class="status-icon"></div> Сдано – 3
+                        </div>
 
-                        <div class="liters-radios">
-                            <label class="radio_2">
-                                <input type="radio" name="lit" value="1">
-                                <span class="radio_2__text">1</span>
-                            </label>
+                        <div class="legend__item status-red color-red">
+                            <div class="status-icon"></div> Долг за аренду или КУ – 1
+                        </div>
 
-                            <label class="radio_2">
-                                <input type="radio" name="lit" value="2">
-                                <span class="radio_2__text">2</span>
-                            </label>
-
-                            <label class="radio_2">
-                                <input type="radio" name="lit" value="3">
-                                <span class="radio_2__text">3</span>
-                            </label>
-
-                            <label class="radio_2">
-                                <input type="radio" name="lit" value="4">
-                                <span class="radio_2__text">4</span>
-                            </label>
-
-                            <label class="radio_2">
-                                <input type="radio" name="lit" value="5">
-                                <span class="radio_2__text">5</span>
-                            </label>
-
-                            <label class="radio_2">
-                                <input type="radio" name="lit" value="6">
-                                <span class="radio_2__text">6</span>
-                            </label>
-
-                            <label class="radio_2">
-                                <input type="radio" name="lit" value="7">
-                                <span class="radio_2__text">7</span>
-                            </label>
-
-                            <label class="radio_2">
-                                <input type="radio" name="lit" value="8">
-                                <span class="radio_2__text">8</span>
-                            </label>
-
-                            <label class="radio_2">
-                                <input type="radio" name="lit" value="9">
-                                <span class="radio_2__text">9</span>
-                            </label>
+                        <div class="legend__item status-grey color-dark_grey">
+                            <div class="status-icon"></div> Недоступных для аренды – 1
                         </div>
                     </div>
                 </div>
-
-                <button class="objects-filter__reset button button--h_45 button--type_12" type="reset">
-                    <span>Сбросить все</span>
-                    <svg aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#delete_icon" />
-                    </svg>
-                </button>
             </div>
 
             <hr>
@@ -131,40 +174,50 @@
                 <div class="objects-filter_2__title">Показать:</div>
 
                 <div class="tabs-menu_2">
-                    <button class="button button--h_40 button--type_6 is-active" type="button">
+                    <button class="button button--type_3 button--h_40" type="button">
                         <span>Все</span>
                         <span class="cnt">15</span>
                     </button>
 
-                    <button class="button button--h_40 button--type_6" type="button">
+                    <button class="button button--type_2 button--h_40" type="button">
+                        <span>Свободно</span>
+                        <span class="cnt">2</span>
+                    </button>
+
+                    <button class="button button--type_2 button--h_40" type="button">
+                        <span>Сдано</span>
+                        <span class="cnt">2</span>
+                    </button>
+
+                    <button class="button button--type_2 button--h_40" type="button">
                         <span>По важным уведомлениям</span>
                         <span class="cnt">6</span>
                     </button>
 
-                    <button class="button button--h_40 button--type_6" type="button">
+                    <button class="button button--type_2 button--h_40" type="button">
                         <span>Долг за аренду или КУ</span>
                         <span class="cnt">6</span>
                     </button>
                 </div>
-
-                <button class="objects-filter_2__reset button button--h_40 button--type_13" type="reset">
-                    <span>Сбросить</span>
-                    <svg aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#delete_icon" />
-                    </svg>
-                </button>
             </div>
 
             <div class="filter-reset">
-                <button class="button button--h_30 button--type_14" type="reset">
+                <button class="button button--type_3 button--h_30" type="reset">
                     <span>Свободно</span>
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#delete_icon" />
                     </svg>
                 </button>
 
-                <button class="button button--h_30 button--type_14" type="reset">
+                <button class="button button--type_3 button--h_30" type="reset">
                     <span>По важным уведомлениям</span>
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#delete_icon" />
+                    </svg>
+                </button>
+
+                <button class="button button--type_2 button--h_30" type="reset">
+                    <span>Очистить список</span>
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#delete_icon" />
                     </svg>
@@ -208,6 +261,7 @@
                                 </svg>
                             </span>
                         </th>
+                        <th></th>
                     </tr>
                     <tr>
                         <td class="text-left">
@@ -228,6 +282,13 @@
                         <td class="color-red">Сдан</td>
                         <td>ООО «Ромашка»</td>
                         <td class="color-red">75 000 ₽</td>
+                        <td>
+                            <button class="objects-table__edit" type="button" title="Редактировать">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#edit_icon" />
+                                </svg>
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td class="text-left">
@@ -248,6 +309,13 @@
                         <td class="color-red">Сдан</td>
                         <td>ООО «Ромашка»</td>
                         <td class="color-red">46 000 ₽</td>
+                        <td>
+                            <button class="objects-table__edit" type="button" title="Редактировать">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#edit_icon" />
+                                </svg>
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td class="text-left">
@@ -268,6 +336,13 @@
                         <td class="color-blue">Сдан</td>
                         <td>ООО «Ромашка»</td>
                         <td>-</td>
+                        <td>
+                            <button class="objects-table__edit" type="button" title="Редактировать">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#edit_icon" />
+                                </svg>
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td class="text-left">
@@ -288,6 +363,13 @@
                         <td class="color-green">Свободен</td>
                         <td>ООО «Ромашка»</td>
                         <td>-</td>
+                        <td>
+                            <button class="objects-table__edit" type="button" title="Редактировать">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#edit_icon" />
+                                </svg>
+                            </button>
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -306,31 +388,6 @@
                         <div class="status-icon"></div> – задолженность за аренду или КУ
                     </div>
                 </div>
-                <ul class="pager">
-                    <li class="pager__item">
-                        <a class="pager__link is-active" href="#">1</a>
-                    </li>
-                    <li class="pager__item">
-                        <a class="pager__link" href="#">2</a>
-                    </li>
-                    <li class="pager__item">
-                        <a class="pager__link" href="#">3</a>
-                    </li>
-                    <li class="pager__item">
-                        <a class="pager__link" href="#">...</a>
-                    </li>
-                    <li class="pager__item">
-                        <a class="pager__link" href="#">7</a>
-                    </li>
-                    <li class="pager__item pager__item--arrow">
-                        <a class="pager__link" href="#">
-                            <span>Вперед</span>
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#chevron_right"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
     </main>
@@ -338,8 +395,6 @@
     //= template/common/popups.html
 
     //= template/common/scripts.html
-
-    <script src="js/table-sort.js"></script>
 </body>
 
 </html>

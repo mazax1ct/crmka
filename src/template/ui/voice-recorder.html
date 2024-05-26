@@ -1,0 +1,33 @@
+<h2>Поле для записи текста и голоса</h2>
+
+<div class="voice-recorder">
+    <textarea class="voice-recorder__textarea textarea" placeholder="Опишите задачу текстом или голосом"></textarea>
+
+    <button class="voice-recorder__button button button--type_3 button--square button--h_40" type="button" title="Начать запись">
+        <svg aria-hidden="true">
+            <use xlink:href="images/sprite.svg#voice_record_icon" />
+        </svg>
+    </button>
+</div>
+
+<div class="record">
+    <button class="record__play" type="button" title="Воспроизвести запись">
+        <svg aria-hidden="true">
+            <use xlink:href="images/sprite.svg#record_play_icon" />
+        </svg>
+    </button>
+
+    <div class="record__track-block">
+        <div class="record__track">
+            <img src="images/icons/record-track.svg" alt="">
+        </div>
+
+        <div class="record__duration">1:15</div>
+    </div>
+
+    <button class="record__delete" type="button" title="Удалить запись">
+        <svg aria-hidden="true">
+            <use xlink:href="images/sprite.svg#trash_icon" />
+        </svg>
+    </button>
+</div>

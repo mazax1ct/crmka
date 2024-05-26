@@ -1,0 +1,431 @@
+<div id="add-new-task" class="popup popup--620 add-new-task-popup">
+    <p class="popup__title">Поставить новую задачу</p>
+
+    <div class="add-new-task-popup__row">
+        <div class="dropzone">
+            <svg class="dropzone__icon" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+            </svg>
+
+            <p class="dropzone__title">Прикрепить фото или видео</p>
+
+            <label class="input-file">
+                <input type="file">
+                <span class="input-file__text">Выбрать...</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="add-new-task-popup__row">
+        <label class="form-label" for="task_description">Добавить описание задачи</label>
+
+        <div class="voice-recorder">
+            <textarea class="voice-recorder__textarea textarea" placeholder="Опишите задачу текстом или голосом"></textarea>
+
+            <button class="voice-recorder__button button button--type_3 button--square button--h_40" type="button" title="Начать запись">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#voice_record_icon" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="add-new-task-popup__row">
+        <label class="form-label" for="task_manager">Выбрать ответственного</label>
+
+        <div class="select-wrapper select-wrapper--h_60">
+            <select id="tasker_" class="js-select" data-placeholder="Не выбрано">
+                <option></option>
+                <option value="1">Иванов И.А.</option>
+                <option value="2">Петров К.К.</option>
+                <option value="3">Сидоров А.Д.</option>
+                <option value="4">Головатенко С.С.</option>
+                <option value="5">Константинопольский К.К.</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="add-new-task-popup__row">
+        <label class="form-label" for="task_time">Поставить срок</label>
+
+        <div class="add-new-task-popup__time">
+            <input id="task_time" class="js-date-mask input input--datepicker w_150" type="text" name="task_time" placeholder="дд.мм.гггг">
+
+            <div class="js-time-picker time-picker">
+                <input class="time-picker__input input" type="number" name="" value="00" readonly="">
+                <span class="time-picker__dropdown">
+                    <span class="time-picker__items-list">
+                        <span class="time-picker__item">00</span>
+                        <span class="time-picker__item">01</span>
+                        <span class="time-picker__item">02</span>
+                        <span class="time-picker__item">03</span>
+                        <span class="time-picker__item">04</span>
+                        <span class="time-picker__item">05</span>
+                        <span class="time-picker__item">06</span>
+                        <span class="time-picker__item">07</span>
+                        <span class="time-picker__item">08</span>
+                        <span class="time-picker__item">09</span>
+                        <span class="time-picker__item">10</span>
+                        <span class="time-picker__item">11</span>
+                        <span class="time-picker__item">12</span>
+                        <span class="time-picker__item">13</span>
+                        <span class="time-picker__item">14</span>
+                        <span class="time-picker__item">15</span>
+                        <span class="time-picker__item">16</span>
+                        <span class="time-picker__item">17</span>
+                        <span class="time-picker__item">18</span>
+                        <span class="time-picker__item">19</span>
+                        <span class="time-picker__item">20</span>
+                        <span class="time-picker__item">21</span>
+                        <span class="time-picker__item">22</span>
+                        <span class="time-picker__item">23</span>
+                    </span>
+                </span>
+            </div>
+
+            <div class="js-time-picker time-picker">
+                <input class="time-picker__input input" type="number" name="" value="00" readonly>
+                <span class="time-picker__dropdown">
+                    <span class="time-picker__items-list">
+                        <span class="time-picker__item">00</span>
+                        <span class="time-picker__item">01</span>
+                        <span class="time-picker__item">02</span>
+                        <span class="time-picker__item">03</span>
+                        <span class="time-picker__item">04</span>
+                        <span class="time-picker__item">05</span>
+                        <span class="time-picker__item">06</span>
+                        <span class="time-picker__item">07</span>
+                        <span class="time-picker__item">08</span>
+                        <span class="time-picker__item">09</span>
+                        <span class="time-picker__item">10</span>
+                        <span class="time-picker__item">11</span>
+                        <span class="time-picker__item">12</span>
+                        <span class="time-picker__item">13</span>
+                        <span class="time-picker__item">14</span>
+                        <span class="time-picker__item">15</span>
+                        <span class="time-picker__item">16</span>
+                        <span class="time-picker__item">17</span>
+                        <span class="time-picker__item">18</span>
+                        <span class="time-picker__item">19</span>
+                        <span class="time-picker__item">20</span>
+                        <span class="time-picker__item">21</span>
+                        <span class="time-picker__item">22</span>
+                        <span class="time-picker__item">23</span>
+                        <span class="time-picker__item">24</span>
+                        <span class="time-picker__item">25</span>
+                        <span class="time-picker__item">26</span>
+                        <span class="time-picker__item">27</span>
+                        <span class="time-picker__item">28</span>
+                        <span class="time-picker__item">29</span>
+                        <span class="time-picker__item">30</span>
+                        <span class="time-picker__item">31</span>
+                        <span class="time-picker__item">32</span>
+                        <span class="time-picker__item">33</span>
+                        <span class="time-picker__item">34</span>
+                        <span class="time-picker__item">35</span>
+                        <span class="time-picker__item">36</span>
+                        <span class="time-picker__item">37</span>
+                        <span class="time-picker__item">38</span>
+                        <span class="time-picker__item">39</span>
+                        <span class="time-picker__item">40</span>
+                        <span class="time-picker__item">41</span>
+                        <span class="time-picker__item">42</span>
+                        <span class="time-picker__item">43</span>
+                        <span class="time-picker__item">44</span>
+                        <span class="time-picker__item">45</span>
+                        <span class="time-picker__item">46</span>
+                        <span class="time-picker__item">47</span>
+                        <span class="time-picker__item">48</span>
+                        <span class="time-picker__item">49</span>
+                        <span class="time-picker__item">50</span>
+                        <span class="time-picker__item">51</span>
+                        <span class="time-picker__item">52</span>
+                        <span class="time-picker__item">53</span>
+                        <span class="time-picker__item">54</span>
+                        <span class="time-picker__item">55</span>
+                        <span class="time-picker__item">56</span>
+                        <span class="time-picker__item">57</span>
+                        <span class="time-picker__item">58</span>
+                        <span class="time-picker__item">59</span>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup__buttons popup__buttons--type_2">
+        <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
+        <button class="button button--type_3 button--h_60" type="button" disabled>Добавить</button>
+    </div>
+</div>
+
+<div id="add-new-task_2" class="popup popup--620 add-new-task-popup">
+    <p class="popup__title">Поставить новую задачу</p>
+
+    <div class="add-new-task-popup__row">
+        <div class="dropzone">
+            <div class="dropzone__files">
+                <div class="dropzone__file">
+                    <div class="dropzone__file-image">
+                        <img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt="">
+
+                        <button class="dropzone__file-delete" type="button" title="Удалить">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#delete_icon"></use>
+                            </svg>
+                        </button>
+
+                        <svg class="dropzone__file-type" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#image_icon"></use>
+                        </svg>
+                    </div>
+
+                    <div class="dropzone__file-title">Снимок экрана...1293.png</div>
+                </div>
+
+                <div class="dropzone__file">
+                    <div class="dropzone__file-image">
+                        <img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt="">
+
+                        <button class="dropzone__file-delete" type="button" title="Удалить">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#delete_icon"></use>
+                            </svg>
+                        </button>
+
+                        <svg class="dropzone__file-type" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#image_icon"></use>
+                        </svg>
+                    </div>
+
+                    <div class="dropzone__file-title">Снимок экрана...1293.png</div>
+                </div>
+
+                <div class="dropzone__file">
+                    <div class="dropzone__file-image">
+                        <img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt="">
+
+                        <button class="dropzone__file-delete" type="button" title="Удалить">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#delete_icon"></use>
+                            </svg>
+                        </button>
+
+                        <svg class="dropzone__file-type" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#image_icon"></use>
+                        </svg>
+                    </div>
+
+                    <div class="dropzone__file-title">Снимок экрана...1293.png</div>
+                </div>
+
+                <div class="dropzone__file">
+                    <div class="dropzone__file-image">
+                        <img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt="">
+
+                        <button class="dropzone__file-delete" type="button" title="Удалить">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#delete_icon"></use>
+                            </svg>
+                        </button>
+
+                        <svg class="dropzone__file-type" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#image_icon"></use>
+                        </svg>
+                    </div>
+
+                    <div class="dropzone__file-title">Снимок экрана...1293.png</div>
+                </div>
+
+                <div class="dropzone__file">
+                    <div class="dropzone__file-image">
+                        <img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt="">
+
+                        <button class="dropzone__file-delete" type="button" title="Удалить">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#delete_icon"></use>
+                            </svg>
+                        </button>
+
+                        <svg class="dropzone__file-type" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#play_icon"></use>
+                        </svg>
+                    </div>
+
+                    <div class="dropzone__file-title">DB0908961293.avi</div>
+                </div>
+
+                <div class="dropzone__add" title="Добавить файлы">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="add-new-task-popup__row">
+        <label class="form-label" for="task_description">Добавить описание задачи</label>
+
+        <div class="voice-recorder">
+            <textarea class="voice-recorder__textarea textarea"
+              placeholder="Опишите задачу текстом или голосом">Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни.</textarea>
+
+            <button class="voice-recorder__button button button--type_3 button--square button--h_40" type="button" title="Начать запись">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#voice_record_icon" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="record">
+            <button class="record__play" type="button" title="Воспроизвести запись">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#record_play_icon" />
+                </svg>
+            </button>
+
+            <div class="record__track-block">
+                <div class="record__track">
+                    <img src="images/icons/record-track.svg" alt="">
+                </div>
+
+                <div class="record__duration">1:15</div>
+            </div>
+
+            <button class="record__delete" type="button" title="Удалить запись">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#trash_icon" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="add-new-task-popup__row">
+        <label class="form-label" for="task_manager">Выбрать ответственного</label>
+
+        <div class="select-wrapper select-wrapper--h_60">
+            <select id="tasker" class="js-select" data-placeholder="Не выбрано">
+                <option></option>
+                <option value="1">Иванов И.А.</option>
+                <option value="2">Петров К.К.</option>
+                <option value="3">Сидоров А.Д.</option>
+                <option value="4">Головатенко С.С.</option>
+                <option value="5">Константинопольский К.К.</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="add-new-task-popup__row">
+        <label class="form-label" for="task_time">Поставить срок</label>
+
+        <div class="add-new-task-popup__time">
+            <input id="task_time" class="js-date-mask input input--datepicker w_150" type="text" name="task_time" placeholder="дд.мм.гггг">
+
+            <div class="js-time-picker time-picker">
+                <input class="time-picker__input input" type="number" name="" value="00" readonly="">
+                <span class="time-picker__dropdown">
+                    <span class="time-picker__items-list">
+                        <span class="time-picker__item">00</span>
+                        <span class="time-picker__item">01</span>
+                        <span class="time-picker__item">02</span>
+                        <span class="time-picker__item">03</span>
+                        <span class="time-picker__item">04</span>
+                        <span class="time-picker__item">05</span>
+                        <span class="time-picker__item">06</span>
+                        <span class="time-picker__item">07</span>
+                        <span class="time-picker__item">08</span>
+                        <span class="time-picker__item">09</span>
+                        <span class="time-picker__item">10</span>
+                        <span class="time-picker__item">11</span>
+                        <span class="time-picker__item">12</span>
+                        <span class="time-picker__item">13</span>
+                        <span class="time-picker__item">14</span>
+                        <span class="time-picker__item">15</span>
+                        <span class="time-picker__item">16</span>
+                        <span class="time-picker__item">17</span>
+                        <span class="time-picker__item">18</span>
+                        <span class="time-picker__item">19</span>
+                        <span class="time-picker__item">20</span>
+                        <span class="time-picker__item">21</span>
+                        <span class="time-picker__item">22</span>
+                        <span class="time-picker__item">23</span>
+                    </span>
+                </span>
+            </div>
+
+            <div class="js-time-picker time-picker">
+                <input class="time-picker__input input" type="number" name="" value="00" readonly>
+                <span class="time-picker__dropdown">
+                    <span class="time-picker__items-list">
+                        <span class="time-picker__item">00</span>
+                        <span class="time-picker__item">01</span>
+                        <span class="time-picker__item">02</span>
+                        <span class="time-picker__item">03</span>
+                        <span class="time-picker__item">04</span>
+                        <span class="time-picker__item">05</span>
+                        <span class="time-picker__item">06</span>
+                        <span class="time-picker__item">07</span>
+                        <span class="time-picker__item">08</span>
+                        <span class="time-picker__item">09</span>
+                        <span class="time-picker__item">10</span>
+                        <span class="time-picker__item">11</span>
+                        <span class="time-picker__item">12</span>
+                        <span class="time-picker__item">13</span>
+                        <span class="time-picker__item">14</span>
+                        <span class="time-picker__item">15</span>
+                        <span class="time-picker__item">16</span>
+                        <span class="time-picker__item">17</span>
+                        <span class="time-picker__item">18</span>
+                        <span class="time-picker__item">19</span>
+                        <span class="time-picker__item">20</span>
+                        <span class="time-picker__item">21</span>
+                        <span class="time-picker__item">22</span>
+                        <span class="time-picker__item">23</span>
+                        <span class="time-picker__item">24</span>
+                        <span class="time-picker__item">25</span>
+                        <span class="time-picker__item">26</span>
+                        <span class="time-picker__item">27</span>
+                        <span class="time-picker__item">28</span>
+                        <span class="time-picker__item">29</span>
+                        <span class="time-picker__item">30</span>
+                        <span class="time-picker__item">31</span>
+                        <span class="time-picker__item">32</span>
+                        <span class="time-picker__item">33</span>
+                        <span class="time-picker__item">34</span>
+                        <span class="time-picker__item">35</span>
+                        <span class="time-picker__item">36</span>
+                        <span class="time-picker__item">37</span>
+                        <span class="time-picker__item">38</span>
+                        <span class="time-picker__item">39</span>
+                        <span class="time-picker__item">40</span>
+                        <span class="time-picker__item">41</span>
+                        <span class="time-picker__item">42</span>
+                        <span class="time-picker__item">43</span>
+                        <span class="time-picker__item">44</span>
+                        <span class="time-picker__item">45</span>
+                        <span class="time-picker__item">46</span>
+                        <span class="time-picker__item">47</span>
+                        <span class="time-picker__item">48</span>
+                        <span class="time-picker__item">49</span>
+                        <span class="time-picker__item">50</span>
+                        <span class="time-picker__item">51</span>
+                        <span class="time-picker__item">52</span>
+                        <span class="time-picker__item">53</span>
+                        <span class="time-picker__item">54</span>
+                        <span class="time-picker__item">55</span>
+                        <span class="time-picker__item">56</span>
+                        <span class="time-picker__item">57</span>
+                        <span class="time-picker__item">58</span>
+                        <span class="time-picker__item">59</span>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup__buttons popup__buttons--type_2">
+        <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
+        <button class="button button--type_3 button--h_60" type="button">Добавить</button>
+    </div>
+</div>

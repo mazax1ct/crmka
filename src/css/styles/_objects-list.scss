@@ -1,0 +1,22 @@
+.objects-manage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    &__select-block {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .select-wrapper {
+            font-weight: 700;
+            min-width: 175px;
+        }
+    }
+
+    &__select-title {
+        font-weight: 700;
+        line-height: 1.21428;
+    }
+}

@@ -1,0 +1,246 @@
+<div id="add-new-agent" class="popup popup--920 add-new-agent">
+    <p class="popup__title">Добавить нового арендатора</p>
+
+    <button class="button button--type_1 button--h_45" type="button">
+        <svg aria-hidden="true">
+            <use xlink:href="images/sprite.svg#edit_icon" />
+        </svg>
+        Заполнить реквизиты автоматически по ИНН
+    </button>
+
+    <p class="popup__subtitle">Общая информация</p>
+
+    <div>
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-new-agent-country">Страна регистрации</label>
+
+            <div class="w_420">
+                <div class="select-wrapper select-wrapper--h_60">
+                    <select id="add-new-agent-country" class="js-select" data-placeholder="Не выбрано">
+                        <option></option>
+                        <option value="1">Россия</option>
+                        <option value="2">Беларусь</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-new-agent-title">Полное название</label>
+
+            <div class="w_420">
+                <input id="add-new-agent-title" class="input" name="add-new-agent-title" type="text" placeholder="Общество с ограниченно ответственностью «Ромашка»">
+
+                <div class="input-caption">Используется в документах</div>
+            </div>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-new-agent-short-title">Краткое название</label>
+
+            <div class="w_420">
+                <input id="add-new-agent-short-title" class="input" name="add-new-agent-short-title" type="text" placeholder="ООО «Ромашка»">
+
+                <div class="input-caption">Используется в интерфейсе Эльбы</div>
+            </div>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-new-agent-group">Группа</label>
+
+            <div class="w_420">
+                <div class="select-wrapper select-wrapper--h_60">
+                    <select id="add-new-agent-group" class="js-select" data-placeholder="Выберите группу или укажите название новой группы">
+                        <option></option>
+                        <option value="1">Группа 1</option>
+                        <option value="2">Группа 2</option>
+                        <option value="3">Новая группа</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-new-agent-inn">ИНН</label>
+
+            <div class="w_420">
+                <input id="add-new-agent-inn" class="input" name="add-new-agent-inn" type="text" placeholder="">
+            </div>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-new-agent-kpp">КПП</label>
+
+            <div class="w_420">
+                <input id="add-new-agent-kpp" class="input" name="add-new-agent-kpp" type="text" placeholder="">
+            </div>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-new-agent-ogrn">ОГРН</label>
+
+            <div class="w_420">
+                <input id="add-new-agent-ogrn" class="input" name="add-new-agent-ogrn" type="text" placeholder="">
+            </div>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-new-agent-okpo">ОКПО</label>
+
+            <div class="w_420">
+                <input id="add-new-agent-okpo" class="input" name="add-new-agent-okpo" type="text" placeholder="">
+            </div>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-new-agent-sign-fio">ФИО для подписи</label>
+
+            <div class="w_420">
+                <input id="add-new-agent-sign-fio" class="input" name="add-new-agent-sign-fio" type="text" placeholder="Например, Иванов А.А.">
+
+                <div class="input-caption">Подставляется в документы в качестве подписи</div>
+            </div>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-new-agent-dir">В лице</label>
+
+            <div class="w_420">
+                <input id="add-new-agent-dir" class="input" name="add-new-agent-dir" type="text" placeholder="директора Иванова Ивана Ивановича">
+
+                <div class="input-caption">Подставляется в договоры в поле «в лице».<br> Заполняется в родительном падеже.</div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label" for="add-new-agent-passport">Паспортные данные</label>
+
+            <div class="w_420">
+                <textarea id="add-new-agent-passport" class="textarea" placeholder="Серия, номер, дата выдачи, код подразделения, кем выдан"></textarea>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label" for="add-new-agent-comment">Комментарий</label>
+
+            <div class="w_420">
+                <textarea id="add-new-agent-comment" class="textarea" placeholder="Видите только вы"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <p class="popup__subtitle">Адреса</p>
+
+    <div class="form-row form-row--centered">
+        <label class="form-label" for="add-new-agent-ur-address">Юридический адрес</label>
+
+        <div class="w_420">
+            <input id="add-new-agent-ur-address" class="input" name="add-new-agent-ur-address" type="text" placeholder="">
+
+            <div class="mt_10">
+                <label class="checkbox">
+                    <input type="checkbox" name="" value="">
+                    <span class="checkbox__icon"></span>
+                    <span class="checkbox__text">Совпадает с юридическим</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row form-row--centered">
+        <label class="form-label" for="add-new-agent-fakt-address">Фактический адрес</label>
+
+        <div class="w_420">
+            <input id="add-new-agent-fakt-address" class="input" name="add-new-agent-fakt-address" type="text" placeholder="">
+        </div>
+    </div>
+
+    <hr>
+
+    <p class="popup__subtitle">Контакты</p>
+
+    <div class="form-row form-row--centered">
+        <label class="form-label" for="add-new-agent-phone">Телефон</label>
+
+        <div class="w_420">
+            <input id="add-new-agent-phone" class="input" name="add-new-agent-phone" type="text" placeholder="">
+        </div>
+    </div>
+
+    <div class="form-row form-row--centered">
+        <label class="form-label" for="add-new-agent-email">E-mail</label>
+
+        <div class="w_420">
+            <input id="add-new-agent-email" class="input" name="add-new-agent-email" type="text" placeholder="">
+        </div>
+    </div>
+
+    <div class="form-row form-row--centered">
+        <label class="form-label" for="add-new-agent-site">Сайт</label>
+
+        <div class="w_420">
+            <input id="add-new-agent-site" class="input" name="add-new-agent-site" type="text" placeholder="">
+        </div>
+    </div>
+
+    <hr>
+
+    <p class="popup__subtitle">Дополнительные контакты</p>
+
+    <button class="button button--type_6" type="button">
+        <svg aria-hidden="true">
+            <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+        </svg>
+        Добавить контакт
+    </button>
+
+    <hr>
+
+    <p class="popup__subtitle">Расчетный счет</p>
+
+    <button class="button button--type_6" type="button">
+        <svg aria-hidden="true">
+            <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+        </svg>
+        Добавить рассчетный счет
+    </button>
+
+    <hr>
+
+    <p class="popup__subtitle">Документы</p>
+
+    <div class="dropzone">
+        <svg class="dropzone__icon" aria-hidden="true">
+            <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+        </svg>
+
+        <p class="dropzone__title">Прикрепить фото или видео</p>
+
+        <label class="input-file">
+            <input type="file">
+            <span class="input-file__text">Выбрать...</span>
+        </label>
+    </div>
+
+    <hr>
+
+    <p class="popup__subtitle">Объекты</p>
+
+    <button class="button button--type_6" type="button">
+        <svg aria-hidden="true">
+            <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+        </svg>
+        Добавить рассчетный счет
+    </button>
+
+    <div class="popup__bottom">
+        <div></div>
+
+        <div class="popup__buttons">
+            <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
+            <button class="button button--type_3 button--h_60" type="button">Добавить</button>
+        </div>
+    </div>
+</div>

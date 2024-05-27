@@ -30,3 +30,15 @@ $(document).on('click', '.js-popup-close', function () {
   $.fancybox.close();
   return false
 });
+
+$(document).on('click', '#js-show-add-tenant-step-2', function () {
+  $('#add-tenant-step-1').hide();
+  $('#add-tenant-step-2').show();
+  return false;
+});
+
+$(document).on('click', '#js-show-add-tenant-step-2', function () {
+  $('#add-tenant-step-1').hide();
+  $('#add-tenant-step-2').show();
+  return false;
+});

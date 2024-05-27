@@ -1761,6 +1761,298 @@
 
             <br><br>
 
+            <button class="button button--type_1 button--h_40" type="button" name="button" data-fancybox="add-tenant_1" data-src="#add-tenant_1">Добавить арендатора - шаг 1</button>
+
+            <br><br>
+
+            <button class="button button--type_1 button--h_40" type="button" name="button" data-fancybox="add-tenant_2" data-src="#add-tenant_2">Добавить арендатора - шаг 2</button>
+
+            <br><br>
+
+            <button class="button button--type_1 button--h_40" type="button" name="button" data-fancybox="add-tenant_3" data-src="#add-tenant_3">Добавить арендатора - шаг 3</button>
+
+            <br><br>
+
+            <button class="button button--type_1 button--h_40" type="button" name="button" data-fancybox="add-tenant_4" data-src="#add-tenant_4">Добавить арендатора - шаг 2</button>
+
+            <div id="add-tenant_1" class="popup popup--920 add-tenant">
+                <div class="popup__title">Шаг 1. Выберите контрагента</div>
+            
+                <button class="button button--type_1 button--h_45" type="button">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+                    </svg>
+                    Добавить нового
+                </button>
+            
+                <div class="search">
+                    <form class="search__form" action="">
+                        <div class="search__form-inner">
+                            <input class="input search__input" type="text" placeholder="Поиск по контрагентам">
+                            <button class="search__submit button button--type_3 button--h_60 button--square" type="submit" title="Найти">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#search_icon" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            
+                <div class="responsive-table">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th class="js-sort text-left">
+                                    <span class="sorting">
+                                        <span>Название</span>
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#double_arrow_icon"></use>
+                                        </svg>
+                                    </span>
+                                </th>
+                                <th class="text-left">Неоплаченные&nbsp;счета</th>
+                                <th class="text-left">Объект</th>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <label class="checkbox">
+                                        <input type="radio" name="contragent" value="1">
+                                        <span class="checkbox__icon"></span>
+                                        <span class="checkbox__text">ПАО «МТС»</span>
+                                    </label>
+                                </td>
+                                <td class="text-left">нет</td>
+                                <td class="text-left">Объект А</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <label class="checkbox">
+                                        <input type="radio" name="contragent" value="2">
+                                        <span class="checkbox__icon"></span>
+                                        <span class="checkbox__text">ООО «Городская мозаика»</span>
+                                    </label>
+                                </td>
+                                <td class="text-left"><span class="color-blue">1 счет</span> на 75 000 ₽</td>
+                                <td class="text-left">Объект А</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <label class="checkbox">
+                                        <input type="radio" name="contragent" value="3">
+                                        <span class="checkbox__icon"></span>
+                                        <span class="checkbox__text">ПАО «МТС»</span>
+                                    </label>
+                                </td>
+                                <td class="text-left">нет</td>
+                                <td class="text-left">Объект А</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <div class="popup__bottom">
+                    <div></div>
+            
+                    <div class="popup__buttons">
+                        <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
+                        <button class="button button--type_3 button--h_60" type="button">Далее</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="add-tenant_2" class="popup popup--920 add-tenant">
+                <div class="add-tenant__step-title-block">
+                    <p class="add-tenant__step-title">Шаг 1. OOO «ГОРОДСКАЯ МОЗАИКА»</p>
+            
+                    <button class="add-tenant__step-edit" type="button">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#edit_2_icon"></use>
+                        </svg>
+                        Редактировать
+                    </button>
+                </div>
+            
+                <div class="popup__title">Шаг 2. Выберите помещение</div>
+            
+                <div class="add-tenant__choose-object">
+                    <div>
+                        <div class="select-wrapper select-wrapper--h_60">
+                            <select id="add-tenant-object" class="js-select" data-placeholder="Объект">
+                                <option></option>
+                                <option value="1">БЦ Возрождение</option>
+                                <option value="2">БЦ Прима</option>
+                                <option value="3">БЦ Трио</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <div>
+                        <div class="select-wrapper select-wrapper--h_60">
+                            <select id="add-tenant-korpus" class="js-select" data-placeholder="Корпус">
+                                <option></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <div>
+                        <div class="select-wrapper select-wrapper--h_60">
+                            <select id="add-tenant-floor" class="js-select" data-placeholder="Этаж">
+                                <option></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="responsive-table">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th class="js-sort text-left">
+                                    <span class="sorting">
+                                        <span>Номер помещения</span>
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#double_arrow_icon"></use>
+                                        </svg>
+                                    </span>
+                                </th>
+                                <th class="js-sort">
+                                    <span class="sorting">
+                                        <span>Площадь&nbsp;м2</span>
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#double_arrow_icon"></use>
+                                        </svg>
+                                    </span>
+                                </th>
+                                <th>Картинка</th>
+                                <th class="js-sort">
+                                    <span class="sorting">
+                                        <span>Статус</span>
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#double_arrow_icon"></use>
+                                        </svg>
+                                    </span>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <label class="checkbox">
+                                        <input type="radio" name="contragent" value="1">
+                                        <span class="checkbox__icon"></span>
+                                        <span class="checkbox__text">Объект А</span>
+                                    </label>
+                                </td>
+                                <td>50</td>
+                                <td>
+                                    <a class="attach-link" href="#">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#image_icon"></use>
+                                        </svg>
+                                        <span>PNG</span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <span class="color-blue">Свободен</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <label class="checkbox">
+                                        <input type="radio" name="contragent" value="1">
+                                        <span class="checkbox__icon"></span>
+                                        <span class="checkbox__text">Объект Б</span>
+                                    </label>
+                                </td>
+                                <td>100</td>
+                                <td>
+                                    <a class="attach-link" href="#">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#image_icon"></use>
+                                        </svg>
+                                        <span>PNG</span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <span class="color-red">Занят</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <label class="checkbox">
+                                        <input type="radio" name="contragent" value="1">
+                                        <span class="checkbox__icon"></span>
+                                        <span class="checkbox__text">Объект В</span>
+                                    </label>
+                                </td>
+                                <td>60</td>
+                                <td>
+                                    <a class="attach-link" href="#">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#image_icon"></use>
+                                        </svg>
+                                        <span>PNG</span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <span class="color-blue">Свободен</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <div class="popup__bottom">
+                    <div></div>
+            
+                    <div class="popup__buttons">
+                        <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
+                        <button class="button button--type_3 button--h_60" type="button">Далее</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="add-tenant_3" class="popup popup--920 add-tenant">
+                <div class="add-tenant__step-title-block">
+                    <p class="add-tenant__step-title">Шаг 1. OOO «ГОРОДСКАЯ МОЗАИКА»</p>
+            
+                    <button class="add-tenant__step-edit" type="button">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#edit_2_icon"></use>
+                        </svg>
+                        Редактировать
+                    </button>
+                </div>
+            
+                <div class="add-tenant__step-title-block">
+                    <p class="add-tenant__step-title">Шаг 2. Помещение 305</p>
+            
+                    <button class="add-tenant__step-edit" type="button">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#edit_2_icon"></use>
+                        </svg>
+                        Редактировать
+                    </button>
+                </div>
+            
+                <div class="popup__title">Шаг 3. Выберите тип договора</div>
+            
+            
+            
+                <div class="popup__bottom">
+                    <div></div>
+            
+                    <div class="popup__buttons">
+                        <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
+                        <button class="button button--type_3 button--h_60" type="button">Далее</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 

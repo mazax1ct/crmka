@@ -1,0 +1,60 @@
+.add-tenant {
+    .search {
+        margin-top: 30px;
+    }
+
+    &__step-title-block {
+        border-bottom: 1px solid var(--grey_2);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        padding-right: 50px;
+    }
+
+    &__step-title {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    &__step-edit {
+        @include button-reset;
+        @include active-area;
+        align-items: center;
+        color: var(--grey_14);
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        font-weight: 600;
+        position: relative;
+        transition: color 0.3s;
+        z-index: 1;
+        @include hover {
+            color: var(--grey_4);
+        }
+
+        svg {
+            fill: currentColor;
+            height: 24px;
+            min-width: 24px;
+            width: 24px;
+        }
+    }
+
+    &__choose-object {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 15px;
+        @media(min-width: $md) {
+            flex-direction: row;
+        }
+
+        & > div {
+            @media(min-width: $md) {
+                width: calc(100% / 3 - 10px * 2 / 3);
+            }
+        }
+    }
+}

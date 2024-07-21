@@ -1,56 +1,19 @@
 <div id="add-square" class="popup popup--920 add-square">
-    <p class="popup__title">Добавить площадь</p>
+    <p class="popup__title">Добавить площадь (помещение/ офис)</p>
 
     <div>
         <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-group">Группа объектов</label>
+            <label class="form-label" for="add-square-group">Объект (здание)</label>
 
             <div class="w_420">
                 <div class="select-wrapper select-wrapper--h_60">
                     <select id="add-square-group" class="js-select" data-placeholder="Не выбрано">
                         <option></option>
                         <option value="1">БЦ Возрождение</option>
-                        <option value="2">Другая группа объектов</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-title">Название, номер</label>
-
-            <div class="w_420">
-                <input id="add-square-title" class="input" name="add-square-title" type="text" placeholder="">
-            </div>
-        </div>
-
-        <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-address">Адрес</label>
-
-            <div class="w_420">
-                <input id="add-square-address" class="input" name="add-square-address" type="text" placeholder="">
-            </div>
-        </div>
-
-        <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-description">Описание</label>
-
-            <div class="grow">
-                <textarea id="add-square-description" class="textarea"></textarea>
-
-                <div class="input-caption">Всего 0 символов из 600</div>
-            </div>
-        </div>
-
-        <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-litera">Литера</label>
-
-            <div class="w_420">
-                <div class="select-wrapper select-wrapper--h_60">
-                    <select id="add-square-litera" class="js-select" data-placeholder="Не выбрано">
-                        <option></option>
-                        <option value="1">Литера А</option>
-                        <option value="2">Литера Б</option>
+                        <option value="2">БЦ Олимп литера А</option>
+                        <option value="3">БЦ Олимп литера Б</option>
+                        <option value="4">БЦ Триумф корпус 1</option>
+                        <option value="5">БЦ Триумф корпус 4</option>
                     </select>
                 </div>
             </div>
@@ -63,10 +26,28 @@
                 <div class="select-wrapper select-wrapper--h_60">
                     <select id="add-square-floor" class="js-select" data-placeholder="-">
                         <option></option>
-                        <option value="1">1</option>
+                        <option value="1" selected>1</option>
                         <option value="2">2</option>
                     </select>
                 </div>
+            </div>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-square-title">Название, номер</label>
+
+            <div class="w_420">
+                <input id="add-square-title" class="input" name="add-square-title" type="text" placeholder="Например: офис 202">
+            </div>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-square-description">Описание</label>
+
+            <div class="grow">
+                <textarea id="add-square-description" class="textarea"></textarea>
+
+                <div class="input-caption">Всего 0 символов из 600</div>
             </div>
         </div>
 
@@ -207,59 +188,21 @@
 </div>
 
 <div id="add-square_2" class="popup popup--920 add-square">
-    <p class="popup__title">Добавить площадь</p>
+    <p class="popup__title">Добавить площадь (помещение/ офис)</p>
 
     <div>
         <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-group_">Группа объектов</label>
+            <label class="form-label" for="add-square-group_">Объект (здание)</label>
 
             <div class="w_420">
                 <div class="select-wrapper select-wrapper--h_60">
                     <select id="add-square-group_" class="js-select" data-placeholder="Не выбрано">
                         <option></option>
                         <option value="1" selected>БЦ Возрождение</option>
-                        <option value="2">Другая группа объектов</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-title_">Название, номер</label>
-
-            <div class="w_420">
-                <input id="add-square-title_" class="input" name="add-square-title_" type="text" value="Офисное помещение 202" placeholder="">
-            </div>
-        </div>
-
-        <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-address_">Адрес</label>
-
-            <div class="w_420">
-                <input id="add-square-address_" class="input" name="add-square-address_" type="text" value="172531, Тверская обл, г. Нелидово, Ул. Невского, д.1" placeholder="">
-            </div>
-        </div>
-
-        <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-description_">Описание</label>
-
-            <div class="grow">
-                <textarea id="add-square-description_"
-                  class="textarea">Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни.</textarea>
-
-                <div class="input-caption">Всего 364 символов из 600</div>
-            </div>
-        </div>
-
-        <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-litera_">Литера</label>
-
-            <div class="w_420">
-                <div class="select-wrapper select-wrapper--h_60">
-                    <select id="add-square-litera_" class="js-select" data-placeholder="Не выбрано">
-                        <option></option>
-                        <option value="1" selected>Литера А</option>
-                        <option value="2">Литера Б</option>
+                        <option value="2">БЦ Олимп литера А</option>
+                        <option value="3">БЦ Олимп литера Б</option>
+                        <option value="4">БЦ Триумф корпус 1</option>
+                        <option value="5">БЦ Триумф корпус 4</option>
                     </select>
                 </div>
             </div>
@@ -272,39 +215,57 @@
                 <div class="select-wrapper select-wrapper--h_60">
                     <select id="add-square-floor_" class="js-select" data-placeholder="-">
                         <option></option>
-                        <option value="1" selected>1</option>
-                        <option value="2">2</option>
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
                     </select>
                 </div>
             </div>
         </div>
 
         <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-square_">Площадь, м2</label>
+            <label class="form-label" for="add-square-title">Название, номер</label>
 
-            <div class="w_120">
-                <input id="add-square-square_" class="input" name="add-square-square_" type="text" value="150" placeholder="">
+            <div class="w_420">
+                <input id="add-square-title" class="input" name="add-square-title" type="text" value="офис 2524" placeholder="Например: офис 202">
             </div>
         </div>
 
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-square-description">Описание</label>
+
+            <div class="grow">
+                <textarea id="add-square-description"
+                  class="textarea">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus non porro iure expedita maiores amet aperiam nihil aut consequuntur deserunt, fugiat nobis consectetur ipsum architecto repudiandae velit iste deleniti a.</textarea>
+
+                <div class="input-caption">Всего 456 символов из 600</div>
+            </div>
+        </div>
 
         <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-price_">Стоимость, м2</label>
+            <label class="form-label" for="add-square-square">Площадь, м2</label>
+
+            <div class="w_120">
+                <input id="add-square-square" class="input" name="add-square-square" type="text" value="150" placeholder="">
+            </div>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-square-price">Стоимость, м2</label>
 
             <div class="grow">
                 <div class="add-square__price-block">
-                    <input id="add-square-price_" class="input w_120" name="add-square-price_" type="text" value="25 000 000" placeholder="">
+                    <input id="add-square-price" class="input w_120" name="add-square-price" type="text" value="1500" placeholder="">
                     ₽
                 </div>
             </div>
         </div>
 
         <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-price-month_">Стоимость аренды в месяц</label>
+            <label class="form-label" for="add-square-price-month">Стоимость аренды в месяц</label>
 
             <div class="grow">
                 <div class="add-square__price-block">
-                    <input id="add-square-price-month_" class="input w_120" name="add-square-price-month_" type="text" value="60 000" placeholder="">
+                    <input id="add-square-price-month" class="input w_120" name="add-square-price-month" type="text" value="45000" placeholder="">
                     ₽
                 </div>
             </div>
@@ -316,13 +277,13 @@
             <div class="grow">
                 <div class="add-square__status">
                     <label class="radio">
-                        <input type="radio" name="add-square-status_" value="1">
+                        <input type="radio" name="add-square-status" value="1" checked>
                         <span class="radio__icon"></span>
                         <span class="radio__text">Сдан</span>
                     </label>
 
                     <label class="radio">
-                        <input type="radio" name="add-square-status_" value="2" checked>
+                        <input type="radio" name="add-square-status" value="2">
                         <span class="radio__icon"></span>
                         <span class="radio__text">Свободен</span>
                     </label>

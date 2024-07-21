@@ -44,4 +44,10 @@
             width: calc(100% - 200px);
         }
     }
+
+    .form-row {
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
 }

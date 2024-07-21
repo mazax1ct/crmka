@@ -37,9 +37,9 @@
 
             <h2>Попапы</h2>
 
-            <button class="button button--type_1 button--h_40" type="button" name="button" data-fancybox="add-new-object" data-src="#add-new-object">Добавть новый объект</button>
+            <button class="button button--type_1 button--h_40" type="button" name="button" data-fancybox="add-new-object" data-src="#add-new-object">Добавть новый объект (здание)</button>
 
-            <div id="add-new-object" class="popup popup--920 new-object-popup">
+            <!--<div id="add-new-object" class="popup popup--920 new-object-popup">
                 <div id="js-new-object-step-1">
                     <p class="popup__title">Шаг 1. Новый объект</p>
             
@@ -319,6 +319,706 @@
                             <button id="js-show-new-object-step-1" class="button button--type_2 button--h_60" type="button">Назад</button>
                             <button class="button button--type_3 button--h_60" type="button">Добавить</button>
                         </div>
+                    </div>
+                </div>
+            </div>-->
+            
+            <div id="add-new-object" class="popup popup--920 new-object-popup">
+                <p class="popup__title">Добавление нового объекта (здание)</p>
+            
+                <div class="new-object">
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="new_object_title">Название</label>
+            
+                        <input id="new_object_title" class="input grow" type="text" name="new_object_title" value="" placeholder="Например: БЦ Возрождение">
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="new_object_address">Адрес</label>
+            
+                        <input id="new_object_address" class="input grow" type="text" name="new_object_address" value="" placeholder="Например: г. Санкт-Петербург, пр-т Просвещения д. 1 лит. А">
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="new_object_liter">Литера / корпус</label>
+            
+                        <div>
+                            <div class="form-row">
+                                <input id="new_object_liter" class="input w_180" type="text" name="new_object_liter" value="" disabled>
+            
+                                <label class="checkbox">
+                                    <input id="litera_korpus" type="checkbox" name="" value="" checked>
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Без литеры /корпуса</span>
+                                </label>
+                            </div>
+            
+                            <div class="input-caption">Заполняется, если объект состоит из нескольких зданий</div>
+                        </div>
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="new_object_square">Общая площадь, м2</label>
+            
+                        <input id="new_object_square" class="input w_180" type="text" name="new_object_square" value="">
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="new_object_floors">Кол-во этажей</label>
+            
+                        <input id="new_object_floors" class="input w_180" type="text" name="new_object_floors" value="">
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="new_object_info">Доп. информация</label>
+            
+                        <textarea id="new_object_info" class="textarea grow" name="new_object_info"></textarea>
+                    </div>
+            
+                    <p class="new-object__title">Этажи и планы</p>
+            
+                    <div>
+                        <div class="floor-block form-row form-row--centered">
+                            <label class="form-label" for="new_object_floor">Этаж</label>
+            
+                            <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="1">
+                        </div>
+            
+                        <div class="form-row">
+                            <label class="form-label" for="new_object_plan">План БТИ</label>
+            
+                            <label class="input-file">
+                                <input type="file">
+                                <span class="input-file__text">Выбрать файл</span>
+                            </label>
+                        </div>
+                    </div>
+            
+                    <hr>
+            
+                    <div>
+                        <div class="floor-block form-row form-row--centered">
+                            <button class="new-object-popup__delete button button--type_6" type="button">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#circle_minus_icon"></use>
+                                </svg>
+                                Удалить этаж
+                            </button>
+            
+                            <label class="form-label" for="new_object_floor">Этаж</label>
+            
+                            <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="2">
+                        </div>
+            
+                        <div class="form-row">
+                            <label class="form-label" for="new_object_plan">План БТИ</label>
+            
+                            <div class="input-file-wrapper">
+                                <div class="input-file-info">
+                                    <div class="input-file-info__type-block">
+                                        <svg class="input-file-info__type" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#image_icon"></use>
+                                        </svg>
+            
+                                        <span>PNG</span>
+            
+                                        <svg class="input-file-info__check" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#check_icon"></use>
+                                        </svg>
+                                    </div>
+            
+                                    <button class="input-file-info__delete">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#delete_icon"></use>
+                                        </svg>
+                                        Удалить файл
+                                    </button>
+                                </div>
+            
+                                <label class="input-file">
+                                    <input type="file">
+                                    <span class="input-file__text">Выбрать другой...</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <hr>
+            
+                    <button class="button button--type_6" type="button">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+                        </svg>
+                        Добавить этаж
+                    </button>
+                </div>
+            
+                <div class="popup__bottom">
+                    <div></div>
+                    <div class="popup__buttons">
+                        <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
+                        <button class="button button--type_3 button--h_60" type="button">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <button class="button button--type_1 button--h_40" type="button" name="button" data-fancybox="add-square" data-src="#add-square">Добавить площадь (офис/помещение)</button>
+
+            <br><br>
+
+            <button class="button button--type_1 button--h_40" type="button" name="button" data-fancybox="add-square_2" data-src="#add-square_2">Добавить площадь (офис/помещение) - заполнено</button>
+
+            <div id="add-square" class="popup popup--920 add-square">
+                <p class="popup__title">Добавить площадь (помещение/ офис)</p>
+            
+                <div>
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="add-square-group">Объект (здание)</label>
+            
+                        <div class="w_420">
+                            <div class="select-wrapper select-wrapper--h_60">
+                                <select id="add-square-group" class="js-select" data-placeholder="Не выбрано">
+                                    <option></option>
+                                    <option value="1">БЦ Возрождение</option>
+                                    <option value="2">БЦ Олимп литера А</option>
+                                    <option value="3">БЦ Олимп литера Б</option>
+                                    <option value="4">БЦ Триумф корпус 1</option>
+                                    <option value="5">БЦ Триумф корпус 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="add-square-floor">Этаж</label>
+            
+                        <div class="w_120">
+                            <div class="select-wrapper select-wrapper--h_60">
+                                <select id="add-square-floor" class="js-select" data-placeholder="-">
+                                    <option></option>
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="add-square-title">Название, номер</label>
+            
+                        <div class="w_420">
+                            <input id="add-square-title" class="input" name="add-square-title" type="text" placeholder="Например: офис 202">
+                        </div>
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="add-square-description">Описание</label>
+            
+                        <div class="grow">
+                            <textarea id="add-square-description" class="textarea"></textarea>
+            
+                            <div class="input-caption">Всего 0 символов из 600</div>
+                        </div>
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="add-square-square">Площадь, м2</label>
+            
+                        <div class="w_120">
+                            <input id="add-square-square" class="input" name="add-square-square" type="text" placeholder="">
+                        </div>
+                    </div>
+            
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="add-square-price">Стоимость, м2</label>
+            
+                        <div class="grow">
+                            <div class="add-square__price-block">
+                                <input id="add-square-price" class="input w_120" name="add-square-price" type="text" placeholder="">
+                                ₽
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="add-square-price-month">Стоимость аренды в месяц</label>
+            
+                        <div class="grow">
+                            <div class="add-square__price-block">
+                                <input id="add-square-price-month" class="input w_120" name="add-square-price-month" type="text" placeholder="">
+                                ₽
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="form-row">
+                        <label class="form-label">Статус</label>
+            
+                        <div class="grow">
+                            <div class="add-square__status">
+                                <label class="radio">
+                                    <input type="radio" name="add-square-status" value="1">
+                                    <span class="radio__icon"></span>
+                                    <span class="radio__text">Сдан</span>
+                                </label>
+            
+                                <label class="radio">
+                                    <input type="radio" name="add-square-status" value="2">
+                                    <span class="radio__icon"></span>
+                                    <span class="radio__text">Свободен</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <hr>
+            
+                <div class="form-row">
+                    <label class="form-label">Фото и видео</label>
+            
+                    <div class="grow">
+                        <div class="dropzone">
+                            <svg class="dropzone__icon" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+                            </svg>
+            
+                            <p class="dropzone__title">Прикрепить фото или видео</p>
+            
+                            <label class="input-file">
+                                <input type="file">
+                                <span class="input-file__text">Выбрать...</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            
+                <hr>
+            
+                <div class="form-row">
+                    <label class="form-label">План БТИ</label>
+            
+                    <div class="grow">
+                        <button class="button button--type_6" type="button">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+                            </svg>
+                            Добавить площадь на план
+                        </button>
+                    </div>
+                </div>
+            
+                <hr>
+            
+                <div class="form-row">
+                    <label class="form-label">Видеонаблюдение</label>
+            
+                    <div class="grow">
+                        <button class="button button--type_6" type="button">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+                            </svg>
+                            Добавить камеру
+                        </button>
+                    </div>
+                </div>
+            
+                <hr>
+            
+                <div class="form-row">
+                    <label class="form-label">Документы</label>
+            
+                    <div class="grow">
+                        <div class="dropzone">
+                            <svg class="dropzone__icon" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+                            </svg>
+            
+                            <p class="dropzone__title">Переместите файлы или выберите на компьютере</p>
+            
+                            <label class="input-file">
+                                <input type="file">
+                                <span class="input-file__text">Выбрать...</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            
+                <hr>
+            
+                <div class="popup__bottom">
+                    <button class="button button--type_1 button--h_60" type="button">Редактировать от имени администратора</button>
+            
+                    <div class="popup__buttons">
+                        <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
+                        <button class="button button--type_3 button--h_60" type="button">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="add-square_2" class="popup popup--920 add-square">
+                <p class="popup__title">Добавить площадь (помещение/ офис)</p>
+            
+                <div>
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="add-square-group_">Объект (здание)</label>
+            
+                        <div class="w_420">
+                            <div class="select-wrapper select-wrapper--h_60">
+                                <select id="add-square-group_" class="js-select" data-placeholder="Не выбрано">
+                                    <option></option>
+                                    <option value="1" selected>БЦ Возрождение</option>
+                                    <option value="2">БЦ Олимп литера А</option>
+                                    <option value="3">БЦ Олимп литера Б</option>
+                                    <option value="4">БЦ Триумф корпус 1</option>
+                                    <option value="5">БЦ Триумф корпус 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="add-square-floor_">Этаж</label>
+            
+                        <div class="w_120">
+                            <div class="select-wrapper select-wrapper--h_60">
+                                <select id="add-square-floor_" class="js-select" data-placeholder="-">
+                                    <option></option>
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="add-square-title">Название, номер</label>
+            
+                        <div class="w_420">
+                            <input id="add-square-title" class="input" name="add-square-title" type="text" value="офис 2524" placeholder="Например: офис 202">
+                        </div>
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="add-square-description">Описание</label>
+            
+                        <div class="grow">
+                            <textarea id="add-square-description"
+                              class="textarea">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus non porro iure expedita maiores amet aperiam nihil aut consequuntur deserunt, fugiat nobis consectetur ipsum architecto repudiandae velit iste deleniti a.</textarea>
+            
+                            <div class="input-caption">Всего 456 символов из 600</div>
+                        </div>
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="add-square-square">Площадь, м2</label>
+            
+                        <div class="w_120">
+                            <input id="add-square-square" class="input" name="add-square-square" type="text" value="150" placeholder="">
+                        </div>
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="add-square-price">Стоимость, м2</label>
+            
+                        <div class="grow">
+                            <div class="add-square__price-block">
+                                <input id="add-square-price" class="input w_120" name="add-square-price" type="text" value="1500" placeholder="">
+                                ₽
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="form-row form-row--centered">
+                        <label class="form-label" for="add-square-price-month">Стоимость аренды в месяц</label>
+            
+                        <div class="grow">
+                            <div class="add-square__price-block">
+                                <input id="add-square-price-month" class="input w_120" name="add-square-price-month" type="text" value="45000" placeholder="">
+                                ₽
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="form-row">
+                        <label class="form-label">Статус</label>
+            
+                        <div class="grow">
+                            <div class="add-square__status">
+                                <label class="radio">
+                                    <input type="radio" name="add-square-status" value="1" checked>
+                                    <span class="radio__icon"></span>
+                                    <span class="radio__text">Сдан</span>
+                                </label>
+            
+                                <label class="radio">
+                                    <input type="radio" name="add-square-status" value="2">
+                                    <span class="radio__icon"></span>
+                                    <span class="radio__text">Свободен</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <hr>
+            
+                <div class="form-row">
+                    <label class="form-label">Фото и видео</label>
+            
+                    <div class="grow">
+                        <div class="dropzone">
+                            <div class="dropzone__files">
+                                <div class="dropzone__file">
+                                    <div class="dropzone__file-image">
+                                        <img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt="">
+            
+                                        <button class="dropzone__file-delete" type="button" title="Удалить">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#delete_icon"></use>
+                                            </svg>
+                                        </button>
+            
+                                        <svg class="dropzone__file-type" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#image_icon"></use>
+                                        </svg>
+                                    </div>
+            
+                                    <div class="dropzone__file-title">Снимок экрана...1293.png</div>
+                                </div>
+            
+                                <div class="dropzone__file">
+                                    <div class="dropzone__file-image">
+                                        <img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt="">
+            
+                                        <button class="dropzone__file-delete" type="button" title="Удалить">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#delete_icon"></use>
+                                            </svg>
+                                        </button>
+            
+                                        <svg class="dropzone__file-type" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#image_icon"></use>
+                                        </svg>
+                                    </div>
+            
+                                    <div class="dropzone__file-title">Снимок экрана...1293.png</div>
+                                </div>
+            
+                                <div class="dropzone__file">
+                                    <div class="dropzone__file-image">
+                                        <img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt="">
+            
+                                        <button class="dropzone__file-delete" type="button" title="Удалить">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#delete_icon"></use>
+                                            </svg>
+                                        </button>
+            
+                                        <svg class="dropzone__file-type" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#image_icon"></use>
+                                        </svg>
+                                    </div>
+            
+                                    <div class="dropzone__file-title">Снимок экрана...1293.png</div>
+                                </div>
+            
+                                <div class="dropzone__file">
+                                    <div class="dropzone__file-image">
+                                        <img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt="">
+            
+                                        <button class="dropzone__file-delete" type="button" title="Удалить">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#delete_icon"></use>
+                                            </svg>
+                                        </button>
+            
+                                        <svg class="dropzone__file-type" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#image_icon"></use>
+                                        </svg>
+                                    </div>
+            
+                                    <div class="dropzone__file-title">Снимок экрана...1293.png</div>
+                                </div>
+            
+                                <div class="dropzone__file">
+                                    <div class="dropzone__file-image">
+                                        <img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt="">
+            
+                                        <button class="dropzone__file-delete" type="button" title="Удалить">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#delete_icon"></use>
+                                            </svg>
+                                        </button>
+            
+                                        <svg class="dropzone__file-type" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#play_icon"></use>
+                                        </svg>
+                                    </div>
+            
+                                    <div class="dropzone__file-title">DB0908961293.avi</div>
+                                </div>
+            
+                                <div class="dropzone__add" title="Добавить файлы">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <hr>
+            
+                <div class="form-row">
+                    <label class="form-label">План БТИ</label>
+            
+                    <div class="grow">
+                        <div class="plan-preview">
+                            <div class="plan-preview__inner">
+                                <img src="images/content/plan_3.jpg" srcset="images/content/plan_3@2x.jpg" alt="">
+            
+                                <div class="plan-preview__buttons">
+                                    <button class="plan-preview__button button button--type_3 button--h_45 button--square" type="button" title="Редактировать">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#edit_icon"></use>
+                                        </svg>
+                                    </button>
+            
+                                    <button class="plan-preview__button button button--type_9 button--h_45 button--square" type="button" title="Удалить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#trash_icon"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <hr>
+            
+                <div class="form-row">
+                    <label class="form-label">Видеонаблюдение</label>
+            
+                    <div class="grow">
+                        <div class="camera">
+                            <div class="camera__image"><img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt=""></div>
+            
+                            <div class="camera__description">
+                                <div class="camera__title">Онлайн-камера 1</div>
+                                <div class="camera__link">http://maps.ufanet.ru/bcvozrozhdenie#1548756683</div>
+                            </div>
+            
+                            <div class="camera__manage">
+                                <button class="camera__button" type="button" title="Редиктировать">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#edit_icon"></use>
+                                    </svg>
+                                </button>
+            
+                                <button class="camera__button" type="button" title="Удалить">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#trash_icon"></use>
+                                    </svg>
+                                </button>
+                            </div>
+            
+                        </div>
+            
+                        <div class="camera-add">
+                            <input class="input" type="text" value="" placeholder="Название">
+            
+                            <input class="input" type="text" value="" placeholder="Добавить ссылку https://">
+            
+                            <div class="camera-add__buttons">
+                                <button class="button button--type_3 button--h_60" type="button">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <hr>
+            
+                <div class="form-row">
+                    <label class="form-label">Документы</label>
+            
+                    <div class="grow">
+                        <div class="dropzone dropzone--documents">
+                            <div class="dropzone__files">
+                                <div class="dropzone__doc">
+                                    <svg class="dropzone__doc-icon" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#file_icon"></use>
+                                    </svg>
+            
+                                    <div class="dropzone__doc-description">
+                                        <div class="dropzone__doc-title">Договор долгосрочной аренды нежилого помещения от 03.04.2024</div>
+                                        <div class="dropzone__doc-type">pdf</div>
+                                    </div>
+            
+                                    <button class="dropzone__doc-delete" type="button" title="Удалить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#trash_icon"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+            
+                                <div class="dropzone__doc">
+                                    <svg class="dropzone__doc-icon" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#file_icon"></use>
+                                    </svg>
+            
+                                    <div class="dropzone__doc-description">
+                                        <div class="dropzone__doc-title">Договор долгосрочной аренды нежилого помещения от 03.04.2024</div>
+                                        <div class="dropzone__doc-type">pdf</div>
+                                    </div>
+            
+                                    <button class="dropzone__doc-delete" type="button" title="Удалить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#trash_icon"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+            
+                                <div class="dropzone__doc">
+                                    <svg class="dropzone__doc-icon" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#file_icon"></use>
+                                    </svg>
+            
+                                    <div class="dropzone__doc-description">
+                                        <div class="dropzone__doc-title">Договор долгосрочной аренды нежилого помещения от 03.04.2024</div>
+                                        <div class="dropzone__doc-type">pdf</div>
+                                    </div>
+            
+                                    <button class="dropzone__doc-delete" type="button" title="Удалить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#trash_icon"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+            
+                                <div class="dropzone__add" title="Добавить файлы">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <hr>
+            
+                <div class="popup__bottom">
+                    <button class="button button--type_1 button--h_60" type="button">Редактировать от имени администратора</button>
+            
+                    <div class="popup__buttons">
+                        <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
+                        <button class="button button--type_3 button--h_60" type="button">Сохранить</button>
                     </div>
                 </div>
             </div>
@@ -1155,606 +1855,6 @@
                     <div class="popup__buttons">
                         <button class="button button--type_3 button--h_60" type="button">Добавить</button>
                         <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
-                    </div>
-                </div>
-            </div>
-
-            <br><br>
-
-            <button class="button button--type_1 button--h_40" type="button" name="button" data-fancybox="add-square" data-src="#add-square">Добавить площадь</button>
-
-            <br><br>
-
-            <button class="button button--type_1 button--h_40" type="button" name="button" data-fancybox="add-square_2" data-src="#add-square_2">Добавить площадь - заполнено</button>
-
-            <div id="add-square" class="popup popup--920 add-square">
-                <p class="popup__title">Добавить площадь</p>
-            
-                <div>
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-group">Группа объектов</label>
-            
-                        <div class="w_420">
-                            <div class="select-wrapper select-wrapper--h_60">
-                                <select id="add-square-group" class="js-select" data-placeholder="Не выбрано">
-                                    <option></option>
-                                    <option value="1">БЦ Возрождение</option>
-                                    <option value="2">Другая группа объектов</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-title">Название, номер</label>
-            
-                        <div class="w_420">
-                            <input id="add-square-title" class="input" name="add-square-title" type="text" placeholder="">
-                        </div>
-                    </div>
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-address">Адрес</label>
-            
-                        <div class="w_420">
-                            <input id="add-square-address" class="input" name="add-square-address" type="text" placeholder="">
-                        </div>
-                    </div>
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-description">Описание</label>
-            
-                        <div class="grow">
-                            <textarea id="add-square-description" class="textarea"></textarea>
-            
-                            <div class="input-caption">Всего 0 символов из 600</div>
-                        </div>
-                    </div>
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-litera">Литера</label>
-            
-                        <div class="w_420">
-                            <div class="select-wrapper select-wrapper--h_60">
-                                <select id="add-square-litera" class="js-select" data-placeholder="Не выбрано">
-                                    <option></option>
-                                    <option value="1">Литера А</option>
-                                    <option value="2">Литера Б</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-floor">Этаж</label>
-            
-                        <div class="w_120">
-                            <div class="select-wrapper select-wrapper--h_60">
-                                <select id="add-square-floor" class="js-select" data-placeholder="-">
-                                    <option></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-square">Площадь, м2</label>
-            
-                        <div class="w_120">
-                            <input id="add-square-square" class="input" name="add-square-square" type="text" placeholder="">
-                        </div>
-                    </div>
-            
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-price">Стоимость, м2</label>
-            
-                        <div class="grow">
-                            <div class="add-square__price-block">
-                                <input id="add-square-price" class="input w_120" name="add-square-price" type="text" placeholder="">
-                                ₽
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-price-month">Стоимость аренды в месяц</label>
-            
-                        <div class="grow">
-                            <div class="add-square__price-block">
-                                <input id="add-square-price-month" class="input w_120" name="add-square-price-month" type="text" placeholder="">
-                                ₽
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="form-row">
-                        <label class="form-label">Статус</label>
-            
-                        <div class="grow">
-                            <div class="add-square__status">
-                                <label class="radio">
-                                    <input type="radio" name="add-square-status" value="1">
-                                    <span class="radio__icon"></span>
-                                    <span class="radio__text">Сдан</span>
-                                </label>
-            
-                                <label class="radio">
-                                    <input type="radio" name="add-square-status" value="2">
-                                    <span class="radio__icon"></span>
-                                    <span class="radio__text">Свободен</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <hr>
-            
-                <div class="form-row">
-                    <label class="form-label">Фото и видео</label>
-            
-                    <div class="grow">
-                        <div class="dropzone">
-                            <svg class="dropzone__icon" aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
-                            </svg>
-            
-                            <p class="dropzone__title">Прикрепить фото или видео</p>
-            
-                            <label class="input-file">
-                                <input type="file">
-                                <span class="input-file__text">Выбрать...</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            
-                <hr>
-            
-                <div class="form-row">
-                    <label class="form-label">План БТИ</label>
-            
-                    <div class="grow">
-                        <button class="button button--type_6" type="button">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
-                            </svg>
-                            Добавить площадь на план
-                        </button>
-                    </div>
-                </div>
-            
-                <hr>
-            
-                <div class="form-row">
-                    <label class="form-label">Видеонаблюдение</label>
-            
-                    <div class="grow">
-                        <button class="button button--type_6" type="button">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
-                            </svg>
-                            Добавить камеру
-                        </button>
-                    </div>
-                </div>
-            
-                <hr>
-            
-                <div class="form-row">
-                    <label class="form-label">Документы</label>
-            
-                    <div class="grow">
-                        <div class="dropzone">
-                            <svg class="dropzone__icon" aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
-                            </svg>
-            
-                            <p class="dropzone__title">Переместите файлы или выберите на компьютере</p>
-            
-                            <label class="input-file">
-                                <input type="file">
-                                <span class="input-file__text">Выбрать...</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            
-                <hr>
-            
-                <div class="popup__bottom">
-                    <button class="button button--type_1 button--h_60" type="button">Редактировать от имени администратора</button>
-            
-                    <div class="popup__buttons">
-                        <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
-                        <button class="button button--type_3 button--h_60" type="button">Сохранить</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="add-square_2" class="popup popup--920 add-square">
-                <p class="popup__title">Добавить площадь</p>
-            
-                <div>
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-group_">Группа объектов</label>
-            
-                        <div class="w_420">
-                            <div class="select-wrapper select-wrapper--h_60">
-                                <select id="add-square-group_" class="js-select" data-placeholder="Не выбрано">
-                                    <option></option>
-                                    <option value="1" selected>БЦ Возрождение</option>
-                                    <option value="2">Другая группа объектов</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-title_">Название, номер</label>
-            
-                        <div class="w_420">
-                            <input id="add-square-title_" class="input" name="add-square-title_" type="text" value="Офисное помещение 202" placeholder="">
-                        </div>
-                    </div>
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-address_">Адрес</label>
-            
-                        <div class="w_420">
-                            <input id="add-square-address_" class="input" name="add-square-address_" type="text" value="172531, Тверская обл, г. Нелидово, Ул. Невского, д.1" placeholder="">
-                        </div>
-                    </div>
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-description_">Описание</label>
-            
-                        <div class="grow">
-                            <textarea id="add-square-description_"
-                              class="textarea">Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни.</textarea>
-            
-                            <div class="input-caption">Всего 364 символов из 600</div>
-                        </div>
-                    </div>
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-litera_">Литера</label>
-            
-                        <div class="w_420">
-                            <div class="select-wrapper select-wrapper--h_60">
-                                <select id="add-square-litera_" class="js-select" data-placeholder="Не выбрано">
-                                    <option></option>
-                                    <option value="1" selected>Литера А</option>
-                                    <option value="2">Литера Б</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-floor_">Этаж</label>
-            
-                        <div class="w_120">
-                            <div class="select-wrapper select-wrapper--h_60">
-                                <select id="add-square-floor_" class="js-select" data-placeholder="-">
-                                    <option></option>
-                                    <option value="1" selected>1</option>
-                                    <option value="2">2</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-square_">Площадь, м2</label>
-            
-                        <div class="w_120">
-                            <input id="add-square-square_" class="input" name="add-square-square_" type="text" value="150" placeholder="">
-                        </div>
-                    </div>
-            
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-price_">Стоимость, м2</label>
-            
-                        <div class="grow">
-                            <div class="add-square__price-block">
-                                <input id="add-square-price_" class="input w_120" name="add-square-price_" type="text" value="25 000 000" placeholder="">
-                                ₽
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="form-row form-row--centered">
-                        <label class="form-label" for="add-square-price-month_">Стоимость аренды в месяц</label>
-            
-                        <div class="grow">
-                            <div class="add-square__price-block">
-                                <input id="add-square-price-month_" class="input w_120" name="add-square-price-month_" type="text" value="60 000" placeholder="">
-                                ₽
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="form-row">
-                        <label class="form-label">Статус</label>
-            
-                        <div class="grow">
-                            <div class="add-square__status">
-                                <label class="radio">
-                                    <input type="radio" name="add-square-status_" value="1">
-                                    <span class="radio__icon"></span>
-                                    <span class="radio__text">Сдан</span>
-                                </label>
-            
-                                <label class="radio">
-                                    <input type="radio" name="add-square-status_" value="2" checked>
-                                    <span class="radio__icon"></span>
-                                    <span class="radio__text">Свободен</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <hr>
-            
-                <div class="form-row">
-                    <label class="form-label">Фото и видео</label>
-            
-                    <div class="grow">
-                        <div class="dropzone">
-                            <div class="dropzone__files">
-                                <div class="dropzone__file">
-                                    <div class="dropzone__file-image">
-                                        <img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt="">
-            
-                                        <button class="dropzone__file-delete" type="button" title="Удалить">
-                                            <svg aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#delete_icon"></use>
-                                            </svg>
-                                        </button>
-            
-                                        <svg class="dropzone__file-type" aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#image_icon"></use>
-                                        </svg>
-                                    </div>
-            
-                                    <div class="dropzone__file-title">Снимок экрана...1293.png</div>
-                                </div>
-            
-                                <div class="dropzone__file">
-                                    <div class="dropzone__file-image">
-                                        <img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt="">
-            
-                                        <button class="dropzone__file-delete" type="button" title="Удалить">
-                                            <svg aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#delete_icon"></use>
-                                            </svg>
-                                        </button>
-            
-                                        <svg class="dropzone__file-type" aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#image_icon"></use>
-                                        </svg>
-                                    </div>
-            
-                                    <div class="dropzone__file-title">Снимок экрана...1293.png</div>
-                                </div>
-            
-                                <div class="dropzone__file">
-                                    <div class="dropzone__file-image">
-                                        <img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt="">
-            
-                                        <button class="dropzone__file-delete" type="button" title="Удалить">
-                                            <svg aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#delete_icon"></use>
-                                            </svg>
-                                        </button>
-            
-                                        <svg class="dropzone__file-type" aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#image_icon"></use>
-                                        </svg>
-                                    </div>
-            
-                                    <div class="dropzone__file-title">Снимок экрана...1293.png</div>
-                                </div>
-            
-                                <div class="dropzone__file">
-                                    <div class="dropzone__file-image">
-                                        <img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt="">
-            
-                                        <button class="dropzone__file-delete" type="button" title="Удалить">
-                                            <svg aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#delete_icon"></use>
-                                            </svg>
-                                        </button>
-            
-                                        <svg class="dropzone__file-type" aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#image_icon"></use>
-                                        </svg>
-                                    </div>
-            
-                                    <div class="dropzone__file-title">Снимок экрана...1293.png</div>
-                                </div>
-            
-                                <div class="dropzone__file">
-                                    <div class="dropzone__file-image">
-                                        <img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt="">
-            
-                                        <button class="dropzone__file-delete" type="button" title="Удалить">
-                                            <svg aria-hidden="true">
-                                                <use xlink:href="images/sprite.svg#delete_icon"></use>
-                                            </svg>
-                                        </button>
-            
-                                        <svg class="dropzone__file-type" aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#play_icon"></use>
-                                        </svg>
-                                    </div>
-            
-                                    <div class="dropzone__file-title">DB0908961293.avi</div>
-                                </div>
-            
-                                <div class="dropzone__add" title="Добавить файлы">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <hr>
-            
-                <div class="form-row">
-                    <label class="form-label">План БТИ</label>
-            
-                    <div class="grow">
-                        <div class="plan-preview">
-                            <div class="plan-preview__inner">
-                                <img src="images/content/plan_3.jpg" srcset="images/content/plan_3@2x.jpg" alt="">
-            
-                                <div class="plan-preview__buttons">
-                                    <button class="plan-preview__button button button--type_3 button--h_45 button--square" type="button" title="Редактировать">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#edit_icon"></use>
-                                        </svg>
-                                    </button>
-            
-                                    <button class="plan-preview__button button button--type_9 button--h_45 button--square" type="button" title="Удалить">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#trash_icon"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <hr>
-            
-                <div class="form-row">
-                    <label class="form-label">Видеонаблюдение</label>
-            
-                    <div class="grow">
-                        <div class="camera">
-                            <div class="camera__image"><img src="images/content/img_3.jpg" srcset="images/content/img_3@2x.jpg 2x" alt=""></div>
-            
-                            <div class="camera__description">
-                                <div class="camera__title">Онлайн-камера 1</div>
-                                <div class="camera__link">http://maps.ufanet.ru/bcvozrozhdenie#1548756683</div>
-                            </div>
-            
-                            <div class="camera__manage">
-                                <button class="camera__button" type="button" title="Редиктировать">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#edit_icon"></use>
-                                    </svg>
-                                </button>
-            
-                                <button class="camera__button" type="button" title="Удалить">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#trash_icon"></use>
-                                    </svg>
-                                </button>
-                            </div>
-            
-                        </div>
-            
-                        <div class="camera-add">
-                            <input class="input" type="text" value="" placeholder="Название">
-            
-                            <input class="input" type="text" value="" placeholder="Добавить ссылку https://">
-            
-                            <div class="camera-add__buttons">
-                                <button class="button button--type_3 button--h_60" type="button">Добавить</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <hr>
-            
-                <div class="form-row">
-                    <label class="form-label">Документы</label>
-            
-                    <div class="grow">
-                        <div class="dropzone dropzone--documents">
-                            <div class="dropzone__files">
-                                <div class="dropzone__doc">
-                                    <svg class="dropzone__doc-icon" aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#file_icon"></use>
-                                    </svg>
-            
-                                    <div class="dropzone__doc-description">
-                                        <div class="dropzone__doc-title">Договор долгосрочной аренды нежилого помещения от 03.04.2024</div>
-                                        <div class="dropzone__doc-type">pdf</div>
-                                    </div>
-            
-                                    <button class="dropzone__doc-delete" type="button" title="Удалить">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#trash_icon"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-            
-                                <div class="dropzone__doc">
-                                    <svg class="dropzone__doc-icon" aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#file_icon"></use>
-                                    </svg>
-            
-                                    <div class="dropzone__doc-description">
-                                        <div class="dropzone__doc-title">Договор долгосрочной аренды нежилого помещения от 03.04.2024</div>
-                                        <div class="dropzone__doc-type">pdf</div>
-                                    </div>
-            
-                                    <button class="dropzone__doc-delete" type="button" title="Удалить">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#trash_icon"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-            
-                                <div class="dropzone__doc">
-                                    <svg class="dropzone__doc-icon" aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#file_icon"></use>
-                                    </svg>
-            
-                                    <div class="dropzone__doc-description">
-                                        <div class="dropzone__doc-title">Договор долгосрочной аренды нежилого помещения от 03.04.2024</div>
-                                        <div class="dropzone__doc-type">pdf</div>
-                                    </div>
-            
-                                    <button class="dropzone__doc-delete" type="button" title="Удалить">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="images/sprite.svg#trash_icon"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-            
-                                <div class="dropzone__add" title="Добавить файлы">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <hr>
-            
-                <div class="popup__bottom">
-                    <button class="button button--type_1 button--h_60" type="button">Редактировать от имени администратора</button>
-            
-                    <div class="popup__buttons">
-                        <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
-                        <button class="button button--type_3 button--h_60" type="button">Сохранить</button>
                     </div>
                 </div>
             </div>

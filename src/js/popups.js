@@ -42,3 +42,11 @@ $(document).on('click', '#js-show-add-tenant-step-2', function () {
   $('#add-tenant-step-2').show();
   return false;
 });
+
+$(document).on('change', '#litera_korpus', function () {
+  if($(this).prop('checked') == true){
+    $('#new_object_liter').prop('disabled', 'disabled');
+  } else {
+    $('#new_object_liter').prop('disabled', '');
+  }
+});

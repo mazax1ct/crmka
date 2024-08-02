@@ -1,0 +1,28 @@
+.breadcrumbs {
+    @include list-reset;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    &__item {
+        &:not(:last-child) {
+            align-items: center;
+            display: flex;
+            gap: 10px;
+
+            &::after {
+                content: '/';
+            }
+        }
+
+        &:last-child {
+            color: var(--grey_3);
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+}

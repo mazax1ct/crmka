@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>CRMka</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page page--auth">
+    <div class="auth">
+        <div class="auth__form-block">
+            <div class="auth__form-block-inner">
+                <div class="auth__form-wrapper">
+                    <p class="auth__title">Создание нового проекта</p>
+
+                    <form class="auth__form" action="">
+                        <label class="form-label" for="project_name">Название проекта</label>
+
+                        <input class="input" id="project_name" name="project_name" type="text" value="">
+
+                        <label class="form-label" for="project_description">Описание проекта</label>
+
+                        <textarea class="textarea" id="project_description" name="project_description"></textarea>
+
+                        <button class="auth__submit button button--type_3 button--h_60 button--wide" type="submit">
+                            Создать
+                        </button>
+                    </form>
+
+                    <a href="#" class="button button--h_60 button--wide button--type_1">Вернуться назад</a>
+                </div>
+
+                <p class="auth__copyright">© 2024 - CRM - all rights reserver</p>
+            </div>
+        </div>
+
+        <div class="auth__logo">
+            <img src="images/big_logo.svg" alt="">
+        </div>
+    </div>
+
+    //= template/common/scripts.html
+</body>
+
+</html>

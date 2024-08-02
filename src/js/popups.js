@@ -43,10 +43,12 @@ $(document).on('click', '#js-show-add-tenant-step-2', function () {
   return false;
 });
 
-$(document).on('change', '#litera_korpus', function () {
-  if($(this).prop('checked') == true){
-    $('#new_object_liter').prop('disabled', 'disabled');
+$(document).on('change', '#objects_group', function () {
+  if($(this).prop('checked') == true) {
+    $('#one_address').css('display', 'none');
+    $('#few_addresses').css('display', 'block');
   } else {
-    $('#new_object_liter').prop('disabled', '');
+    $('#one_address').css('display', 'block');
+    $('#few_addresses').css('display', 'none');
   }
 });

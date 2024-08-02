@@ -104,6 +104,10 @@
             display: none;
         }
     }
+
+    .button + .button {
+        margin-top: 10px;
+    }
 }
 
 .auth-button {

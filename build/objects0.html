@@ -63,9 +63,6 @@
                             <li class="user-profile__dropdown-list-item">
                                 <a class="user-profile__dropdown-link" href="#">Уведомления <span class="cnt">3</span></a>
                             </li>
-                            <li class="user-profile__dropdown-list-item">
-                                <a class="user-profile__dropdown-link" href="#">Выход</a>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -106,32 +103,12 @@
                         </a>
                     </li>
                     <li class="main-menu__item">
-                        <div class="main-menu__link-container">
-                            <a class="main-menu__link" href="#" title="Объекты">
-                                <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#building_icon" />
-                                </svg>
-                                <span>Объекты</span>
-                            </a>
-    
-                            <button class="js-submenu-toggler main-menu__submenu-toggler" type="button" title="Открыть меню">
-                                <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#chevron_down" />
-                                </svg>
-                            </button>
-                        </div>
-    
-                        <ul class="main-menu__submenu">
-                            <li class="main-menu__submenu-item">
-                                <a class="main-menu__submenu-link" href="#">Группы зданий</a>
-                            </li>
-                            <li class="main-menu__submenu-item">
-                                <a class="main-menu__submenu-link" href="#">Здания</a>
-                            </li>
-                            <li class="main-menu__submenu-item">
-                                <a class="main-menu__submenu-link" href="#">Помещения, офисы, площади</a>
-                            </li>
-                        </ul>
+                        <a class="main-menu__link" href="#" title="Объекты">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#building_icon" />
+                            </svg>
+                            <span>Объекты</span>
+                        </a>
                     </li>
                     <li class="main-menu__item">
                         <div class="main-menu__link-container">
@@ -163,14 +140,6 @@
                                 <a class="main-menu__submenu-link" href="#">И наконец самое длинное название подраздела для проверки всего и вся и прочего</a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="main-menu__item">
-                        <a class="main-menu__link" href="#" title="Арендодатели">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#users_icon" />
-                            </svg>
-                            <span>Арендодатели</span>
-                        </a>
                     </li>
                     <li class="main-menu__item">
                         <a class="main-menu__link" href="#" title="Документы">
@@ -262,21 +231,21 @@
 
     <main class="page__content">
         <div class="page__top">
-            <h1 class="page__top-title">Название рабочей области</h1>
+            <h1 class="page__top-title">Холдинг Аренда</h1>
         
             <div class="page__top-buttons">
                 <button class="button button--h_45 button--type_1" type="button" data-fancybox data-src="#add-task-popup">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#circle_plus_icon" />
                     </svg>
-                    <span>Новая задача</span>
+                    <span>Поставить новую задачу</span>
                 </button>
         
                 <button class="button button--h_45 button--type_1" type="button">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#circle_plus_icon" />
                     </svg>
-                    <span>Добавить контрагента</span>
+                    <span>Добавить нового арендатора</span>
                 </button>
             </div>
         
@@ -291,10 +260,7 @@
             <div class="js-horizontal-scroll objects-menu__wrapper">
                 <ul class="objects-menu__list">
                     <li class="objects-menu__item">
-                        <a class="objects-menu__button is-active" href="#" draggable="false"><span>БЦ Возрождение литера А</span></a>
-                    </li>
-                    <li class="objects-menu__item">
-                        <a class="objects-menu__button" href="#" draggable="false"><span>БЦ Возрождение литера Б</span></a>
+                        <a class="objects-menu__button is-active" href="#" draggable="false"><span>БЦ Возрождение</span></a>
                     </li>
                     <li class="objects-menu__item">
                         <a class="objects-menu__button" href="#" draggable="false"><span>БЦ Космос</span></a>
@@ -303,10 +269,10 @@
                         <a class="objects-menu__button" href="#" draggable="false"><span>Желтый угол</span></a>
                     </li>
                     <li class="objects-menu__item">
-                        <a class="objects-menu__button" href="#" draggable="false"><span>БЦ Космос корпус 1</span></a>
+                        <a class="objects-menu__button" href="#" draggable="false"><span>БЦ Возрождение</span></a>
                     </li>
                     <li class="objects-menu__item">
-                        <a class="objects-menu__button" href="#" draggable="false"><span>БЦ Космос корпус 2</span></a>
+                        <a class="objects-menu__button" href="#" draggable="false"><span>БЦ Космос</span></a>
                     </li>
                     <li class="objects-menu__item">
                         <a class="objects-menu__button" href="#" draggable="false"><span>Желтый угол</span></a>
@@ -352,7 +318,7 @@
                         <div class="select-wrapper select-wrapper--h_45">
                             <select class="js-select">
                                 <option value="1">Только объекты</option>
-                                <option value="2" selected>План + список</option>
+                                <option value="2">План + список</option>
                                 <option value="3">Только план</option>
                                 <option value="4">Только список</option>
                             </select>
@@ -374,105 +340,6 @@
                             <option value="2">Литера Б</option>
                             <option value="3">Литера В</option>
                         </select>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-row form-row--centered">
-                <label class="form-label" for="floor">Этаж:</label>
-
-                <div class="grow">
-                    <div class="liters-radios">
-                        <label class="radio_2">
-                            <input type="radio" name="floor" value="1">
-                            <span class="radio_2__text">1</span>
-                        </label>
-
-                        <label class="radio_2">
-                            <input type="radio" name="floor" value="2">
-                            <span class="radio_2__text">2</span>
-                        </label>
-
-                        <label class="radio_2">
-                            <input type="radio" name="floor" value="3">
-                            <span class="radio_2__text">3</span>
-                        </label>
-
-                        <label class="radio_2">
-                            <input type="radio" name="floor" value="4">
-                            <span class="radio_2__text">4</span>
-                        </label>
-
-                        <label class="radio_2">
-                            <input type="radio" name="floor" value="5">
-                            <span class="radio_2__text">5</span>
-                        </label>
-
-                        <label class="radio_2">
-                            <input type="radio" name="floor" value="6">
-                            <span class="radio_2__text">6</span>
-                        </label>
-
-                        <label class="radio_2">
-                            <input type="radio" name="floor" value="7">
-                            <span class="radio_2__text">7</span>
-                        </label>
-
-                        <label class="radio_2">
-                            <input type="radio" name="floor" value="8">
-                            <span class="radio_2__text">8</span>
-                        </label>
-
-                        <label class="radio_2">
-                            <input type="radio" name="floor" value="9">
-                            <span class="radio_2__text">9</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="plan">
-                <div class="plan__inner">
-                    <div class="js-tooltip plan__tooltip"></div>
-
-                    <img class="plan__image" src="images/content/plan.jpg" srcset="images/content/plan@2x.jpg 2x" alt="">
-
-                    <svg class="plan__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 983 433">
-                        <polygon class="blue" data-key="1" data-title="OOO «Ромашка»" data-status="status-blue" data-status-text="Сдан" data-square="15" data-price="1500" data-cost="22500" data-href="#" points="737,27,957,27,957,144,737,144">
-                        </polygon>
-                        <polygon class="red" data-key="2" data-title="OOO «Ромашка»" data-status="status-red" data-status-text="Долг за аренду или КУ" data-square="30" data-price="3000" data-cost="30000" data-href="#"
-                          points="262,27,381,27,381,225,262,225">
-                        </polygon>
-                        <polygon class="green" data-key="3" data-title="OOO «Ромашка»" data-status="status-green" data-status-text="Свободен" data-square="20" data-price="2000" data-cost="25000" data-href="#" points="27,186,246,185,246,402,27,402">
-                        </polygon>
-                        <polygon class="blue" data-key="4" data-title="OOO «Ромашка»" data-status="status-blue" data-status-text="Сдан" data-square="17" data-price="1700" data-cost="2300" data-href="#" points="148,27,246,27,246,181,149,181">
-                        </polygon>
-                        <polygon class="blue" data-key="5" data-title="OOO «Ромашка»" data-status="status-blue" data-status-text="Сдан" data-square="16" data-price="1600" data-cost="22000" data-href="#" points="27,28,144,28,144,181,27,180"></polygon>
-                    </svg>
-                </div>
-
-                <div class="plan-legend">
-                    <div class="square-info">
-                        <span>Общая площадь, S</span>
-                        = 18,6…26&nbsp;=&nbsp;106&nbsp;м²
-                    </div>
-
-                    <div class="legend">
-                        <div class="legend__item status-green color-green">
-                            <div class="status-icon"></div> Свободных – 2
-                        </div>
-
-                        <div class="legend__item status-green color-blue">
-                            <div class="status-icon"></div> Сдано – 3
-                        </div>
-
-                        <div class="legend__item status-red color-red">
-                            <div class="status-icon"></div> Долг за аренду или КУ – 1
-                        </div>
-
-                        <div class="legend__item status-grey color-dark_grey">
-                            <div class="status-icon"></div> Недоступных для аренды – 1
-                        </div>
                     </div>
                 </div>
             </div>
@@ -510,35 +377,12 @@
                 </div>
             </div>
 
-            <div class="filter-reset">
-                <button class="button button--type_3 button--h_30" type="reset">
-                    <span>Свободно</span>
-                    <svg aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#delete_icon" />
-                    </svg>
-                </button>
-
-                <button class="button button--type_3 button--h_30" type="reset">
-                    <span>По важным уведомлениям</span>
-                    <svg aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#delete_icon" />
-                    </svg>
-                </button>
-
-                <button class="button button--type_2 button--h_30" type="reset">
-                    <span>Очистить список</span>
-                    <svg aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#delete_icon" />
-                    </svg>
-                </button>
-            </div>
-
             <div class="responsive-table">
                 <table class="table objects-table">
                     <tr>
                         <th class="js-sort text-left">
                             <span class="sorting">
-                                <span>Номер помещения</span>
+                                <span>Название</span>
                                 <svg aria-hidden="true">
                                     <use xlink:href="images/sprite.svg#double_arrow_icon" />
                                 </svg>
@@ -547,15 +391,6 @@
                         <th class="js-sort">
                             <span class="sorting">
                                 <span>Площадь м2</span>
-                                <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#double_arrow_icon" />
-                                </svg>
-                            </span>
-                        </th>
-                        <th>Картинка</th>
-                        <th class="js-sort">
-                            <span class="sorting">
-                                <span>Статус</span>
                                 <svg aria-hidden="true">
                                     <use xlink:href="images/sprite.svg#double_arrow_icon" />
                                 </svg>
@@ -572,131 +407,80 @@
                         </th>
                         <th></th>
                     </tr>
-                    <tr>
-                        <td class="text-left">
-                            <div class="object-status status-red">
-                                <span class="status-icon"></span>
-                                Объект A
-                            </div>
-                        </td>
-                        <td>50</td>
-                        <td>
-                            <a class="attach-link" href="#">
-                                <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#image_icon"></use>
-                                </svg>
-                                <span>PNG</span>
-                            </a>
-                        </td>
-                        <td class="color-red">Сдан</td>
+                    <tr data-href="1">
+                        <td class="text-left">БЦ Возрождение</td>
+                        <td>1000</td>
                         <td>ООО «Ромашка»</td>
                         <td class="color-red">75 000 ₽</td>
                         <td>
-                            <button class="objects-table__edit" type="button" title="Редактировать">
-                                <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#edit_icon" />
-                                </svg>
-                            </button>
+                            <svg class="objects-table__arrow" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right"></use>
+                            </svg>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="text-left">
-                            <div class="object-status status-red">
-                                <span class="status-icon"></span>
-                                Объект B
-                            </div>
-                        </td>
-                        <td>60</td>
-                        <td>
-                            <a class="attach-link" href="#">
-                                <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#image_icon"></use>
-                                </svg>
-                                <span>PNG</span>
-                            </a>
-                        </td>
-                        <td class="color-red">Сдан</td>
+                    <tr data-href="2">
+                        <td class="text-left">БЦ Космос</td>
+                        <td>2000</td>
                         <td>ООО «Ромашка»</td>
                         <td class="color-red">46 000 ₽</td>
                         <td>
-                            <button class="objects-table__edit" type="button" title="Редактировать">
-                                <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#edit_icon" />
-                                </svg>
-                            </button>
+                            <svg class="objects-table__arrow" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right"></use>
+                            </svg>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="text-left">
-                            <div class="object-status status-blue">
-                                <span class="status-icon"></span>
-                                Объект C
-                            </div>
-                        </td>
-                        <td>12</td>
-                        <td>
-                            <a class="attach-link" href="#">
-                                <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#image_icon"></use>
-                                </svg>
-                                <span>PNG</span>
-                            </a>
-                        </td>
-                        <td class="color-blue">Сдан</td>
+                    <tr data-href="3">
+                        <td class="text-left">Желтый угол</td>
+                        <td>1200</td>
                         <td>ООО «Ромашка»</td>
                         <td>-</td>
                         <td>
-                            <button class="objects-table__edit" type="button" title="Редактировать">
-                                <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#edit_icon" />
-                                </svg>
-                            </button>
+                            <svg class="objects-table__arrow" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right"></use>
+                            </svg>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="text-left">
-                            <div class="object-status status-green">
-                                <span class="status-icon"></span>
-                                Объект D
-                            </div>
-                        </td>
-                        <td>63</td>
-                        <td>
-                            <a class="attach-link" href="#">
-                                <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#image_icon"></use>
-                                </svg>
-                                <span>PNG</span>
-                            </a>
-                        </td>
-                        <td class="color-green">Свободен</td>
+                    <tr data-href="4">
+                        <td class="text-left">БЦ Ромашка</td>
+                        <td>630</td>
                         <td>ООО «Ромашка»</td>
                         <td>-</td>
                         <td>
-                            <button class="objects-table__edit" type="button" title="Редактировать">
-                                <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#edit_icon" />
-                                </svg>
-                            </button>
+                            <svg class="objects-table__arrow" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right"></use>
+                            </svg>
                         </td>
                     </tr>
                 </table>
             </div>
 
             <div class="box__footer">
-                <div class="legend">
-                    <div class="legend__item status-blue">
-                        <div class="status-icon"></div> – сдан
-                    </div>
-
-                    <div class="legend__item status-green">
-                        <div class="status-icon"></div> – свободен
-                    </div>
-
-                    <div class="legend__item status-red">
-                        <div class="status-icon"></div> – задолженность за аренду или КУ
-                    </div>
-                </div>
+                <div></div>
+                <ul class="pager">
+                    <li class="pager__item">
+                        <a class="pager__link is-active" href="#">1</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">2</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">3</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">...</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">7</a>
+                    </li>
+                    <li class="pager__item pager__item--arrow">
+                        <a class="pager__link" href="#">
+                            <span>Вперед</span>
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </main>

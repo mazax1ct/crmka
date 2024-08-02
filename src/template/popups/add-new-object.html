@@ -1,319 +1,188 @@
-<!--<div id="add-new-object" class="popup popup--920 new-object-popup">
-    <div id="js-new-object-step-1">
-        <p class="popup__title">Шаг 1. Новый объект</p>
-
-        <div class="new-object">
-            <p class="new-object__title">Объект 1</p>
-
-            <div>
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_title">Название</label>
-
-                    <input id="new_object_title" class="input grow" type="text" name="new_object_title" value="">
-                </div>
-
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_square">Общая площадь, м2</label>
-
-                    <input id="new_object_square" class="input w_80" type="text" name="new_object_square" value="">
-                </div>
-
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_liter">Литера</label>
-
-                    <input id="new_object_liter" class="input w_80" type="text" name="new_object_liter" value="">
-
-                    <label class="checkbox">
-                        <input type="checkbox" name="" value="">
-                        <span class="checkbox__icon"></span>
-                        <span class="checkbox__text">Без литеры</span>
-                    </label>
-                </div>
-
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_floors">Кол-во этажей</label>
-
-                    <input id="new_object_floors" class="input w_80" type="text" name="new_object_floors" value="">
-                </div>
-            </div>
-        </div>
-
-        <div id="js-new-object" class="new-object" style="display: none">
-            <div class="new-object__title-block">
-                <p class="new-object__title">Объект 2</p>
-
-                <button id="js-hide-new-object" class="new-object-popup__delete button button--type_6" type="button">
-                    <svg aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#circle_minus_icon"></use>
-                    </svg>
-                    Удалить объект
-                </button>
-            </div>
-
-            <div>
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_title">Название</label>
-
-                    <input id="new_object_title" class="input grow" type="text" name="new_object_title" value="">
-                </div>
-
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_square">Общая площадь, м2</label>
-
-                    <input id="new_object_square" class="input w_80" type="text" name="new_object_square" value="">
-                </div>
-
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_liter">Литера</label>
-
-                    <input id="new_object_liter" class="input w_80" type="text" name="new_object_liter" value="">
-
-                    <label class="checkbox">
-                        <input type="checkbox" name="" value="">
-                        <span class="checkbox__icon"></span>
-                        <span class="checkbox__text">Без литеры</span>
-                    </label>
-                </div>
-
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_floors">Кол-во этажей</label>
-
-                    <input id="new_object_floors" class="input w_80" type="text" name="new_object_floors" value="">
-                </div>
-            </div>
-        </div>
-
-        <div class="popup__bottom">
-            <button id="js-show-new-object" class="button button--type_5 button--h_60" type="button">
-                <svg aria-hidden="true">
-                    <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
-                </svg>
-                Добавить дополнительный объект
-            </button>
-
-            <div class="popup__buttons">
-                <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
-                <button id="js-show-new-object-step-2" class="button button--type_3 button--h_60" type="button">Далее</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="js-new-object-step-2" style="display: none">
-        <p class="popup__title">Шаг 2. Загрузите план</p>
-
-        <div class="popup-accordion">
-            <button class="js-popup-accordion-toggler popup-accordion__toggler is-active" type="button">
-                БЦ Возрождение, Литера 1 - 900 м2
-
-                <svg aria-hidden="true">
-                    <use xlink:href="images/sprite.svg#chevron_down_2" />
-                </svg>
-            </button>
-
-            <div class="popup-accordion__body" style="display: block">
-                <div>
-                    <div class="floor-block form-row form-row--centered">
-                        <button class="new-object-popup__delete button button--type_6" type="button">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#circle_minus_icon"></use>
-                            </svg>
-                            Удалить объект
-                        </button>
-
-                        <label class="form-label" for="new_object_floor">Этаж</label>
-
-                        <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="1">
-                    </div>
-
-                    <div class="form-row">
-                        <label class="form-label" for="new_object_plan">План БТИ</label>
-
-                        <label class="input-file">
-                            <input type="file">
-                            <span class="input-file__text">Выбрать файл</span>
-                        </label>
-                    </div>
-                </div>
-
-                <hr>
-
-                <div>
-                    <div class="floor-block form-row form-row--centered">
-                        <button class="new-object-popup__delete button button--type_6" type="button">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#circle_minus_icon"></use>
-                            </svg>
-                            Удалить объект
-                        </button>
-
-                        <label class="form-label" for="new_object_floor">Этаж</label>
-
-                        <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="2">
-                    </div>
-
-                    <div class="form-row">
-                        <label class="form-label" for="new_object_plan">План БТИ</label>
-
-                        <div class="input-file-wrapper">
-                            <div class="input-file-info">
-                                <div class="input-file-info__type-block">
-                                    <svg class="input-file-info__type" aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#image_icon"></use>
-                                    </svg>
-
-                                    <span>PNG</span>
-
-                                    <svg class="input-file-info__check" aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#check_icon"></use>
-                                    </svg>
-                                </div>
-
-                                <button class="input-file-info__delete">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#delete_icon"></use>
-                                    </svg>
-                                    Удалить
-                                </button>
-                            </div>
-
-                            <label class="input-file">
-                                <input type="file">
-                                <span class="input-file__text">Выбрать другой...</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="popup-accordion">
-            <button class="js-popup-accordion-toggler popup-accordion__toggler" type="button">
-                БЦ Космос, Литера 2 - 1200 м2
-
-                <svg aria-hidden="true">
-                    <use xlink:href="images/sprite.svg#chevron_down_2" />
-                </svg>
-            </button>
-
-            <div class="popup-accordion__body">
-                <div>
-                    <div class="floor-block form-row form-row--centered">
-                        <button class="new-object-popup__delete button button--type_6" type="button">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#circle_minus_icon"></use>
-                            </svg>
-                            Удалить объект
-                        </button>
-
-                        <label class="form-label" for="new_object_floor">Этаж</label>
-
-                        <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="1">
-                    </div>
-
-                    <div class="form-row">
-                        <label class="form-label" for="new_object_plan">План БТИ</label>
-
-                        <label class="input-file">
-                            <input type="file">
-                            <span class="input-file__text">Выбрать файл</span>
-                        </label>
-                    </div>
-                </div>
-
-                <hr>
-
-                <div>
-                    <div class="floor-block form-row form-row--centered">
-                        <button class="new-object-popup__delete button button--type_6" type="button">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#circle_minus_icon"></use>
-                            </svg>
-                            Удалить объект
-                        </button>
-
-                        <label class="form-label" for="new_object_floor">Этаж</label>
-
-                        <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="2">
-                    </div>
-
-                    <div class="form-row">
-                        <label class="form-label" for="new_object_plan">План БТИ</label>
-
-                        <div class="input-file-wrapper">
-                            <div class="input-file-info">
-                                <div class="input-file-info__type-block">
-                                    <svg class="input-file-info__type" aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#image_icon"></use>
-                                    </svg>
-
-                                    <span>PNG</span>
-
-                                    <svg class="input-file-info__check" aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#check_icon"></use>
-                                    </svg>
-                                </div>
-
-                                <button class="input-file-info__delete">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="images/sprite.svg#delete_icon"></use>
-                                    </svg>
-                                    Удалить
-                                </button>
-                            </div>
-
-                            <label class="input-file">
-                                <input type="file">
-                                <span class="input-file__text">Выбрать другой...</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="popup__bottom">
-            <div></div>
-
-            <div class="popup__buttons">
-                <button id="js-show-new-object-step-1" class="button button--type_2 button--h_60" type="button">Назад</button>
-                <button class="button button--type_3 button--h_60" type="button">Добавить</button>
-            </div>
-        </div>
-    </div>
-</div>-->
-
 <div id="add-new-object" class="popup popup--920 new-object-popup">
-    <p class="popup__title">Добавление нового объекта (здание)</p>
+    <p class="popup__title">Добавление нового здания / группы зданий</p>
 
     <div class="new-object">
         <div class="form-row form-row--centered">
-            <label class="form-label" for="new_object_title">Название</label>
+            <label class="form-label" for="new_object_title">Название<span class="required">*</span></label>
 
             <input id="new_object_title" class="input grow" type="text" name="new_object_title" value="" placeholder="Например: БЦ Возрождение">
         </div>
 
         <div class="form-row form-row--centered">
-            <label class="form-label" for="new_object_address">Адрес</label>
+            <label class="form-label" for="new_object_type">Тип<span class="required">*</span></label>
 
-            <input id="new_object_address" class="input grow" type="text" name="new_object_address" value="" placeholder="Например: г. Санкт-Петербург, пр-т Просвещения д. 1 лит. А">
+            <div class="select-wrapper select-wrapper--h_60 grow">
+                <select id="new_object_type" class="js-select" data-placeholder="Тип">
+                    <option></option>
+                    <option value="1">Бизнес центр</option>
+                    <option value="2">Торговый центр</option>
+                    <option value="3">Складское помещение</option>
+                    <option value="4">Промышленное помещение</option>
+                    <option value="5">Жилая площадь</option>
+                </select>
+            </div>
         </div>
 
         <div class="form-row form-row--centered">
-            <label class="form-label" for="new_object_liter">Литера / корпус</label>
+            <label class="form-label" for="new_object_liter">Группа зданий</label>
 
-            <div>
-                <div class="form-row">
-                    <input id="new_object_liter" class="input w_180" type="text" name="new_object_liter" value="" disabled>
+            <div class="objects-group-checkbox">
+                <label class="checkbox">
+                    <input id="objects_group" type="checkbox" name="" value="">
+                    <span class="checkbox__icon"></span>
+                    <span class="checkbox__text">Группа зданий</span>
+                </label>
 
-                    <label class="checkbox">
-                        <input id="litera_korpus" type="checkbox" name="" value="" checked>
-                        <span class="checkbox__icon"></span>
-                        <span class="checkbox__text">Без литеры /корпуса</span>
-                    </label>
-                </div>
-
-                <div class="input-caption">Заполняется, если объект состоит из нескольких зданий</div>
+                <div class="input-caption">Отметьте галочкой, если объект состоит из нескольких зданий и сможете добавить несколько адресов</div>
             </div>
+        </div>
+
+        <div id="one_address" class="form-block">
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="new_object_address">Адрес<span class="required">*</span></label>
+
+                <input id="new_object_address" class="input grow" type="text" name="new_object_address" value="" placeholder="Например: г. Санкт-Петербург, пр-т Просвещения д. 1 лит. А">
+            </div>
+
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="new_object_square">Общая площадь, м2</label>
+
+                <input id="new_object_square" class="input w_180" type="text" name="new_object_square" value="">
+            </div>
+
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="new_object_floors">Кол-во этажей</label>
+
+                <input id="new_object_floors" class="input w_180" type="text" name="new_object_floors" value="">
+            </div>
+        </div>
+
+        <div id="few_addresses" class="form-block" style="display: none">
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="new_object_names">Обозначение зданий<span class="required">*</span></label>
+
+                <div class="grow">
+                    <div class="select-wrapper select-wrapper--h_60">
+                        <select id="new_object_names" class="js-select" data-placeholder="Обозначение зданий">
+                            <option></option>
+                            <option value="1">Корпус</option>
+                            <option value="2">Литера</option>
+                            <option value="3">Секция</option>
+                            <option value="4">Строение</option>
+                        </select>
+                    </div>
+
+                    <div class="input-caption">Выберите вариант обозначения зданий</div>
+                </div>
+            </div>
+
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="new_object_name">Корпус<span class="required">*</span></label>
+
+                <input id="new_object_name" class="input w_180" type="text" name="new_object_name" value="" placeholder="">
+            </div>
+
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="new_object_address_1">Адрес здания 1<span class="required">*</span></label>
+
+                <input id="new_object_address_1" class="input grow" type="text" name="new_object_address_1" value="" placeholder="Например: г. Санкт-Петербург, пр-т Просвещения д. 1 лит. А">
+            </div>
+
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="new_object_square">Общая площадь, м2</label>
+
+                <input id="new_object_square" class="input w_180" type="text" name="new_object_square" value="">
+            </div>
+
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="new_object_floors">Кол-во этажей</label>
+
+                <input id="new_object_floors" class="input w_180" type="text" name="new_object_floors" value="">
+            </div>
+
+            <hr>
+
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="new_object_name">Корпус<span class="required">*</span></label>
+
+                <input id="new_object_name" class="input w_180" type="text" name="new_object_name" value="" placeholder="">
+            </div>
+
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="new_object_address_2">Адрес здания 2<span class="required">*</span></label>
+
+                <div class="input-group">
+                    <input id="new_object_address_2" class="input grow" type="text" name="new_object_address_2" value="" placeholder="Например: г. Санкт-Петербург, пр-т Просвещения д. 1 лит. А">
+
+                    <button class="new-object-popup__delete button button--type_6" type="button">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#circle_minus_icon"></use>
+                        </svg>
+                        Удалить здание
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="new_object_square">Общая площадь, м2</label>
+
+                <input id="new_object_square" class="input w_180" type="text" name="new_object_square" value="">
+            </div>
+
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="new_object_floors">Кол-во этажей</label>
+
+                <input id="new_object_floors" class="input w_180" type="text" name="new_object_floors" value="">
+            </div>
+
+            <hr>
+
+            <button class="button button--type_6" type="button">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+                </svg>
+                Добавить здание
+            </button>
+
+            <hr>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="new_object_info">Доп. информация</label>
+
+            <textarea id="new_object_info" class="textarea grow" name="new_object_info"></textarea>
+        </div>
+    </div>
+
+    <div class="popup__bottom">
+        <div></div>
+        <div class="popup__buttons">
+            <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
+            <button class="button button--type_3 button--h_60" type="button">Сохранить</button>
+        </div>
+    </div>
+</div>
+
+<div id="building-edit" class="popup popup--920 new-object-popup">
+    <p class="popup__title">Редактирование здания</p>
+
+    <div class="new-object">
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="new_object_title">Название</label>
+
+            <input id="new_object_title" class="input grow" type="text" name="new_object_title" value="БЦ Возрождение" disabled>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="new_object_address">Адрес</label>
+
+            <input id="new_object_address" class="input grow" type="text" name="new_object_address" value="г. Санкт-Петербург, пр-т Просвещения д. 1 лит. А" disabled>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="new_object_address">Литера</label>
+
+            <input id="new_object_address" class="input w_180" type="text" name="new_object_address" value="А" disabled>
         </div>
 
         <div class="form-row form-row--centered">
@@ -326,12 +195,6 @@
             <label class="form-label" for="new_object_floors">Кол-во этажей</label>
 
             <input id="new_object_floors" class="input w_180" type="text" name="new_object_floors" value="">
-        </div>
-
-        <div class="form-row form-row--centered">
-            <label class="form-label" for="new_object_info">Доп. информация</label>
-
-            <textarea id="new_object_info" class="textarea grow" name="new_object_info"></textarea>
         </div>
 
         <p class="new-object__title">Этажи и планы</p>
@@ -417,6 +280,31 @@
         <div class="popup__buttons">
             <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
             <button class="button button--type_3 button--h_60" type="button">Сохранить</button>
+        </div>
+    </div>
+</div>
+
+<div id="buildings-group-delete" class="popup popup--620">
+    <p class="popup__title text-center">Подтвердить удаление</p>
+    <p class="text-center">Вы уверены что хотите удалить выбранный элемент?</p>
+    <p class="text-center">Удаление группы зданий необратимое действие и повлечёт за собой удаление прикреплённых к ней зданий.</p>
+
+    <div class="popup__bottom">
+        <div class="popup__buttons popup__buttons--type_2">
+            <button class="button button--type_3 button--h_60" type="button">Удалить</button>
+            <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
+        </div>
+    </div>
+</div>
+
+<div id="building-delete" class="popup popup--620">
+    <p class="popup__title text-center">Подтвердить удаление</p>
+    <p class="text-center">Вы уверены что хотите удалить выбранный элемент?</p>
+
+    <div class="popup__bottom">
+        <div class="popup__buttons popup__buttons--type_2">
+            <button class="button button--type_3 button--h_60" type="button">Удалить</button>
+            <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
         </div>
     </div>
 </div>

@@ -63,6 +63,9 @@
                             <li class="user-profile__dropdown-list-item">
                                 <a class="user-profile__dropdown-link" href="#">Уведомления <span class="cnt">3</span></a>
                             </li>
+                            <li class="user-profile__dropdown-list-item">
+                                <a class="user-profile__dropdown-link" href="#">Выход</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -103,12 +106,32 @@
                         </a>
                     </li>
                     <li class="main-menu__item">
-                        <a class="main-menu__link" href="#" title="Объекты">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#building_icon" />
-                            </svg>
-                            <span>Объекты</span>
-                        </a>
+                        <div class="main-menu__link-container">
+                            <a class="main-menu__link" href="#" title="Объекты">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#building_icon" />
+                                </svg>
+                                <span>Объекты</span>
+                            </a>
+    
+                            <button class="js-submenu-toggler main-menu__submenu-toggler" type="button" title="Открыть меню">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#chevron_down" />
+                                </svg>
+                            </button>
+                        </div>
+    
+                        <ul class="main-menu__submenu">
+                            <li class="main-menu__submenu-item">
+                                <a class="main-menu__submenu-link" href="#">Группы зданий</a>
+                            </li>
+                            <li class="main-menu__submenu-item">
+                                <a class="main-menu__submenu-link" href="#">Здания</a>
+                            </li>
+                            <li class="main-menu__submenu-item">
+                                <a class="main-menu__submenu-link" href="#">Помещения, офисы, площади</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="main-menu__item">
                         <div class="main-menu__link-container">
@@ -140,6 +163,14 @@
                                 <a class="main-menu__submenu-link" href="#">И наконец самое длинное название подраздела для проверки всего и вся и прочего</a>
                             </li>
                         </ul>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#" title="Арендодатели">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#users_icon" />
+                            </svg>
+                            <span>Арендодатели</span>
+                        </a>
                     </li>
                     <li class="main-menu__item">
                         <a class="main-menu__link" href="#" title="Документы">
@@ -231,21 +262,21 @@
 
     <main class="page__content">
         <div class="page__top">
-            <h1 class="page__top-title">Холдинг Аренда</h1>
+            <h1 class="page__top-title">Название рабочей области</h1>
         
             <div class="page__top-buttons">
                 <button class="button button--h_45 button--type_1" type="button" data-fancybox data-src="#add-task-popup">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#circle_plus_icon" />
                     </svg>
-                    <span>Поставить новую задачу</span>
+                    <span>Новая задача</span>
                 </button>
         
                 <button class="button button--h_45 button--type_1" type="button">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#circle_plus_icon" />
                     </svg>
-                    <span>Добавить нового арендатора</span>
+                    <span>Добавить контрагента</span>
                 </button>
             </div>
         
@@ -260,7 +291,10 @@
             <div class="js-horizontal-scroll objects-menu__wrapper">
                 <ul class="objects-menu__list">
                     <li class="objects-menu__item">
-                        <a class="objects-menu__button is-active" href="#" draggable="false"><span>БЦ Возрождение</span></a>
+                        <a class="objects-menu__button is-active" href="#" draggable="false"><span>БЦ Возрождение литера А</span></a>
+                    </li>
+                    <li class="objects-menu__item">
+                        <a class="objects-menu__button" href="#" draggable="false"><span>БЦ Возрождение литера Б</span></a>
                     </li>
                     <li class="objects-menu__item">
                         <a class="objects-menu__button" href="#" draggable="false"><span>БЦ Космос</span></a>
@@ -269,10 +303,10 @@
                         <a class="objects-menu__button" href="#" draggable="false"><span>Желтый угол</span></a>
                     </li>
                     <li class="objects-menu__item">
-                        <a class="objects-menu__button" href="#" draggable="false"><span>БЦ Возрождение</span></a>
+                        <a class="objects-menu__button" href="#" draggable="false"><span>БЦ Космос корпус 1</span></a>
                     </li>
                     <li class="objects-menu__item">
-                        <a class="objects-menu__button" href="#" draggable="false"><span>БЦ Космос</span></a>
+                        <a class="objects-menu__button" href="#" draggable="false"><span>БЦ Космос корпус 2</span></a>
                     </li>
                     <li class="objects-menu__item">
                         <a class="objects-menu__button" href="#" draggable="false"><span>Желтый угол</span></a>
@@ -657,6 +691,8 @@
     <script src="js/plan.js"></script>
     
     <script src="js/table-sort.js"></script>
+    
+    <script src="js/popups.js"></script>
     
     <script src="js/main.js"></script>
 </body>

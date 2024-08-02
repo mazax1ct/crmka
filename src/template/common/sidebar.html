@@ -29,6 +29,9 @@
                         <li class="user-profile__dropdown-list-item">
                             <a class="user-profile__dropdown-link" href="#">Уведомления <span class="cnt">3</span></a>
                         </li>
+                        <li class="user-profile__dropdown-list-item">
+                            <a class="user-profile__dropdown-link" href="#">Выход</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -69,12 +72,32 @@
                     </a>
                 </li>
                 <li class="main-menu__item">
-                    <a class="main-menu__link" href="#" title="Объекты">
-                        <svg aria-hidden="true">
-                            <use xlink:href="images/sprite.svg#building_icon" />
-                        </svg>
-                        <span>Объекты</span>
-                    </a>
+                    <div class="main-menu__link-container">
+                        <a class="main-menu__link" href="#" title="Объекты">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#building_icon" />
+                            </svg>
+                            <span>Объекты</span>
+                        </a>
+
+                        <button class="js-submenu-toggler main-menu__submenu-toggler" type="button" title="Открыть меню">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_down" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="main-menu__submenu">
+                        <li class="main-menu__submenu-item">
+                            <a class="main-menu__submenu-link" href="#">Группы зданий</a>
+                        </li>
+                        <li class="main-menu__submenu-item">
+                            <a class="main-menu__submenu-link" href="#">Здания</a>
+                        </li>
+                        <li class="main-menu__submenu-item">
+                            <a class="main-menu__submenu-link" href="#">Помещения, офисы, площади</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="main-menu__item">
                     <div class="main-menu__link-container">
@@ -106,6 +129,14 @@
                             <a class="main-menu__submenu-link" href="#">И наконец самое длинное название подраздела для проверки всего и вся и прочего</a>
                         </li>
                     </ul>
+                </li>
+                <li class="main-menu__item">
+                    <a class="main-menu__link" href="#" title="Арендодатели">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#users_icon" />
+                        </svg>
+                        <span>Арендодатели</span>
+                    </a>
                 </li>
                 <li class="main-menu__item">
                     <a class="main-menu__link" href="#" title="Документы">

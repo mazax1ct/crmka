@@ -3,7 +3,7 @@
 
     <div>
         <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-group">Здание / группа зданий<span class="required">*</span></label>
+            <label class="form-label" for="add-square-group">Здание<span class="required">*</span></label>
 
             <div class="w_420">
                 <div class="select-wrapper select-wrapper--h_60">
@@ -38,6 +38,24 @@
 
             <div class="w_420">
                 <input id="add-square-title" class="input" name="add-square-title" type="text" placeholder="Например: офис 202">
+            </div>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-square-type">Тип площади<span class="required">*</span></label>
+
+            <div class="w_420">
+                <div class="select-wrapper select-wrapper--h_60">
+                    <select id="add-square-type" class="js-select" data-placeholder="Не выбрано">
+                        <option></option>
+                        <option value="1">Жилая площадь</option>
+                        <option value="2">Торговая площадь</option>
+                        <option value="3">Для промышленного применения</option>
+                        <option value="4">Складское помещение</option>
+                        <option value="5">Свободного назначения</option>
+                        <option value="6">Офис</option>
+                    </select>
+                </div>
             </div>
         </div>
 
@@ -191,7 +209,7 @@
 
     <div>
         <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-group_">Объект (здание)</label>
+            <label class="form-label" for="add-square-group_">Объект (здание)<span class="required">*</span></label>
 
             <div class="w_420">
                 <div class="select-wrapper select-wrapper--h_60">
@@ -208,7 +226,7 @@
         </div>
 
         <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-floor_">Этаж</label>
+            <label class="form-label" for="add-square-floor_">Этаж<span class="required">*</span></label>
 
             <div class="w_120">
                 <div class="select-wrapper select-wrapper--h_60">
@@ -222,10 +240,28 @@
         </div>
 
         <div class="form-row form-row--centered">
-            <label class="form-label" for="add-square-title">Название, номер</label>
+            <label class="form-label" for="add-square-title">Название, номер<span class="required">*</span></label>
 
             <div class="w_420">
                 <input id="add-square-title" class="input" name="add-square-title" type="text" value="офис 2524" placeholder="Например: офис 202">
+            </div>
+        </div>
+
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="add-square-type_">Тип площади<span class="required">*</span></label>
+
+            <div class="w_420">
+                <div class="select-wrapper select-wrapper--h_60">
+                    <select id="add-square-type_" class="js-select" data-placeholder="Не выбрано">
+                        <option></option>
+                        <option value="1" selected>Жилая площадь</option>
+                        <option value="2">Торговая площадь</option>
+                        <option value="3">Для промышленного применения</option>
+                        <option value="4">Складское помещение</option>
+                        <option value="5">Свободного назначения</option>
+                        <option value="6">Офис</option>
+                    </select>
+                </div>
             </div>
         </div>
 

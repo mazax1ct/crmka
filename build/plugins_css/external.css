@@ -42,7 +42,8 @@
   container-type: inline-size;
 }
 
-.contact-user {
+.contact-user,
+.contact-user--type_2 {
   container-name: contact-user;
   container-type: inline-size;
 

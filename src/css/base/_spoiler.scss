@@ -1,0 +1,58 @@
+.spoiler {
+    &__body {
+        max-height: 130px;
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+            background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,1) 100%);
+            bottom: 0;
+            content: '';
+            height: 60px;
+            left: 0;
+            position: absolute;
+            top: auto;
+            width: 100%;
+            z-index: 1;
+        }
+
+        &.is-open {
+            max-height: initial;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__toggler {
+        @include button-reset;
+        @include active-area;
+        align-items: center;
+        color: var(--grey_5);
+        cursor: pointer;
+        display: flex;
+        font-weight: 700;
+        gap: 10px;
+        margin-top: 15px;
+        transition: color 0.3s;
+        position: relative;
+        z-index: 1;
+        @include hover {
+            color: var(--primary_color);
+        }
+
+        &.is-active {
+            .spoiler__toggler-arrow {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__toggler-arrow {
+        fill: currentcolor;
+        height: 12px;
+        min-width: 12px;
+        width: 12px;
+    }
+}

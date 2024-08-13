@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>CRMka</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page">
+    //= template/common/sidebar.html
+
+    <main class="page__content">
+        //= template/common/page__top.html
+
+        <h2 class="page__title">Арендаторы</h2>
+
+        //= template/common/search.html
+
+        <div class="box">
+            <div class="responsive-table">
+                <table class="table objects-table">
+                    <tr>
+                        <th class="js-sort text-left">
+                            <span class="sorting">
+                                <span>Название организации</span>
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#double_arrow_icon" />
+                                </svg>
+                            </span>
+                        </th>
+                        <th class="text-left">
+                            Группа организаций
+                        </th>
+                        <th>
+                            Помещение
+                        </th>
+                        <th>
+                            Задолженность
+                        </th>
+                        <th>Редактировать</th>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><a href="#">ООО "Полевые цветы"</a></td>
+                        <td class="text-left">Ромашка</td>
+                        <td><a href="#">офис 202</a> <a href="#">офис 203</a></td>
+                        <td>-</td>
+                        <td>
+                            <button class="objects-table__edit" type="button" title="Редактировать" data-fancybox="building-edit-1" data-src="#building-edit">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#edit_icon"></use>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><a href="#">ООО "Брянка"</a></td>
+                        <td class="text-left">Ромашка</td>
+                        <td><a href="#">офис 204</a></td>
+                        <td><b class="text-status status-red">25000</b></td>
+                        <td>
+                            <button class="objects-table__edit" type="button" title="Редактировать" data-fancybox="building-edit-1" data-src="#building-edit">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#edit_icon"></use>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><a href="#">ООО "Трансформерс и Ко"</a></td>
+                        <td class="text-left"></td>
+                        <td><a href="#">офис 1011</a></td>
+                        <td>-</td>
+                        <td>
+                            <button class="objects-table__edit" type="button" title="Редактировать" data-fancybox="building-edit-1" data-src="#building-edit">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#edit_icon"></use>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="box__footer">
+                <div></div>
+                <ul class="pager">
+                    <li class="pager__item">
+                        <a class="pager__link is-active" href="#">1</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">2</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">3</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">...</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">7</a>
+                    </li>
+                    <li class="pager__item pager__item--arrow">
+                        <a class="pager__link" href="#">
+                            <span>Вперед</span>
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    //= template/popups/add-new-object.html
+
+    //= template/common/scripts.html
+</body>
+
+</html>

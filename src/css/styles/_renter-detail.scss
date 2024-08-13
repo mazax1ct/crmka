@@ -1,0 +1,77 @@
+.renter-detail {
+    &__top {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        .url {
+            flex-grow: 1;
+            max-width: 680px;
+        }
+    }
+
+    &__back {
+        svg {
+            fill: currentcolor;
+            height: 12px;
+            min-width: 12px;
+            width: 12px;
+        }
+    }
+
+    &__title-block {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    &__columns {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @media(min-width: $md) {
+            flex-direction: row;
+            gap: 50px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__column {
+        @media(min-width: $md) {
+            width: calc(100% / 2 - 20px / 2);
+        }
+    }
+
+    &__info {
+        display: grid;
+        gap: 30px 15px;
+        grid-template-columns: 1fr 1fr;
+        @media(min-width: $sm) {
+            gap: 30px;
+        }
+
+        a {
+            color: var(--primary_color);
+            text-decoration: none;
+        }
+    }
+
+    &__info-title {
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+}

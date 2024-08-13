@@ -263,3 +263,15 @@ $(".js-date-mask").each(function(index, element) {
         isMobile: true
     });
 });
+
+//тогглер спойлера
+$(document).on('click', '.js-spoiler-toggler', function () {
+  if(!$(this).hasClass('is-active')){
+    $(this).addClass('is-active');
+    $(this).parent('.spoiler').find('.spoiler__body').addClass('is-open');
+  }else{
+    $(this).removeClass('is-active');
+    $(this).parent('.spoiler').find('.spoiler__body').removeClass('is-open');
+  }
+  return false;
+});

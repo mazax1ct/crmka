@@ -12,6 +12,14 @@
     }
 }
 
+.files-vertical-list {
+    .file-link {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}
+
 .file-link {
     align-items: center;
     display: flex;

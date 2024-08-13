@@ -287,53 +287,49 @@
             </button>
         </div>
 
-        <ul class="breadcrumbs">
-            <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link" href="#">Объекты</a>
-            </li>
-            <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link" href="#">Группы зданий</a>
-            </li>
-            <li class="breadcrumbs__item">
-                БЦ Возрождение
-            </li>
-        </ul>
+        <h2 class="page__title">Арендаторы</h2>
+
+        <div class="search">
+            <form class="search__form" action="">
+                <div class="search__form-inner">
+                    <input class="input search__input" type="text" placeholder="Поиск по ИНН или названию">
+                    <button class="search__submit button button--type_3 button--h_60 button--square" type="submit" title="Найти">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#search_icon" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
 
         <div class="box">
-            <div class="box__title-block justify-content-spacebetween">
-                <p class="box__title">БЦ Возрождение</p>
-            </div>
-
-            <hr>
-
             <div class="responsive-table">
                 <table class="table objects-table">
                     <tr>
                         <th class="js-sort text-left">
                             <span class="sorting">
-                                <span>Название</span>
+                                <span>Название организации</span>
                                 <svg aria-hidden="true">
                                     <use xlink:href="images/sprite.svg#double_arrow_icon" />
                                 </svg>
                             </span>
                         </th>
                         <th class="text-left">
-                            Адрес
+                            Группа организаций
                         </th>
                         <th>
-                            Площадь м2
+                            Помещение
                         </th>
                         <th>
-                            Количество этажей
+                            Задолженность
                         </th>
                         <th>Редактировать</th>
-                        <th>Удалить</th>
                     </tr>
                     <tr>
-                        <td class="text-left">БЦ Возрождение литера А</td>
-                        <td class="text-left">г. Санкт-Петербург, пр-т Просвещения д. 111 лит. А</td>
-                        <td>1000</td>
-                        <td>25</td>
+                        <td class="text-left"><a href="#">ООО "Полевые цветы"</a></td>
+                        <td class="text-left">Ромашка</td>
+                        <td><a href="#">офис 202</a> <a href="#">офис 203</a></td>
+                        <td>-</td>
                         <td>
                             <button class="objects-table__edit" type="button" title="Редактировать" data-fancybox="building-edit-1" data-src="#building-edit">
                                 <svg aria-hidden="true">
@@ -341,30 +337,29 @@
                                 </svg>
                             </button>
                         </td>
-                        <td>
-                            <button class="objects-table__delete" type="button" title="Удалить" data-fancybox="buildings-group-delete-1" data-src="#building-delete">
-                                <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#trash_icon"></use>
-                                </svg>
-                            </button>
-                        </td>
                     </tr>
                     <tr>
-                        <td class="text-left">БЦ Возрождение литера Б</td>
-                        <td class="text-left">г. Санкт-Петербург, пр-т Просвещения д. 111 лит. Б</td>
-                        <td>1000</td>
-                        <td>20</td>
+                        <td class="text-left"><a href="#">ООО "Брянка"</a></td>
+                        <td class="text-left">Ромашка</td>
+                        <td><a href="#">офис 204</a></td>
+                        <td><b class="text-status status-red">25000</b></td>
                         <td>
-                            <button class="objects-table__edit" type="button" title="Редактировать" data-fancybox="building-edit-2" data-src="#building-edit">
+                            <button class="objects-table__edit" type="button" title="Редактировать" data-fancybox="building-edit-1" data-src="#building-edit">
                                 <svg aria-hidden="true">
                                     <use xlink:href="images/sprite.svg#edit_icon"></use>
                                 </svg>
                             </button>
                         </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><a href="#">ООО "Трансформерс и Ко"</a></td>
+                        <td class="text-left"></td>
+                        <td><a href="#">офис 1011</a></td>
+                        <td>-</td>
                         <td>
-                            <button class="objects-table__delete" type="button" title="Удалить" data-fancybox="buildings-group-delete-2" data-src="#building-delete">
+                            <button class="objects-table__edit" type="button" title="Редактировать" data-fancybox="building-edit-1" data-src="#building-edit">
                                 <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#trash_icon"></use>
+                                    <use xlink:href="images/sprite.svg#edit_icon"></use>
                                 </svg>
                             </button>
                         </td>
@@ -460,6 +455,85 @@
     
                     <input id="new_object_floors" class="input w_180" type="text" name="new_object_floors" value="">
                 </div>
+    
+                <hr>
+    
+                <p class="new-object__title">Этажи и планы</p>
+    
+                <div>
+                    <div class="floor-block form-row form-row--centered">
+                        <label class="form-label" for="new_object_floor">Этаж</label>
+    
+                        <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="1">
+                    </div>
+    
+                    <div class="form-row">
+                        <label class="form-label" for="new_object_plan">План БТИ</label>
+    
+                        <label class="input-file">
+                            <input type="file">
+                            <span class="input-file__text">Выбрать файл</span>
+                        </label>
+                    </div>
+                </div>
+    
+                <hr>
+    
+                <div>
+                    <div class="floor-block form-row form-row--centered">
+                        <button class="new-object-popup__delete button button--type_6" type="button">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#circle_minus_icon"></use>
+                            </svg>
+                            Удалить этаж
+                        </button>
+    
+                        <label class="form-label" for="new_object_floor">Этаж</label>
+    
+                        <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="2">
+                    </div>
+    
+                    <div class="form-row">
+                        <label class="form-label" for="new_object_plan">План БТИ</label>
+    
+                        <div class="input-file-wrapper">
+                            <div class="input-file-info">
+                                <div class="input-file-info__type-block">
+                                    <svg class="input-file-info__type" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#image_icon"></use>
+                                    </svg>
+    
+                                    <span>PNG</span>
+    
+                                    <svg class="input-file-info__check" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#check_icon"></use>
+                                    </svg>
+                                </div>
+    
+                                <button class="input-file-info__delete">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#delete_icon"></use>
+                                    </svg>
+                                    Удалить файл
+                                </button>
+                            </div>
+    
+                            <label class="input-file">
+                                <input type="file">
+                                <span class="input-file__text">Выбрать другой...</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+    
+                <hr>
+    
+                <button class="button button--type_6" type="button">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+                    </svg>
+                    Добавить этаж
+                </button>
             </div>
     
             <div id="few_addresses" class="form-block" style="display: none">
@@ -480,6 +554,8 @@
                         <div class="input-caption">Выберите вариант обозначения зданий</div>
                     </div>
                 </div>
+    
+                <p class="new-object__title">Здание 1</p>
     
                 <div class="form-row form-row--centered">
                     <label class="form-label" for="new_object_name">Корпус<span class="required">*</span></label>
@@ -506,6 +582,87 @@
                 </div>
     
                 <hr>
+    
+                <p class="new-object__title">Этажи и планы</p>
+    
+                <div>
+                    <div class="floor-block form-row form-row--centered">
+                        <label class="form-label" for="new_object_floor">Этаж</label>
+    
+                        <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="1">
+                    </div>
+    
+                    <div class="form-row">
+                        <label class="form-label" for="new_object_plan">План БТИ</label>
+    
+                        <label class="input-file">
+                            <input type="file">
+                            <span class="input-file__text">Выбрать файл</span>
+                        </label>
+                    </div>
+                </div>
+    
+                <hr>
+    
+                <div>
+                    <div class="floor-block form-row form-row--centered">
+                        <button class="new-object-popup__delete button button--type_6" type="button">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#circle_minus_icon"></use>
+                            </svg>
+                            Удалить этаж
+                        </button>
+    
+                        <label class="form-label" for="new_object_floor">Этаж</label>
+    
+                        <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="2">
+                    </div>
+    
+                    <div class="form-row">
+                        <label class="form-label" for="new_object_plan">План БТИ</label>
+    
+                        <div class="input-file-wrapper">
+                            <div class="input-file-info">
+                                <div class="input-file-info__type-block">
+                                    <svg class="input-file-info__type" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#image_icon"></use>
+                                    </svg>
+    
+                                    <span>PNG</span>
+    
+                                    <svg class="input-file-info__check" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#check_icon"></use>
+                                    </svg>
+                                </div>
+    
+                                <button class="input-file-info__delete">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#delete_icon"></use>
+                                    </svg>
+                                    Удалить файл
+                                </button>
+                            </div>
+    
+                            <label class="input-file">
+                                <input type="file">
+                                <span class="input-file__text">Выбрать другой...</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+    
+                <hr>
+    
+                <button class="button button--type_6" type="button">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+                    </svg>
+                    Добавить этаж
+                </button>
+    
+                <hr>
+    
+                <p class="new-object__title">Здание 2</p>
     
                 <div class="form-row form-row--centered">
                     <label class="form-label" for="new_object_name">Корпус<span class="required">*</span></label>
@@ -542,142 +699,101 @@
     
                 <hr>
     
+                <p class="new-object__title">Этажи и планы</p>
+    
+                <div>
+                    <div class="floor-block form-row form-row--centered">
+                        <label class="form-label" for="new_object_floor">Этаж</label>
+    
+                        <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="1">
+                    </div>
+    
+                    <div class="form-row">
+                        <label class="form-label" for="new_object_plan">План БТИ</label>
+    
+                        <label class="input-file">
+                            <input type="file">
+                            <span class="input-file__text">Выбрать файл</span>
+                        </label>
+                    </div>
+                </div>
+    
+                <hr>
+    
+                <div>
+                    <div class="floor-block form-row form-row--centered">
+                        <button class="new-object-popup__delete button button--type_6" type="button">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#circle_minus_icon"></use>
+                            </svg>
+                            Удалить этаж
+                        </button>
+    
+                        <label class="form-label" for="new_object_floor">Этаж</label>
+    
+                        <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="2">
+                    </div>
+    
+                    <div class="form-row">
+                        <label class="form-label" for="new_object_plan">План БТИ</label>
+    
+                        <div class="input-file-wrapper">
+                            <div class="input-file-info">
+                                <div class="input-file-info__type-block">
+                                    <svg class="input-file-info__type" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#image_icon"></use>
+                                    </svg>
+    
+                                    <span>PNG</span>
+    
+                                    <svg class="input-file-info__check" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#check_icon"></use>
+                                    </svg>
+                                </div>
+    
+                                <button class="input-file-info__delete">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#delete_icon"></use>
+                                    </svg>
+                                    Удалить файл
+                                </button>
+                            </div>
+    
+                            <label class="input-file">
+                                <input type="file">
+                                <span class="input-file__text">Выбрать другой...</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+    
+                <hr>
+    
+                <button class="button button--type_6" type="button">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+                    </svg>
+                    Добавить этаж
+                </button>
+    
+                <hr>
+    
                 <button class="button button--type_6" type="button">
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
                     </svg>
                     Добавить здание
                 </button>
-    
                 <hr>
             </div>
+    
+            <hr>
     
             <div class="form-row form-row--centered">
                 <label class="form-label" for="new_object_info">Доп. информация</label>
     
                 <textarea id="new_object_info" class="textarea grow" name="new_object_info"></textarea>
             </div>
-        </div>
-    
-        <div class="popup__bottom">
-            <div></div>
-            <div class="popup__buttons">
-                <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
-                <button class="button button--type_3 button--h_60" type="button">Сохранить</button>
-            </div>
-        </div>
-    </div>
-    
-    <div id="building-edit" class="popup popup--920 new-object-popup">
-        <p class="popup__title">Редактирование здания</p>
-    
-        <div class="new-object">
-            <div class="form-row form-row--centered">
-                <label class="form-label" for="new_object_title">Название</label>
-    
-                <input id="new_object_title" class="input grow" type="text" name="new_object_title" value="БЦ Возрождение" disabled>
-            </div>
-    
-            <div class="form-row form-row--centered">
-                <label class="form-label" for="new_object_address">Адрес</label>
-    
-                <input id="new_object_address" class="input grow" type="text" name="new_object_address" value="г. Санкт-Петербург, пр-т Просвещения д. 1 лит. А" disabled>
-            </div>
-    
-            <div class="form-row form-row--centered">
-                <label class="form-label" for="new_object_address">Литера</label>
-    
-                <input id="new_object_address" class="input w_180" type="text" name="new_object_address" value="А" disabled>
-            </div>
-    
-            <div class="form-row form-row--centered">
-                <label class="form-label" for="new_object_square">Общая площадь, м2</label>
-    
-                <input id="new_object_square" class="input w_180" type="text" name="new_object_square" value="">
-            </div>
-    
-            <div class="form-row form-row--centered">
-                <label class="form-label" for="new_object_floors">Кол-во этажей</label>
-    
-                <input id="new_object_floors" class="input w_180" type="text" name="new_object_floors" value="">
-            </div>
-    
-            <p class="new-object__title">Этажи и планы</p>
-    
-            <div>
-                <div class="floor-block form-row form-row--centered">
-                    <label class="form-label" for="new_object_floor">Этаж</label>
-    
-                    <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="1">
-                </div>
-    
-                <div class="form-row">
-                    <label class="form-label" for="new_object_plan">План БТИ</label>
-    
-                    <label class="input-file">
-                        <input type="file">
-                        <span class="input-file__text">Выбрать файл</span>
-                    </label>
-                </div>
-            </div>
-    
-            <hr>
-    
-            <div>
-                <div class="floor-block form-row form-row--centered">
-                    <button class="new-object-popup__delete button button--type_6" type="button">
-                        <svg aria-hidden="true">
-                            <use xlink:href="images/sprite.svg#circle_minus_icon"></use>
-                        </svg>
-                        Удалить этаж
-                    </button>
-    
-                    <label class="form-label" for="new_object_floor">Этаж</label>
-    
-                    <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="2">
-                </div>
-    
-                <div class="form-row">
-                    <label class="form-label" for="new_object_plan">План БТИ</label>
-    
-                    <div class="input-file-wrapper">
-                        <div class="input-file-info">
-                            <div class="input-file-info__type-block">
-                                <svg class="input-file-info__type" aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#image_icon"></use>
-                                </svg>
-    
-                                <span>PNG</span>
-    
-                                <svg class="input-file-info__check" aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#check_icon"></use>
-                                </svg>
-                            </div>
-    
-                            <button class="input-file-info__delete">
-                                <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#delete_icon"></use>
-                                </svg>
-                                Удалить файл
-                            </button>
-                        </div>
-    
-                        <label class="input-file">
-                            <input type="file">
-                            <span class="input-file__text">Выбрать другой...</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-    
-            <hr>
-    
-            <button class="button button--type_6" type="button">
-                <svg aria-hidden="true">
-                    <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
-                </svg>
-                Добавить этаж
-            </button>
         </div>
     
         <div class="popup__bottom">

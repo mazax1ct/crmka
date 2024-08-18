@@ -401,6 +401,17 @@ hr {
         height: 10px;
         width: 10px;
     }
+
+    a {
+        &:not([class]) {
+            color: var(--primary_color);
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 .text-center {

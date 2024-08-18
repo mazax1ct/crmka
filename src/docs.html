@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>CRMka</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page">
+    //= template/common/sidebar.html
+
+    <main class="page__content">
+        //= template/common/page__top.html
+
+        //= template/common/search.html
+
+        <div class="box">
+            <div class="box__title-block justify-content-spacebetween">
+                <p class="box__title">Документы</p>
+
+                <div class="objects-manage">
+                    <button class="button button--type_1 button--h_45" type="button" data-fancybox="" data-src="#">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#circle_plus_icon" />
+                        </svg>
+                        <span>Новый документ</span>
+                    </button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="doc_type">Тип документа</label>
+
+                <div class="w_400">
+                    <div class="select-wrapper select-wrapper--h_60">
+                        <select id="doc_type" class="js-select" data-placeholder="Не выбрано">
+                            <option></option>
+                            <option value="1">Договор</option>
+                            <option value="2">Доп. соглашение</option>
+                            <option value="3">Акт</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="doc_status">Статус:</label>
+
+                <div class="w_400">
+                    <div class="select-wrapper select-wrapper--h_60">
+                        <select id="doc_status" class="js-select" data-placeholder="Не выбрано">
+                            <option></option>
+                            <option value="1">Действующий</option>
+                            <option value="2">Закрыт</option>
+                            <option value="3">Черновик</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="responsive-table">
+                <table class="table objects-table">
+                    <tr>
+                        <th class="text-left">
+                            Номер договора
+                        </th>
+                        <th class="js-sort text-left">
+                            <span class="sorting">
+                                <span>Арендатор</span>
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#double_arrow_icon" />
+                                </svg>
+                            </span>
+                        </th>
+                        <th class="js-sort text-left">
+                            <span class="sorting">
+                                <span>Арендодатель</span>
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#double_arrow_icon" />
+                                </svg>
+                            </span>
+                        </th>
+                        <th class="js-sort text-left">
+                            <span class="sorting">
+                                <span>Тип документа</span>
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#double_arrow_icon" />
+                                </svg>
+                            </span>
+                        </th>
+                        <th class="text-left">Дата заключения</th>
+                        <th class="text-left">Объект договора</th>
+                        <th class="text-left">Сумма платежа</th>
+                        <th class="text-left">Статус документа</th>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <a href="#">54</a>
+                        </td>
+                        <td class="text-left">
+                            <a href="#">ООО "Арендатор"</a>
+                        </td>
+                        <td class="text-left">
+                            <a href="#">ООО "Арендодатель"</a>
+                        </td>
+                        <td class="text-left">
+                            <a class="attach-link" href="#">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#file_icon"></use>
+                                </svg>
+                                <span>Договор</span>
+                            </a>
+                        </td>
+                        <td class="text-left">02.03.2021</td>
+                        <td class="text-left"><a href="#">Офис 201</a></td>
+                        <td class="text-left">25000</td>
+                        <td class="text-left">
+                            <div class="text-status status-green">
+                                <span class="status-icon"></span>
+                                Действующий
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <a href="#">12</a>
+                        </td>
+                        <td class="text-left">
+                            <a href="#">ООО "Арендатор"</a>
+                        </td>
+                        <td class="text-left">
+                            <a href="#">ООО "Арендодатель"</a>
+                        </td>
+                        <td class="text-left">
+                            <a class="attach-link" href="#">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#file_icon"></use>
+                                </svg>
+                                <span>Договор</span>
+                            </a>
+                        </td>
+                        <td class="text-left">05.03.2020</td>
+                        <td class="text-left"><a href="#">Офис 201</a></td>
+                        <td class="text-left">20000</td>
+                        <td class="text-left">
+                            <div class="text-status status-red">
+                                <span class="status-icon"></span>
+                                Закрыт
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <a href="#">5</a>
+                        </td>
+                        <td class="text-left">
+                            <a href="#">ООО "Арендатор"</a>
+                        </td>
+                        <td class="text-left">
+                            <a href="#">ООО "Арендодатель"</a>
+                        </td>
+                        <td class="text-left">
+                            <a class="attach-link" href="#">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#file_icon"></use>
+                                </svg>
+                                <span>Договор</span>
+                            </a>
+                        </td>
+                        <td class="text-left">05.03.2019</td>
+                        <td class="text-left"><a href="#">Офис 201</a></td>
+                        <td class="text-left">20000</td>
+                        <td class="text-left">
+                            <div class="text-status status-yellow">
+                                <span class="status-icon"></span>
+                                Черновик
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    //= template/common/popups.html
+
+    //= template/popups/add-square.html
+
+    //= template/common/scripts.html
+</body>
+
+</html>

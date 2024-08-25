@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="plugins_css/air-datepicker.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="plugins_css/external.css" />
+    <link rel="stylesheet" href="plugins_css/swiper-bundle.min.css" />
 </head>
 
 <body class="page">
@@ -287,20 +288,356 @@
             </button>
         </div>
 
-        <div class="box">
-            <div class="box__title-block justify-content-center">
-                <p class="box__title">Добро пожаловать!</p>
+        <div class="box bld-detail">
+            <div class="bld-detail__top">
+                <a class="bld-detail__back button button--h_40 button--type_17" href="#">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#chevron_left" />
+                    </svg>
+                    <span>Назад</span>
+                </a>
+        
+                <div class="bld-detail__top-buttons">
+                    <button class="button button--type_1 button--h_45" type="button">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#edit_2_icon"></use>
+                        </svg>
+                        <span>Редактировать</span>
+                    </button>
+        
+                    <button class="button button--type_1 button--h_45" type="button" data-fancybox="add-new-floor" data-src="#add-new-floor">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#edit_2_icon"></use>
+                        </svg>
+                        <span>Добавить этажи</span>
+                    </button>
+                </div>
             </div>
         
-            <p class="text-center">Для начала работы в системе вам необходимо завести в систему здания и арендуемые площади.</p>
+            <div class="bld-detail__title-block">
+                <p class="bld-detail__title">БЦ Возрождение - литера В</p>
+            </div>
         
-            <p class="text-center">За подробной информацией о работе в системе, вы всегда можете обратиться в раздел <a href="/help">Помощь</a>.</p>
+            <div class="bld-detail__columns">
+                <div class="bld-detail__column">
+                    <div class="bld-detail__info">
+                        <div class="bld-detail__info-item">
+                            <p class="bld-detail__info-title">Группа объектов</p>
+                            <p><a href="#">БЦ Возрождение</a></p>
+                        </div>
         
-            <p class="text-center">
-                <button class="button button--type_3 button--h_40" type="button" name="button" data-fancybox="add-new-object" data-src="#add-new-object">Добавить здание</button>
-            </p>
+                        <div class="bld-detail__info-item">
+                            <p class="bld-detail__info-title">Адрес</p>
+                            <p>172531, Тверская обл, г. Нелидово, Ул. Невского, д.1</p>
+                        </div>
+        
+                        <div class="bld-detail__info-item">
+                            <p class="bld-detail__info-title">Тип</p>
+                            <p>Торговое</p>
+                        </div>
+        
+                        <div class="bld-detail__info-item">
+                            <p class="bld-detail__info-title">Площадь</p>
+                            <p>150 м2</p>
+                        </div>
+        
+                        <div class="bld-detail__info-item">
+                            <p class="bld-detail__info-title">Количество этажей</p>
+                            <p>25</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="bld-detail__column">
+                    <div class="bld-detail__about">
+                        <p>Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="bld-detail__images">
+                <div class="bld-detail__block">
+                    <div class="js-object-slider swiper bld-detail__slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a class="video-link" data-fancybox href="https://www.youtube.com/watch?v=MOEtQSswu3s">
+                                    <img src="images/content/img.jpg" srcset="images/content/img@2x.jpg 2x" alt="">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#play_icon_filled" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide"><img src="images/content/img.jpg" srcset="images/content/img@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img.jpg" srcset="images/content/img@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img.jpg" srcset="images/content/img@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img.jpg" srcset="images/content/img@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img.jpg" srcset="images/content/img@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img.jpg" srcset="images/content/img@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img.jpg" srcset="images/content/img@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img.jpg" srcset="images/content/img@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img.jpg" srcset="images/content/img@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img.jpg" srcset="images/content/img@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img.jpg" srcset="images/content/img@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img.jpg" srcset="images/content/img@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img.jpg" srcset="images/content/img@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img.jpg" srcset="images/content/img@2x.jpg 2x" alt=""></div>
+                        </div>
+        
+                        <button class="js-object-slider-prev swiper-button-prev" type="button" title="Назад">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_left" />
+                            </svg>
+                        </button>
+                        <button class="js-object-slider-next swiper-button-next" type="button" title="Вперед">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right" />
+                            </svg>
+                        </button>
+                    </div>
+        
+                    <div thumbsSlider="" class="js-object-thumbs swiper bld-detail__thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="video-link">
+                                    <img src="images/content/img_2.jpg" srcset="images/content/img_2@2x.jpg 2x" alt="">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#play_icon_filled" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"><img src="images/content/img_2.jpg" srcset="images/content/img_2@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img_2.jpg" srcset="images/content/img_2@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img_2.jpg" srcset="images/content/img_2@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img_2.jpg" srcset="images/content/img_2@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img_2.jpg" srcset="images/content/img_2@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img_2.jpg" srcset="images/content/img_2@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img_2.jpg" srcset="images/content/img_2@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img_2.jpg" srcset="images/content/img_2@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img_2.jpg" srcset="images/content/img_2@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img_2.jpg" srcset="images/content/img_2@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img_2.jpg" srcset="images/content/img_2@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img_2.jpg" srcset="images/content/img_2@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img_2.jpg" srcset="images/content/img_2@2x.jpg 2x" alt=""></div>
+                            <div class="swiper-slide"><img src="images/content/img_2.jpg" srcset="images/content/img_2@2x.jpg 2x" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="bld-detail__block">
+                    <div class="bld-detail__plan"><img src="images/content/plan_2.jpg" srcset="images/content/plan_2@2x.jpg 2x" alt=""></div>
+                </div>
+            </div>
         </div>
 
+        <div class="box">
+            <div class="box__title-block justify-content-spacebetween">
+                <p class="box__title">Этажи и планы</p>
+
+                <button class="button button--type_1 button--h_45" type="button" data-fancybox="add-new-floor_" data-src="#add-new-floor">
+                    <svg aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#edit_2_icon"></use>
+                    </svg>
+                    <span>Добавить этажи</span>
+                </button>
+            </div>
+
+            <hr>
+
+            <div class="responsive-table">
+                <table class="table objects-table">
+                    <tr>
+                        <th class="js-sort text-left">
+                            <span class="sorting">
+                                <span>Номер этажа</span>
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#double_arrow_icon" />
+                                </svg>
+                            </span>
+                        </th>
+                        <th class="text-left">
+                            План БТИ
+                        </th>
+                        <th class="text-left">Помещения</th>
+                        <th>Редактировать</th>
+                    </tr>
+                    <tr>
+                        <td class="text-left">1</td>
+                        <td class="text-left">
+                            <a class="attach-link" href="#">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#image_icon"></use>
+                                </svg>
+                                <span>План БТИ</span>
+                            </a>
+                        </td>
+                        <td class="text-left">
+                            <a href="#">Офис 1</a>
+                            <a href="#">Офис 2</a>
+                            <a href="#">Офис 3</a>
+                            <a href="#">Офис 4</a>
+                            <a href="#">Офис 17</a>
+                            <a href="#">Офис 18</a>
+                            <a href="#">Офис 19</a>
+                        </td>
+                        <td>
+                            <button class="objects-table__edit" type="button" title="Редактировать">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#edit_icon"></use>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">3</td>
+                        <td class="text-left">-</td>
+                        <td class="text-left">
+                            <a href="#">Офис 31</a>
+                            <a href="#">Офис 32</a>
+                            <a href="#">Офис 33</a>
+                        </td>
+                        <td>
+                            <button class="objects-table__edit" type="button" title="Редактировать">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#edit_icon"></use>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="box__footer">
+                <div></div>
+                <ul class="pager">
+                    <li class="pager__item">
+                        <a class="pager__link is-active" href="#">1</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">2</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">3</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">...</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">7</a>
+                    </li>
+                    <li class="pager__item pager__item--arrow">
+                        <a class="pager__link" href="#">
+                            <span>Вперед</span>
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box__title-block justify-content-spacebetween">
+                <p class="box__title">Остальные здания БЦ Возрождение</p>
+            </div>
+
+            <hr>
+
+            <div class="responsive-table">
+                <table class="table objects-table">
+                    <tr>
+                        <th class="js-sort text-left">
+                            <span class="sorting">
+                                <span>Название</span>
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#double_arrow_icon" />
+                                </svg>
+                            </span>
+                        </th>
+                        <th class="text-left">
+                            Адрес
+                        </th>
+                        <th>
+                            Площадь м2
+                        </th>
+                        <th>
+                            Количество этажей
+                        </th>
+                        <th>Редактировать</th>
+                        <th>Удалить</th>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><a href="#">БЦ Возрождение литера А</a></td>
+                        <td class="text-left">г. Санкт-Петербург, пр-т Просвещения д. 111 лит. А</td>
+                        <td>1000</td>
+                        <td>25</td>
+                        <td>
+                            <button class="objects-table__edit" type="button" title="Редактировать">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#edit_icon"></use>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="objects-table__delete" type="button" title="Удалить" data-fancybox="buildings-group-delete-1" data-src="#building-delete">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#trash_icon"></use>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><a href="#">БЦ Возрождение литера Б</a></td>
+                        <td class="text-left">г. Санкт-Петербург, пр-т Просвещения д. 111 лит. Б</td>
+                        <td>1000</td>
+                        <td>20</td>
+                        <td>
+                            <button class="objects-table__edit" type="button" title="Редактировать">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#edit_icon"></use>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="objects-table__delete" type="button" title="Удалить" data-fancybox="buildings-group-delete-2" data-src="#building-delete">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#trash_icon"></use>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="box__footer">
+                <div></div>
+                <ul class="pager">
+                    <li class="pager__item">
+                        <a class="pager__link is-active" href="#">1</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">2</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">3</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">...</a>
+                    </li>
+                    <li class="pager__item">
+                        <a class="pager__link" href="#">7</a>
+                    </li>
+                    <li class="pager__item pager__item--arrow">
+                        <a class="pager__link" href="#">
+                            <span>Вперед</span>
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron_right"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </main>
 
     <div id="add-task-popup" class="popup add-task-popup">
@@ -489,145 +826,85 @@
         </form>
     </div>
 
-    <div id="add-new-object" class="popup popup--920 new-object-popup">
-        <p class="popup__title">Добавление нового здания / группы зданий</p>
+    <div id="add-new-floor" class="popup popup--920 new-object-popup">
+        <p class="popup__title">Добавление этажа</p>
     
         <div class="new-object">
             <div class="form-row form-row--centered">
-                <label class="form-label" for="new_object_title">Название<span class="required">*</span></label>
+                <label class="form-label" for="bld">Здание</label>
     
-                <input id="new_object_title" class="input grow" type="text" name="new_object_title" value="" placeholder="Например: БЦ Возрождение">
+                <input id="bld" class="input grow" type="text" name="bld" value="БЦ Возрождение литера В" disabled>
             </div>
     
-            <div class="form-row form-row--centered">
-                <label class="form-label" for="new_object_type">Тип<span class="required">*</span></label>
+            <div class="form-block">
     
-                <div class="select-wrapper select-wrapper--h_60 grow">
-                    <select id="new_object_type" class="js-select" data-placeholder="Тип">
-                        <option></option>
-                        <option value="1">Бизнес центр</option>
-                        <option value="2">Торговый центр</option>
-                        <option value="3">Складское помещение</option>
-                        <option value="4">Промышленное помещение</option>
-                        <option value="5">Жилая площадь</option>
-                    </select>
-                </div>
-            </div>
     
-            <div class="form-row form-row--centered">
-                <label class="form-label" for="new_object_liter">Группа зданий</label>
+                <p class="new-object__title">Этажи и планы</p>
     
-                <div class="objects-group-checkbox">
-                    <label class="checkbox">
-                        <input id="objects_group" type="checkbox" name="" value="">
-                        <span class="checkbox__icon"></span>
-                        <span class="checkbox__text">Группа зданий</span>
-                    </label>
+                <div>
+                    <div class="floor-block form-row form-row--centered">
+                        <label class="form-label" for="new_object_floor">Этаж</label>
     
-                    <div class="input-caption">Отметьте галочкой, если объект состоит из нескольких зданий и сможете добавить несколько адресов</div>
-                </div>
-            </div>
-    
-            <div id="one_address" class="form-block">
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_address">Адрес<span class="required">*</span></label>
-    
-                    <input id="new_object_address" class="input grow" type="text" name="new_object_address" value="" placeholder="Например: г. Санкт-Петербург, пр-т Просвещения д. 1 лит. А">
-                </div>
-    
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_square">Общая площадь, м2</label>
-    
-                    <input id="new_object_square" class="input w_180" type="text" name="new_object_square" value="">
-                </div>
-    
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_floors">Кол-во этажей</label>
-    
-                    <input id="new_object_floors" class="input w_180" type="text" name="new_object_floors" value="">
-                </div>
-            </div>
-    
-            <div id="few_addresses" class="form-block" style="display: none">
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_names">Обозначение зданий<span class="required">*</span></label>
-    
-                    <div class="grow">
-                        <div class="select-wrapper select-wrapper--h_60">
-                            <select id="new_object_names" class="js-select" data-placeholder="Обозначение зданий">
-                                <option></option>
-                                <option value="1">Корпус</option>
-                                <option value="2">Литера</option>
-                                <option value="3">Секция</option>
-                                <option value="4">Строение</option>
-                            </select>
-                        </div>
-    
-                        <div class="input-caption">Выберите вариант обозначения зданий</div>
+                        <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="1">
                     </div>
-                </div>
     
-                <p class="new-object__title">Здание 1</p>
+                    <div class="form-row">
+                        <label class="form-label" for="new_object_plan">План БТИ</label>
     
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_name">Корпус<span class="required">*</span></label>
-    
-                    <input id="new_object_name" class="input w_180" type="text" name="new_object_name" value="" placeholder="">
-                </div>
-    
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_address_1">Адрес здания 1<span class="required">*</span></label>
-    
-                    <input id="new_object_address_1" class="input grow" type="text" name="new_object_address_1" value="" placeholder="Например: г. Санкт-Петербург, пр-т Просвещения д. 1 лит. А">
-                </div>
-    
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_square">Общая площадь, м2</label>
-    
-                    <input id="new_object_square" class="input w_180" type="text" name="new_object_square" value="">
-                </div>
-    
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_floors">Кол-во этажей</label>
-    
-                    <input id="new_object_floors" class="input w_180" type="text" name="new_object_floors" value="">
+                        <label class="input-file">
+                            <input type="file">
+                            <span class="input-file__text">Выбрать файл</span>
+                        </label>
+                    </div>
                 </div>
     
                 <hr>
     
-                <p class="new-object__title">Здание 2</p>
-    
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_name">Корпус<span class="required">*</span></label>
-    
-                    <input id="new_object_name" class="input w_180" type="text" name="new_object_name" value="" placeholder="">
-                </div>
-    
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_address_2">Адрес здания 2<span class="required">*</span></label>
-    
-                    <div class="input-group">
-                        <input id="new_object_address_2" class="input grow" type="text" name="new_object_address_2" value="" placeholder="Например: г. Санкт-Петербург, пр-т Просвещения д. 1 лит. А">
-    
+                <div>
+                    <div class="floor-block form-row form-row--centered">
                         <button class="new-object-popup__delete button button--type_6" type="button">
                             <svg aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#circle_minus_icon"></use>
                             </svg>
-                            Удалить здание
+                            Удалить этаж
                         </button>
+    
+                        <label class="form-label" for="new_object_floor">Этаж</label>
+    
+                        <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="2">
                     </div>
-                </div>
     
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_square">Общая площадь, м2</label>
+                    <div class="form-row">
+                        <label class="form-label" for="new_object_plan">План БТИ</label>
     
-                    <input id="new_object_square" class="input w_180" type="text" name="new_object_square" value="">
-                </div>
+                        <div class="input-file-wrapper">
+                            <div class="input-file-info">
+                                <div class="input-file-info__type-block">
+                                    <svg class="input-file-info__type" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#image_icon"></use>
+                                    </svg>
     
-                <div class="form-row form-row--centered">
-                    <label class="form-label" for="new_object_floors">Кол-во этажей</label>
+                                    <span>PNG</span>
     
-                    <input id="new_object_floors" class="input w_180" type="text" name="new_object_floors" value="">
+                                    <svg class="input-file-info__check" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#check_icon"></use>
+                                    </svg>
+                                </div>
+    
+                                <button class="input-file-info__delete">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#delete_icon"></use>
+                                    </svg>
+                                    Удалить файл
+                                </button>
+                            </div>
+    
+                            <label class="input-file">
+                                <input type="file">
+                                <span class="input-file__text">Выбрать другой...</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
     
                 <hr>
@@ -636,16 +913,8 @@
                     <svg aria-hidden="true">
                         <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
                     </svg>
-                    Добавить здание
+                    Добавить этаж
                 </button>
-            </div>
-    
-            <hr>
-    
-            <div class="form-row form-row--centered">
-                <label class="form-label" for="new_object_info">Доп. информация</label>
-    
-                <textarea id="new_object_info" class="textarea grow" name="new_object_info"></textarea>
             </div>
         </div>
     
@@ -654,31 +923,6 @@
             <div class="popup__buttons">
                 <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
                 <button class="button button--type_3 button--h_60" type="button">Сохранить</button>
-            </div>
-        </div>
-    </div>
-    
-    <div id="buildings-group-delete" class="popup popup--620">
-        <p class="popup__title text-center">Подтвердить удаление</p>
-        <p class="text-center">Вы уверены что хотите удалить выбранный элемент?</p>
-        <p class="text-center">Удаление группы зданий необратимое действие и повлечёт за собой удаление прикреплённых к ней зданий.</p>
-    
-        <div class="popup__bottom">
-            <div class="popup__buttons popup__buttons--type_2">
-                <button class="button button--type_3 button--h_60" type="button">Удалить</button>
-                <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
-            </div>
-        </div>
-    </div>
-    
-    <div id="building-delete" class="popup popup--620">
-        <p class="popup__title text-center">Подтвердить удаление</p>
-        <p class="text-center">Вы уверены что хотите удалить выбранный элемент?</p>
-    
-        <div class="popup__bottom">
-            <div class="popup__buttons popup__buttons--type_2">
-                <button class="button button--type_3 button--h_60" type="button">Удалить</button>
-                <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
             </div>
         </div>
     </div>
@@ -705,6 +949,8 @@
     <script src="js/popups.js"></script>
     
     <script src="js/main.js"></script>
+
+    <script src="js/table-sort.js"></script>
 </body>
 
 </html>

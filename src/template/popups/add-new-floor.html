@@ -1,0 +1,100 @@
+<div id="add-new-floor" class="popup popup--920 new-object-popup">
+    <p class="popup__title">Добавление этажа</p>
+
+    <div class="new-object">
+        <div class="form-row form-row--centered">
+            <label class="form-label" for="bld">Здание</label>
+
+            <input id="bld" class="input grow" type="text" name="bld" value="БЦ Возрождение литера В" disabled>
+        </div>
+
+        <div class="form-block">
+
+
+            <p class="new-object__title">Этажи и планы</p>
+
+            <div>
+                <div class="floor-block form-row form-row--centered">
+                    <label class="form-label" for="new_object_floor">Этаж</label>
+
+                    <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="1">
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="new_object_plan">План БТИ</label>
+
+                    <label class="input-file">
+                        <input type="file">
+                        <span class="input-file__text">Выбрать файл</span>
+                    </label>
+                </div>
+            </div>
+
+            <hr>
+
+            <div>
+                <div class="floor-block form-row form-row--centered">
+                    <button class="new-object-popup__delete button button--type_6" type="button">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#circle_minus_icon"></use>
+                        </svg>
+                        Удалить этаж
+                    </button>
+
+                    <label class="form-label" for="new_object_floor">Этаж</label>
+
+                    <input id="new_object_floor" class="input w_80" type="text" name="new_object_floor" value="2">
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label" for="new_object_plan">План БТИ</label>
+
+                    <div class="input-file-wrapper">
+                        <div class="input-file-info">
+                            <div class="input-file-info__type-block">
+                                <svg class="input-file-info__type" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#image_icon"></use>
+                                </svg>
+
+                                <span>PNG</span>
+
+                                <svg class="input-file-info__check" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#check_icon"></use>
+                                </svg>
+                            </div>
+
+                            <button class="input-file-info__delete">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#delete_icon"></use>
+                                </svg>
+                                Удалить файл
+                            </button>
+                        </div>
+
+                        <label class="input-file">
+                            <input type="file">
+                            <span class="input-file__text">Выбрать другой...</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <button class="button button--type_6" type="button">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#circle_plus_icon"></use>
+                </svg>
+                Добавить этаж
+            </button>
+        </div>
+    </div>
+
+    <div class="popup__bottom">
+        <div></div>
+        <div class="popup__buttons">
+            <button class="js-popup-close button button--type_2 button--h_60" type="button">Отменить</button>
+            <button class="button button--type_3 button--h_60" type="button">Сохранить</button>
+        </div>
+    </div>
+</div>

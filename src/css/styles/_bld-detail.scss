@@ -1,0 +1,214 @@
+.bld-detail {
+    &__top {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    &__top-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    &__back {
+        svg {
+            fill: currentcolor;
+            height: 12px;
+            min-width: 12px;
+            width: 12px;
+        }
+    }
+
+    &__title-block {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    &__columns {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 50px;
+        @media(min-width: $md) {
+            flex-direction: row;
+            gap: 50px;
+        }
+    }
+
+    &__column {
+        @media(min-width: $md) {
+            width: calc(100% / 2 - 20px / 2);
+        }
+    }
+
+    &__info {
+        display: grid;
+        gap: 30px 15px;
+        grid-template-columns: 1fr 1fr;
+        @media(min-width: $sm) {
+            gap: 30px;
+        }
+
+        a {
+            color: var(--primary_color);
+            text-decoration: none;
+        }
+    }
+
+    &__info-title {
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    &__images {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+        @media(min-width: $md) {
+            display: flex;
+            gap: 30px;
+        }
+
+        img {
+            border-radius: 8px;
+            display: block;
+            width: 100%;
+        }
+
+        .video-link {
+            display: block;
+            position: relative;
+            z-index: 1;
+
+            svg {
+                fill: #fff;
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+            }
+        }
+    }
+
+    &__block {
+        @media(max-width: $md - 0.01px) {
+            margin-bottom: 30px;
+        }
+        @media(min-width: $md) {
+            width: calc(100% / 2 - 30px / 2);
+        }
+    }
+
+    &__slider {
+        margin-bottom: 10px;
+
+        .video-link {
+            svg {
+                height: 48px;
+                width: 48px;
+            }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            align-items: center;
+            border: none;
+            background-color: rgba(255,255,255,0.4);
+            display: flex;
+            height: 40px;
+            justify-content: center;
+            margin: 0;
+            width: 40px;
+
+            svg {
+                fill: #fff;
+                height: 12px;
+                width: 12px;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .swiper-button-prev {
+            border-radius: 0 8px 8px 0;
+            left: 0;
+        }
+
+        .swiper-button-next {
+            border-radius: 8px 0 0 8px;
+            right: 0;
+        }
+    }
+
+    &__thumbs {
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            width: 108px;
+            height: 100%;
+            right: 0;
+            top: 0;
+            background: linear-gradient(270deg, #fff 0, rgba(255, 255, 255, 0) 100%);
+            z-index: 1;
+        }
+
+        .swiper-slide {
+            width: 60px;
+        }
+
+        .swiper-slide-thumb-active {
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                border-radius: 8px;
+                border: 1px solid var(--primary_color);
+                background-color: rgba(0,0,0,0.3);
+                bottom: 0;
+                content: '';
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 1;
+            }
+        }
+
+        .video-link {
+            svg {
+                height: 18px;
+                width: 18px;
+            }
+        }
+    }
+
+    &__plan {
+        align-items: center;
+        background-color: var(--grey_6);
+        border-radius: 8px;
+        display: flex;
+        height: 100%;
+        padding: 20px;
+    }
+}

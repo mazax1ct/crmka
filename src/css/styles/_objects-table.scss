@@ -1,11 +1,18 @@
 .objects-table {
     tr {
-        @include hover {
+        /*@include hover {
             background-color: var(--grey_2);
-        }
-
+        }*/
         &[data-href] {
             cursor: pointer;
+        }
+    }
+
+    tbody {
+        tr {
+            @include hover {
+                background-color: var(--grey_2);
+            }
         }
     }
 

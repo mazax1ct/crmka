@@ -11,7 +11,7 @@ var comparer = function(idx, asc) {
   }
 };
 
-Array.prototype.slice.call(document.querySelectorAll('th.js-sort')).forEach(function(th) { 
+Array.prototype.slice.call(document.querySelectorAll('th.js-sort')).forEach(function(th) {
   th.addEventListener('click', function() {
     var table = th.parentNode
     while(table.tagName.toUpperCase() != 'TABLE') table = table.parentNode;

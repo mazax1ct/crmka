@@ -82,3 +82,18 @@
 .objects-group-checkbox {
     padding-top: 15px;
 }
+
+.form-period {
+    display: flex;
+    gap: 10px 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    @media(min-width: $md) {
+        width: calc(100% - 200px);
+    }
+
+    .input {
+        flex-grow: 1;
+        max-width: 400px;
+    }
+}

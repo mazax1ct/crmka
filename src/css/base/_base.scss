@@ -87,7 +87,7 @@ html {
             padding-top: 28px;
             width: calc(100% - var(--sidebar_width));
         }
-        @media(min-width: $lg) {
+        @media(min-width: $fhd) {
             padding-left: 45px;
             padding-right: 45px;
         }

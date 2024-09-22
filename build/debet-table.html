@@ -295,38 +295,51 @@
             <hr>
 
             <div class="form-row form-row--centered">
-                <label class="form-label" for="year">Год:</label>
+                <label class="form-label" for="period">Период:</label>
+
+                <div class="form-period">
+                    <input id="period_start" class="js-date-mask input input--datepicker" type="text" name="period_start" placeholder="дд.мм.гггг" readonly="true" inputmode="text">
+                    <input id="period_end" class="js-date-mask input input--datepicker" type="text" name="period_end" placeholder="дд.мм.гггг" readonly="true" inputmode="text">
+                </div>
+            </div>
+
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="bld_group">Группа зданий:</label>
 
                 <div class="w_400">
                     <div class="select-wrapper select-wrapper--h_60">
-                        <select id="year" class="js-select">
-                            <option value="1" selected>2024</option>
-                            <option value="2">2023</option>
-                            <option value="3">2022</option>
+                        <select id="bld_group" class="js-select" data-placeholder="Выберите группу зданий">
+                            <option></option>
+                            <option value="1">БЦ 1</option>
+                            <option value="2">БЦ 2</option>
                         </select>
                     </div>
                 </div>
             </div>
 
             <div class="form-row form-row--centered">
-                <label class="form-label" for="month">Месяц:</label>
+                <label class="form-label" for="bld">Здание:</label>
 
                 <div class="w_400">
                     <div class="select-wrapper select-wrapper--h_60">
-                        <select id="month" class="js-select">
-                            <option value="0">Весь год</option>
-                            <option value="1">Январь</option>
-                            <option value="2">Февраль</option>
-                            <option value="3">Март</option>
-                            <option value="4">Апрель</option>
-                            <option value="5">Май</option>
-                            <option value="6">Июнь</option>
-                            <option value="7">Июль</option>
-                            <option value="8" selected>Август</option>
-                            <option value="9">Сентябрь</option>
-                            <option value="10">Октябрь</option>
-                            <option value="11">Ноябрь</option>
-                            <option value="12">Декабрь</option>
+                        <select id="bld" class="js-select" data-placeholder="Выберите здание">
+                            <option></option>
+                            <option value="1">Литера А</option>
+                            <option value="2">Литера Б</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row form-row--centered">
+                <label class="form-label" for="floor">Этаж:</label>
+
+                <div class="w_400">
+                    <div class="select-wrapper select-wrapper--h_60">
+                        <select id="floor" class="js-select" data-placeholder="Выберите этаж">
+                            <option></option>
+                            <option value="1">Этаж 1</option>
+                            <option value="2">Этаж 2</option>
                         </select>
                     </div>
                 </div>
@@ -338,6 +351,10 @@
                 <div class="tabs-menu_2">
                     <button class="button button--type_3 button--h_40" type="button">
                         <span>Все платежи</span>
+                    </button>
+
+                    <button class="button button--type_2 button--h_40" type="button">
+                        <span>Только долги</span>
                     </button>
 
                     <button class="button button--type_2 button--h_40" type="button">
@@ -369,6 +386,10 @@
 
                             <th>Номер и дата договора</th>
 
+                            <th>Помещения</th>
+
+                            <th>Общий долг</th>
+
                             <th>Обеспечит. начислено</th>
                             <th>Обеспечит. оплачено</th>
                             <th>Долг обеспечительного</th>
@@ -385,9 +406,13 @@
 
                     <tbody>
                         <tr>
-                            <td class="text-left">САТУРН-Р ООО</td>
+                            <td class="text-left"><a href="#">САТУРН-Р ООО</a></td>
 
-                            <td>ПМ-109 от 25.02.2024г.</td>
+                            <td><a href="#">ПМ-109 от 25.02.2024г.</a></td>
+
+                            <td><a href="#">Офис 1</a></td>
+
+                            <td>0 ₽</td>
 
                             <td>125 840 ₽</td>
                             <td>125 840 ₽</td>
@@ -403,9 +428,13 @@
                         </tr>
 
                         <tr>
-                            <td class="text-left">АВИА ПРИНТ ООО</td>
+                            <td class="text-left"><a href="#">АВИА ПРИНТ ООО</a></td>
 
-                            <td>ПМ-87 от 25.02.2024г.</td>
+                            <td><a href="#">ПМ-87 от 25.02.2024г.</a></td>
+
+                            <td><a href="#">Офис 2</a></td>
+
+                            <td><b class="color-red">15 000 ₽</b></td>
 
                             <td>95 000 ₽</td>
                             <td>95 000 ₽</td>
@@ -425,6 +454,8 @@
                         <tr>
                             <td></td>
                             <td></td>
+                            <td></td>
+                            <td><b class="color-red">15 000 ₽</b></td>
                             <td>220 840 ₽</td>
                             <td>220 840 ₽</td>
                             <td>0 ₽</td>
